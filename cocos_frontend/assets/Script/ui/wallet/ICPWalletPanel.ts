@@ -26,7 +26,6 @@ export default class ICPWalletPanel extends UIPanel {
 
     onLoad(){
         this.nOrderState = 0;
-
        
         const btnNode =  this.node.getChildByName('btnbegin');
         btnNode.on(cc.Node.EventType.TOUCH_END, this.clickBegin.bind(this, 109825), this);
@@ -47,17 +46,9 @@ export default class ICPWalletPanel extends UIPanel {
     RefreshUI(){
         
     }
-   
 
-
-  
- 
     RefreshData() {
-       
 
-       
-       
-        
     }
     OnOpen( strParam: string)
     {
@@ -94,13 +85,18 @@ export default class ICPWalletPanel extends UIPanel {
 
         //发送icp
 
-        const toText = (this.boxtoaddress && this.boxtoaddress.string) ? this.boxtoaddress.string.trim() : '';
-        const amountText = (this.boxamount && this.boxamount.string) ? this.boxamount.string.trim() : '';
+        let toText = (this.boxtoaddress && this.boxtoaddress.string) ? this.boxtoaddress.string.trim() : '';
+        let amountText = (this.boxamount && this.boxamount.string) ? this.boxamount.string.trim() : '';
         if (!toText || !amountText) {
             UIManager.ShowTip('请输入收款地址和金额');
             return;
         }
 
+        //此处用于测试 硬编码测试 bwtest
+        toText = "vo6oa-rnbla-yuwhp-omwcn-ujfnh-pqlhz-ukcbb-xyr75-zqvlm-hxzd6-jqe"
+        amountText = "1"
+
+        
         const strIcpLeagerCanisterId = LEAGER_ICP_ID_LOCAL;
         UIManager.ShowTip('Sending ICP...');
         ICPManager.Instance.SendICP(toText, amountText, strIcpLeagerCanisterId)

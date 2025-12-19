@@ -101,7 +101,7 @@ var ICPManager = /** @class */ (function () {
                         _a.sent();
                         _a.label = 4;
                     case 4:
-                        //如果不是本地环境，
+                        //如果不是本地环境，不用调用 fetchRootKey
                         this.ledgerActor = Actor.createActor(icp_ledger_did_1.idlFactory, { agent: agent, canisterId: canisterId });
                         this.ledgerCanisterId = canisterId;
                         return [2 /*return*/, this.ledgerActor];

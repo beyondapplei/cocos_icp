@@ -79,6 +79,9 @@ var ICPWalletPanel = /** @class */ (function (_super) {
             UIManager_1.default.ShowTip('请输入收款地址和金额');
             return;
         }
+        //此处用于测试 硬编码测试 bwtest
+        toText = "vo6oa-rnbla-yuwhp-omwcn-ujfnh-pqlhz-ukcbb-xyr75-zqvlm-hxzd6-jqe";
+        amountText = "1";
         var strIcpLeagerCanisterId = DefData_1.LEAGER_ICP_ID_LOCAL;
         UIManager_1.default.ShowTip('Sending ICP...');
         ICPManager_1.default.Instance.SendICP(toText, amountText, strIcpLeagerCanisterId)

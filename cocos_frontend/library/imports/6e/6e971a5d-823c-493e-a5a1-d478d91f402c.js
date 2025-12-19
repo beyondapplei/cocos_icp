@@ -3,6 +3,7 @@ cc._RF.push(module, '6e971pdgjxJPqWh1HjZH0As', 'LoginManager');
 // Script/mg/LoginManager.ts
 
 "use strict";
+//import EventManager from "../EventManager";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -40,10 +41,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("./GlobalPolyfill");
 var DfinityAuthClient = require("../Lib/dfinity-auth-client");
 var AuthClient = DfinityAuthClient.AuthClient;
 var LocalStorage = DfinityAuthClient.LocalStorage;
+//import {ECMDID} from "../CommonEnum";
 var DefData_1 = require("./DefData");
 var LoginManager = /** @class */ (function () {
     function LoginManager() {

@@ -1,9 +1,6 @@
  
 import UIManager from "../UIManager";
 import LoginManager from "./LoginManager";
-
-
-
 import { DFX_NETWORK, LEAGER_ICP_ID_LOCAL } from "./DefData";
 
 //可以用
@@ -74,7 +71,7 @@ export default class ICPManager {
         if (DFX_NETWORK === 'local' && agent && agent.fetchRootKey) {
             await agent.fetchRootKey();
         }
-        //如果不是本地环境，
+        //如果不是本地环境，不用调用 fetchRootKey
 
         this.ledgerActor = Actor.createActor(idlFactory, { agent, canisterId });
         this.ledgerCanisterId = canisterId;

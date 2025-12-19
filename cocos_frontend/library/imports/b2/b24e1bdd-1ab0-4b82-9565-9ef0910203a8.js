@@ -28,6 +28,7 @@ var UIManager_1 = require("../UIManager");
 var CommonEnum_1 = require("../CommonEnum");
 var TableView_1 = require("./TableView");
 var ResManager_1 = require("../ResManager");
+//coinlist 无用
 //coin list panel = LoginPanel.ts
 //import { _decorator, Component, Label, Asset, assert, loader, sys, assetManager } from 'cc';
 //mport { _decorator, Component } from 'cc';

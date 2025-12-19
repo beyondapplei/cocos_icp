@@ -1,4 +1,4 @@
-import "./GlobalPolyfill";
+
 
 import LoginManager from "./LoginManager";
 import { ethers } from "ethers";

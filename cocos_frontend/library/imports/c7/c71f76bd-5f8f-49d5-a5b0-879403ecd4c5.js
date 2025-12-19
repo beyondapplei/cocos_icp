@@ -40,7 +40,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("./GlobalPolyfill");
 var LoginManager_1 = require("./LoginManager");
 var ethers_1 = require("ethers");
 var DfinityAgent = require("../Lib/dfinity-agent");

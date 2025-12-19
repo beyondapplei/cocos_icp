@@ -1,12 +1,11 @@
 
-import EventManager from "../EventManager";
-import "./GlobalPolyfill";
-import DfinityAuthClient = require("../Lib/dfinity-auth-client");
+//import EventManager from "../EventManager";
 
+import DfinityAuthClient = require("../Lib/dfinity-auth-client");
 const AuthClient = (DfinityAuthClient as any).AuthClient;
 const LocalStorage = (DfinityAuthClient as any).LocalStorage;
 
-import {ECMDID} from "../CommonEnum";
+//import {ECMDID} from "../CommonEnum";
 
 import { DFX_NETWORK, II_CANISTER_ID_LOCAL } from "./DefData";
 

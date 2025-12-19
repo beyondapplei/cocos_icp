@@ -4,6 +4,9 @@ import { EUIPanelType } from "../CommonEnum";
 import {TableView,CellData} from "./TableView";
 import ResManager from "../ResManager";
 
+
+//coinlist 无用
+
 //coin list panel = LoginPanel.ts
 
 //import { _decorator, Component, Label, Asset, assert, loader, sys, assetManager } from 'cc';

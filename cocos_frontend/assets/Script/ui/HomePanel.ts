@@ -1,14 +1,11 @@
-import "./mg/GlobalPolyfill";
+
 import UIPanel from "./UIPanel"
 import UIManager from "../UIManager";
-
 import BackManager from "../mg/BackManager";
 import LoginManager from "../mg/LoginManager";
 import {ECMDID, ESceneType, EUIPanelType, EUnitType} from "../CommonEnum";
 
 const {ccclass, property} = cc._decorator;
-
-declare const require: any;
 
 @ccclass
 export default class HomePanel extends UIPanel{

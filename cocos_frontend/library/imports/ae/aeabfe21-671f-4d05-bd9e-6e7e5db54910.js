@@ -59,7 +59,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("./mg/GlobalPolyfill");
 var UIPanel_1 = require("./UIPanel");
 var UIManager_1 = require("../UIManager");
 var BackManager_1 = require("../mg/BackManager");
