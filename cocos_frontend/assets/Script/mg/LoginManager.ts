@@ -1,9 +1,9 @@
 
 //import EventManager from "../EventManager";
 
-import DfinityAuthClient = require("../Lib/dfinity-auth-client");
-const AuthClient = (DfinityAuthClient as any).AuthClient;
-const LocalStorage = (DfinityAuthClient as any).LocalStorage;
+// import DfinityAuthClient = require("../Lib/dfinity-auth-client");
+const AuthClient = (window as any).DfinityAuthClient ? (window as any).DfinityAuthClient.AuthClient : null;
+const LocalStorage = (window as any).DfinityAuthClient ? (window as any).DfinityAuthClient.LocalStorage : null;
 
 //import {ECMDID} from "../CommonEnum";
 
