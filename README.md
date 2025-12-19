@@ -1,7 +1,21 @@
 # cocos_icp
 
 
-cocos 里即成icp 相关的代码库
+1 dfx start --clean --background
+
+2 ./deploy-ledger.sh
+
+3 ./local-deploy-app.sh
+
+4 替换
+export const II_CANISTER_ID_LOCAL = "bw4dl-smaaa-aaaaa-qaacq-cai";
+export const BACKEND_CANISTER_ID_LOCAL_FALLBACK = "be2us-64aaa-aaaaa-qaabq-cai";
+
+5 cocoscreater 2.4.14. 运行调试
+
+
+
+cocos 里集成icp 相关的代码库
 
 1. 语法兼容性修补 (Cocos JS 引擎限制)
 移除 BigInt 指数运算符 (**)：

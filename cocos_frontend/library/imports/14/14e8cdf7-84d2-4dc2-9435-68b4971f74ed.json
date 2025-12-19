@@ -1,0 +1,10 @@
+{
+  "__type__": "cc.JsonAsset",
+  "_name": "scenename",
+  "_objFlags": 0,
+  "_native": "",
+  "json": {
+    "0": "login",
+    "1": "game"
+  }
+}
