@@ -52,9 +52,11 @@ export default class LoginManager {
     }
 
     Init() {
-        // void this.ensureAuthClient().catch(() => {
-        //     // UI 层自行提示；这里不抛出
-        // });
+        // 预先初始化 AuthClient，否则可能 AuthClient not ready
+        // 特别是在 Web Build 下更容易遇到此问题
+        void this.ensureAuthClient().catch(() => {
+            // UI 层自行提示；这里不抛出
+        });
     }
 
     // private isEditorOrPreview(): boolean {

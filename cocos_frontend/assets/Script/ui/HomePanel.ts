@@ -1,7 +1,6 @@
 
 import UIPanel from "./UIPanel"
 import UIManager from "../UIManager";
-import BackManager from "../mg/BackManager";
 import LoginManager from "../mg/LoginManager";
 import {ECMDID, ESceneType, EUIPanelType, EUnitType} from "../CommonEnum";
 
@@ -64,20 +63,20 @@ export default class HomePanel extends UIPanel{
     uiend() {
         this.showinfo("HomePanel uiend");
 
-        LoginManager.Instance.ensureAuthClient()
-            .then(() => LoginManager.Instance.isAuthenticated())
-            .then((authed) => {
-                if (authed) {
-                    this.showinfo("HomePanel: Already authenticated");
-                    this.handleLoginSuccess();
-                } else {
-                    this.showinfo("HomePanel: Not authenticated");
-                }
-            })
-            .catch((e) => {
-                cc.error("HomePanel: BackManager init error:", e);
-                this.showinfo("Init Error: " + e);
-            });
+        // LoginManager.Instance.ensureAuthClient()
+        //     .then(() => LoginManager.Instance.isAuthenticated())
+        //     .then((authed) => {
+        //         if (authed) {
+        //             this.showinfo("HomePanel: Already authenticated");
+        //             this.handleLoginSuccess();
+        //         } else {
+        //             this.showinfo("HomePanel: Not authenticated");
+        //         }
+        //     })
+        //     .catch((e) => {
+        //         cc.error("HomePanel: BackManager init error:", e);
+        //         this.showinfo("Init Error: " + e);
+        //     });
     }
 
     
@@ -114,19 +113,19 @@ export default class HomePanel extends UIPanel{
         UIManager.OpenPanel(EUIPanelType.HOMELIST); //tables 列表
     }
 
-    async onGetAddressClick() {
-        const principal = LoginManager.Instance.getPrincipalText();
-       try {
-            const address = await BackManager.Instance.getEthAddress();
-            this.showinfo('ETH Address: ' + address);
-            if (this.labelpid) {
-                this.labelpid.string = (principal || this.labelpid.string || '') + "\n" + address;
-            }
-        } catch (e) {
-            cc.error('HomePanel: getEthAddress failed:', e);
-            this.showinfo('Fetch address failed: ' + e);
-        }
-    }
+    // async onGetAddressClick() {
+    //     const principal = LoginManager.Instance.getPrincipalText();
+    //    try {
+    //         const address = await BackManager.Instance.getEthAddress();
+    //         this.showinfo('ETH Address: ' + address);
+    //         if (this.labelpid) {
+    //             this.labelpid.string = (principal || this.labelpid.string || '') + "\n" + address;
+    //         }
+    //     } catch (e) {
+    //         cc.error('HomePanel: getEthAddress failed:', e);
+    //         this.showinfo('Fetch address failed: ' + e);
+    //     }
+    // }
 
     
 }
