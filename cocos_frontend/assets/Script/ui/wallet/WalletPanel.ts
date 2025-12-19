@@ -1,8 +1,8 @@
-import UIPanel from "./UIPanel"
-import UIManager from "../UIManager";
-import { EUIPanelType } from "../CommonEnum";
-import {TableView,CellData} from "./TableView";
-import ResManager from "../ResManager";
+import UIPanel from "../UIPanel"
+import UIManager from "../../UIManager";
+import { EUIPanelType } from "../../CommonEnum";
+import {TableView,CellData} from "../TableView";
+import ResManager from "../../ResManager";
 
 
 
@@ -63,7 +63,7 @@ class WalletCellData{
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class HomeListPanel extends UIPanel {
+export default class WalletPanel extends UIPanel {
 
     tableview: TableView;
     vListData: WalletCellData[] = [];
@@ -186,6 +186,7 @@ export default class HomeListPanel extends UIPanel {
            // UIManager.Instance.OpenPanel(EUIPanelType.GAME);
 
         }
+        UIManager.OpenPanel(EUIPanelType.WALLET_ICP);
         
     }
   

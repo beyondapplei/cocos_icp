@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var BackManager_1 = require("./BackManager");
 var UIManager_1 = require(".././UIManager");
 var LoginManager_1 = require("./LoginManager");
+var ICPManager_1 = require("./ICPManager");
 var AppManager = /** @class */ (function () {
     function AppManager() {
     }
@@ -15,6 +16,7 @@ var AppManager = /** @class */ (function () {
     AppManager.prototype.Init = function () {
         LoginManager_1.default.Instance.Init();
         BackManager_1.default.Instance.Init();
+        ICPManager_1.default.Instance.Init();
     };
     AppManager.prototype.showTip = function (strTip) {
         UIManager_1.default.ShowTip(strTip);

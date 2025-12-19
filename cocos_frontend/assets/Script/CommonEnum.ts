@@ -35,5 +35,6 @@ export enum EUIPanelType
      EDIT = 5,
      HOMELIST = 6,
      WALLET = 7,
+     WALLET_ICP = 8,
 
 }

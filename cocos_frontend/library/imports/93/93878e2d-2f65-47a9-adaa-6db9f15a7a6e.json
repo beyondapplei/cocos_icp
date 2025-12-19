@@ -91,7 +91,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 3
@@ -207,7 +207,7 @@
     "_prefab": {
       "__id__": 7
     },
-    "_opacity": 66,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 60,

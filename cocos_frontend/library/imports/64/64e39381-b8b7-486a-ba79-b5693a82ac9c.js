@@ -15,6 +15,7 @@ var UIManager = /** @class */ (function () {
         UIManager.Instance.OpenPanel(nPanelId, strParam);
     };
     UIManager.ShowTip = function (strTip) {
+        cc.log('UIManager ShowTip=' + strTip);
         UIManager.Instance.showtip(strTip);
     };
     UIManager.prototype.onLoadEnd = function (err, res) {

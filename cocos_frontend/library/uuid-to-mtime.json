@@ -520,8 +520,8 @@
     "relativePath": "migration/use_v2.0.x_cc.Toggle_event.js"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1766115650608,
-    "meta": 1766115650613,
+    "asset": 1766150229529,
+    "meta": 1766150229531,
     "relativePath": "Scene/helloworld.fire"
   },
   "98803cc5-e747-4315-b7d1-e8329d7adf5a": {
@@ -549,250 +549,10 @@
     "meta": 1765850682582,
     "relativePath": "resources/coin.csv"
   },
-  "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1765985878441,
-    "meta": 1765985878463,
-    "relativePath": "Script"
-  },
-  "e06e83c3-31ca-4196-b557-9842c5be2324": {
-    "asset": 1765904439885,
-    "meta": 1765960579740,
-    "relativePath": "Script/BWUnitManager.ts"
-  },
-  "b4076d8f-009d-4262-95ea-6f0ca48ef10d": {
-    "asset": 1765904439885,
-    "meta": 1765960579786,
-    "relativePath": "Script/ResManager.ts"
-  },
-  "a03c6a73-8912-4a50-a021-f968abcebafe": {
-    "asset": 1731739976615,
-    "meta": 1765960579789,
-    "relativePath": "Script/TableStruct.ts"
-  },
-  "93f92209-654f-498a-a19f-d082a0ea35be": {
-    "asset": 1558945067000,
-    "meta": 1765960579811,
-    "relativePath": "Script/WangbinTest.ts"
-  },
-  "8500cdd3-f360-40db-9592-71d9ae3b929c": {
-    "asset": 1765985455235,
-    "meta": 1765985455249,
-    "relativePath": "Script/mg"
-  },
-  "1b1a59c9-4c82-48c4-b5da-6d60e5bb2028": {
-    "asset": 1765952099986,
-    "meta": 1765960579822,
-    "relativePath": "Script/mg/AppkManager.ts"
-  },
-  "cc4ad511-ff7d-49c3-8377-6e26d06a21dc": {
-    "asset": 1765852013035,
-    "meta": 1765960579881,
-    "relativePath": "Script/mg/GlobalPolyfill.ts"
-  },
-  "24fdfe20-bb22-4f27-b1c5-3205d5969f05": {
-    "asset": 1765985202854,
-    "meta": 1765985455332,
-    "relativePath": "Script/mg/backend.did.js"
-  },
-  "c71f76bd-5f8f-49d5-a5b0-879403ecd4c5": {
-    "asset": 1766020050042,
-    "meta": 1766020066944,
-    "relativePath": "Script/mg/BackManager.ts"
-  },
-  "d1616a21-a713-44ea-bb1e-a7e649cba114": {
-    "asset": 1766023636639,
-    "meta": 1766024678851,
-    "relativePath": "Script/Lib"
-  },
-  "e1ff61e8-b682-47b4-b73a-e94f7735df4e": {
-    "asset": 1766023198583,
-    "meta": 1766024680782,
-    "relativePath": "Script/Lib/dfinity-agent-dev.js"
-  },
-  "c1a98e54-3856-402a-90c2-965193031f0c": {
-    "asset": 1766024301529,
-    "meta": 1766024682564,
-    "relativePath": "Script/Lib/dfinity-agent-prod.js"
-  },
-  "3d03288f-df83-4064-94ce-264198df462a": {
-    "asset": 1766023198587,
-    "meta": 1766024686441,
-    "relativePath": "Script/Lib/dfinity-auth-client-dev.js"
-  },
-  "cefebeb8-36fd-47ed-bded-c2b7e9caff67": {
-    "asset": 1766024301530,
-    "meta": 1766024688853,
-    "relativePath": "Script/Lib/dfinity-auth-client-prod.js"
-  },
-  "333eafbf-e141-4faa-9d26-0e9b3876c67b": {
-    "asset": 1766066782916,
-    "meta": 1766067626212,
-    "relativePath": "Script/EventManager.ts"
-  },
-  "6e971a5d-823c-493e-a5a1-d478d91f402c": {
-    "asset": 1766066782928,
-    "meta": 1766067626228,
-    "relativePath": "Script/mg/LoginManager.ts"
-  },
-  "64e39381-b8b7-486a-ba79-b5693a82ac9c": {
-    "asset": 1766066782916,
-    "meta": 1766067626294,
-    "relativePath": "Script/UIManager.ts"
-  },
-  "efbd5140-5852-4c80-b788-1f793c5782a0": {
-    "asset": 1766107235145,
-    "meta": 1766110035826,
-    "relativePath": "resources/prefab"
-  },
-  "4f068aa1-8759-4b3e-880c-7b0b3d902beb": {
-    "asset": 1731386636863,
-    "meta": 1766069549789,
-    "relativePath": "resources/prefab/editpanel.prefab"
-  },
-  "6a284963-1516-40cd-a4a1-e0ab24c168bb": {
-    "asset": 1731386636864,
-    "meta": 1766069549790,
-    "relativePath": "resources/prefab/gameendpanel.prefab"
-  },
-  "3cf09e93-145d-4c97-96e0-c4bf8801e476": {
-    "asset": 1731386636866,
-    "meta": 1766069549791,
-    "relativePath": "resources/prefab/gamehomepanel.prefab"
-  },
-  "93878e2d-2f65-47a9-adaa-6db9f15a7a6e": {
-    "asset": 1766105724369,
-    "meta": 1766105724401,
-    "relativePath": "resources/prefab/homelistpanel.prefab"
-  },
-  "535eca78-7808-4b64-b13d-4d68304328ea": {
-    "asset": 1731386636867,
-    "meta": 1766069549793,
-    "relativePath": "resources/prefab/gamepanel.prefab"
-  },
-  "46873407-7699-4d93-8b25-4a2c2d9f61a5": {
-    "asset": 1766033778816,
-    "meta": 1766069551665,
-    "relativePath": "resources/prefab/tippanel.prefab"
-  },
-  "4d39b684-9ed8-466f-87c7-7076bbf53eaa": {
-    "asset": 1766108296450,
-    "meta": 1766110035826,
-    "relativePath": "Script/ui"
-  },
-  "4b8f673f-ff48-4b54-9b80-2f2a79d4f29d": {
-    "asset": 1765904439885,
-    "meta": 1766069554021,
-    "relativePath": "Script/ui/BWBulletUnit.ts"
-  },
-  "b72799c9-6b90-49da-8624-b35c214bc1b2": {
-    "asset": 1766064303671,
-    "meta": 1766069554024,
-    "relativePath": "resources/prefab/loginpanel.prefab"
-  },
-  "a64f92b4-53cd-41f2-a8d4-2692461cc2a5": {
-    "asset": 1765904439885,
-    "meta": 1766069554037,
-    "relativePath": "Script/ui/BWEnemyUnit.ts"
-  },
-  "dab71e3f-318e-4c5d-87b8-809212525a25": {
-    "asset": 1765904439885,
-    "meta": 1766069554046,
-    "relativePath": "Script/ui/BWPlayerUnit.ts"
-  },
-  "3f6702d1-7e49-40a3-b9a1-721f7107f5a2": {
-    "asset": 1765904439920,
-    "meta": 1766069554051,
-    "relativePath": "Script/ui/BWUnit.ts"
-  },
-  "35fed284-13b3-4963-b1e3-a0922c4b05b7": {
-    "asset": 1765904439886,
-    "meta": 1766069554069,
-    "relativePath": "Script/ui/EditPanel.ts"
-  },
-  "461b5247-a00a-4534-884e-ad343c982856": {
-    "asset": 1766061590231,
-    "meta": 1766069554085,
-    "relativePath": "resources/prefab/homepanel.prefab"
-  },
-  "ff16c0cc-e9ba-40d1-8554-c79a5872be94": {
-    "asset": 1766061421446,
-    "meta": 1766069554097,
-    "relativePath": "Script/ui/GameApp.ts"
-  },
-  "c9e703d9-540f-4cb1-91b9-449a90657fa9": {
-    "asset": 1765904439886,
-    "meta": 1766069554103,
-    "relativePath": "Script/ui/GameEndPanel.ts"
-  },
-  "debacc16-de2e-4247-bed1-9eaaef16dd1c": {
-    "asset": 1765904439885,
-    "meta": 1766069554118,
-    "relativePath": "Script/ui/GamePanel.ts"
-  },
-  "aeabfe21-671f-4d05-bd9e-6e7e5db54910": {
-    "asset": 1766066782916,
-    "meta": 1766069554151,
-    "relativePath": "Script/ui/HomePanel.ts"
-  },
-  "b24e1bdd-1ab0-4b82-9565-9ef0910203a8": {
-    "asset": 1765904439885,
-    "meta": 1766069554177,
-    "relativePath": "Script/ui/LoginPanel.ts"
-  },
-  "3860df06-350e-4efe-911a-2fc8f16799ad": {
-    "asset": 1731670281946,
-    "meta": 1766069554194,
-    "relativePath": "Script/ui/TableView.ts"
-  },
-  "d971452a-064a-43e7-af3f-052078f12162": {
-    "asset": 1765904439885,
-    "meta": 1766069554200,
-    "relativePath": "Script/ui/TipPanel.ts"
-  },
-  "201ec743-9b06-48a1-9fc3-a1177dc145d8": {
-    "asset": 1765815215790,
-    "meta": 1766069554202,
-    "relativePath": "Script/ui/UIPanel.ts"
-  },
-  "f0e110db-e03c-43e4-9036-53d2af39d535": {
-    "asset": 1766108565085,
-    "meta": 1766108565088,
-    "relativePath": "resources/prefab/walletpanel.prefab"
-  },
-  "cb02ed12-2425-4c50-8a83-abad1a498bff": {
-    "asset": 1766107983140,
-    "meta": 1766108296504,
-    "relativePath": "resources/uipanel.csv"
-  },
-  "d94e8ca9-d240-4da0-8e67-f9e7d1bc0df7": {
-    "asset": 1766108409499,
-    "meta": 1766108423071,
-    "relativePath": "Script/CommonEnum.ts"
-  },
-  "83594e2d-dc2b-486b-9de0-7031f09eea94": {
-    "asset": 1766108421661,
-    "meta": 1766108423099,
-    "relativePath": "Script/ui/HomeListPanel.ts"
-  },
-  "f58f74ef-29d9-47e3-b2b8-31c9e6442532": {
-    "asset": 1766108561602,
-    "meta": 1766108563891,
-    "relativePath": "Script/ui/WalletPanel.ts"
-  },
   "113af6e1-d949-4e1d-a38e-ac2524fbaadd": {
     "asset": 1766110211421,
     "meta": 1766110670130,
     "relativePath": "resources/texture"
-  },
-  "e99452b9-6af5-430b-bdc8-6e039a621f6e": {
-    "asset": 1766110596834,
-    "meta": 1766110672179,
-    "relativePath": "Script/Lib/dfinity-agent.js"
-  },
-  "e6e0bd06-6937-4ef8-bad2-b583048f401c": {
-    "asset": 1766110596838,
-    "meta": 1766110674573,
-    "relativePath": "Script/Lib/dfinity-auth-client.js"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
     "asset": 1766110177058,
@@ -849,9 +609,279 @@
     "meta": 1766110674725,
     "relativePath": "resources/texture/imagebg11.png"
   },
+  "cb02ed12-2425-4c50-8a83-abad1a498bff": {
+    "asset": 1766130627951,
+    "meta": 1766130653497,
+    "relativePath": "resources/uipanel.csv"
+  },
+  "efbd5140-5852-4c80-b788-1f793c5782a0": {
+    "asset": 1766120610879,
+    "meta": 1766149865590,
+    "relativePath": "resources/prefab"
+  },
+  "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
+    "asset": 1766123480049,
+    "meta": 1766149865591,
+    "relativePath": "Script"
+  },
+  "e06e83c3-31ca-4196-b557-9842c5be2324": {
+    "asset": 1765904439885,
+    "meta": 1766149865630,
+    "relativePath": "Script/BWUnitManager.ts"
+  },
+  "d94e8ca9-d240-4da0-8e67-f9e7d1bc0df7": {
+    "asset": 1766130650158,
+    "meta": 1766149865638,
+    "relativePath": "Script/CommonEnum.ts"
+  },
+  "333eafbf-e141-4faa-9d26-0e9b3876c67b": {
+    "asset": 1766066782916,
+    "meta": 1766149865653,
+    "relativePath": "Script/EventManager.ts"
+  },
+  "d1616a21-a713-44ea-bb1e-a7e649cba114": {
+    "asset": 1766139671295,
+    "meta": 1766149865654,
+    "relativePath": "Script/Lib"
+  },
+  "b4076d8f-009d-4262-95ea-6f0ca48ef10d": {
+    "asset": 1765904439885,
+    "meta": 1766149865672,
+    "relativePath": "Script/ResManager.ts"
+  },
+  "a03c6a73-8912-4a50-a021-f968abcebafe": {
+    "asset": 1731739976615,
+    "meta": 1766149865678,
+    "relativePath": "Script/TableStruct.ts"
+  },
+  "64e39381-b8b7-486a-ba79-b5693a82ac9c": {
+    "asset": 1766137651344,
+    "meta": 1766149865699,
+    "relativePath": "Script/UIManager.ts"
+  },
+  "93f92209-654f-498a-a19f-d082a0ea35be": {
+    "asset": 1558945067000,
+    "meta": 1766149865713,
+    "relativePath": "Script/WangbinTest.ts"
+  },
+  "93878e2d-2f65-47a9-adaa-6db9f15a7a6e": {
+    "asset": 1766120381943,
+    "meta": 1766149865715,
+    "relativePath": "resources/prefab/homelistpanel.prefab"
+  },
+  "8500cdd3-f360-40db-9592-71d9ae3b929c": {
+    "asset": 1766127262118,
+    "meta": 1766149865715,
+    "relativePath": "Script/mg"
+  },
+  "461b5247-a00a-4534-884e-ad343c982856": {
+    "asset": 1766119778882,
+    "meta": 1766149865716,
+    "relativePath": "resources/prefab/homepanel.prefab"
+  },
+  "4d39b684-9ed8-466f-87c7-7076bbf53eaa": {
+    "asset": 1766124663767,
+    "meta": 1766149865717,
+    "relativePath": "Script/ui"
+  },
+  "4f068aa1-8759-4b3e-880c-7b0b3d902beb": {
+    "asset": 1731386636863,
+    "meta": 1766149865718,
+    "relativePath": "resources/prefab/editpanel.prefab"
+  },
+  "e1ff61e8-b682-47b4-b73a-e94f7735df4e": {
+    "asset": 1766023198583,
+    "meta": 1766149867855,
+    "relativePath": "Script/Lib/dfinity-agent-dev.js"
+  },
+  "6a284963-1516-40cd-a4a1-e0ab24c168bb": {
+    "asset": 1731386636864,
+    "meta": 1766149867856,
+    "relativePath": "resources/prefab/gameendpanel.prefab"
+  },
+  "c1a98e54-3856-402a-90c2-965193031f0c": {
+    "asset": 1766024301529,
+    "meta": 1766149869410,
+    "relativePath": "Script/Lib/dfinity-agent-prod.js"
+  },
+  "535eca78-7808-4b64-b13d-4d68304328ea": {
+    "asset": 1731386636867,
+    "meta": 1766149869411,
+    "relativePath": "resources/prefab/gamepanel.prefab"
+  },
+  "e99452b9-6af5-430b-bdc8-6e039a621f6e": {
+    "asset": 1766149269574,
+    "meta": 1766149870938,
+    "relativePath": "Script/Lib/dfinity-agent.js"
+  },
+  "3d03288f-df83-4064-94ce-264198df462a": {
+    "asset": 1766023198587,
+    "meta": 1766149873651,
+    "relativePath": "Script/Lib/dfinity-auth-client-dev.js"
+  },
+  "3cf09e93-145d-4c97-96e0-c4bf8801e476": {
+    "asset": 1731386636866,
+    "meta": 1766149873655,
+    "relativePath": "resources/prefab/gamehomepanel.prefab"
+  },
+  "cefebeb8-36fd-47ed-bded-c2b7e9caff67": {
+    "asset": 1766024301530,
+    "meta": 1766149876644,
+    "relativePath": "Script/Lib/dfinity-auth-client-prod.js"
+  },
+  "f0e110db-e03c-43e4-9036-53d2af39d535": {
+    "asset": 1766108565085,
+    "meta": 1766149876648,
+    "relativePath": "resources/prefab/walletpanel.prefab"
+  },
+  "e6e0bd06-6937-4ef8-bad2-b583048f401c": {
+    "asset": 1766149269579,
+    "meta": 1766149879465,
+    "relativePath": "Script/Lib/dfinity-auth-client.js"
+  },
+  "46873407-7699-4d93-8b25-4a2c2d9f61a5": {
+    "asset": 1766033778816,
+    "meta": 1766149879468,
+    "relativePath": "resources/prefab/tippanel.prefab"
+  },
+  "1b1a59c9-4c82-48c4-b5da-6d60e5bb2028": {
+    "asset": 1766131419466,
+    "meta": 1766149879473,
+    "relativePath": "Script/mg/AppkManager.ts"
+  },
+  "b72799c9-6b90-49da-8624-b35c214bc1b2": {
+    "asset": 1766064303671,
+    "meta": 1766149879474,
+    "relativePath": "resources/prefab/loginpanel.prefab"
+  },
+  "c71f76bd-5f8f-49d5-a5b0-879403ecd4c5": {
+    "asset": 1766020050042,
+    "meta": 1766149879486,
+    "relativePath": "Script/mg/BackManager.ts"
+  },
   "4a1f9a63-a8da-4103-bdde-599df1315dbb": {
-    "asset": 1766110826710,
-    "meta": 1766110832647,
+    "asset": 1766149223397,
+    "meta": 1766149879496,
     "relativePath": "Script/mg/DefData.ts"
+  },
+  "cc4ad511-ff7d-49c3-8377-6e26d06a21dc": {
+    "asset": 1765852013035,
+    "meta": 1766149879503,
+    "relativePath": "Script/mg/GlobalPolyfill.ts"
+  },
+  "6e971a5d-823c-493e-a5a1-d478d91f402c": {
+    "asset": 1766151175938,
+    "meta": 1766151181361,
+    "relativePath": "Script/mg/LoginManager.ts"
+  },
+  "24fdfe20-bb22-4f27-b1c5-3205d5969f05": {
+    "asset": 1765985202854,
+    "meta": 1766149879550,
+    "relativePath": "Script/mg/backend.did.js"
+  },
+  "d667a169-7b82-4f7d-b255-ed66cdc4ba44": {
+    "asset": 1766127281684,
+    "meta": 1766149879556,
+    "relativePath": "Script/mg/icp_ledger.did.js"
+  },
+  "4b8f673f-ff48-4b54-9b80-2f2a79d4f29d": {
+    "asset": 1765904439885,
+    "meta": 1766149879563,
+    "relativePath": "Script/ui/BWBulletUnit.ts"
+  },
+  "a64f92b4-53cd-41f2-a8d4-2692461cc2a5": {
+    "asset": 1765904439885,
+    "meta": 1766149879573,
+    "relativePath": "Script/ui/BWEnemyUnit.ts"
+  },
+  "dab71e3f-318e-4c5d-87b8-809212525a25": {
+    "asset": 1765904439885,
+    "meta": 1766149879581,
+    "relativePath": "Script/ui/BWPlayerUnit.ts"
+  },
+  "3f6702d1-7e49-40a3-b9a1-721f7107f5a2": {
+    "asset": 1765904439920,
+    "meta": 1766149879587,
+    "relativePath": "Script/ui/BWUnit.ts"
+  },
+  "35fed284-13b3-4963-b1e3-a0922c4b05b7": {
+    "asset": 1765904439886,
+    "meta": 1766149879608,
+    "relativePath": "Script/ui/EditPanel.ts"
+  },
+  "ff16c0cc-e9ba-40d1-8554-c79a5872be94": {
+    "asset": 1766061421446,
+    "meta": 1766149879618,
+    "relativePath": "Script/ui/GameApp.ts"
+  },
+  "c9e703d9-540f-4cb1-91b9-449a90657fa9": {
+    "asset": 1765904439886,
+    "meta": 1766149879624,
+    "relativePath": "Script/ui/GameEndPanel.ts"
+  },
+  "debacc16-de2e-4247-bed1-9eaaef16dd1c": {
+    "asset": 1765904439885,
+    "meta": 1766149879638,
+    "relativePath": "Script/ui/GamePanel.ts"
+  },
+  "83594e2d-dc2b-486b-9de0-7031f09eea94": {
+    "asset": 1766126076209,
+    "meta": 1766149879652,
+    "relativePath": "Script/ui/HomeListPanel.ts"
+  },
+  "aeabfe21-671f-4d05-bd9e-6e7e5db54910": {
+    "asset": 1766066782916,
+    "meta": 1766149879663,
+    "relativePath": "Script/ui/HomePanel.ts"
+  },
+  "b24e1bdd-1ab0-4b82-9565-9ef0910203a8": {
+    "asset": 1765904439885,
+    "meta": 1766149879685,
+    "relativePath": "Script/ui/LoginPanel.ts"
+  },
+  "3860df06-350e-4efe-911a-2fc8f16799ad": {
+    "asset": 1731670281946,
+    "meta": 1766149879702,
+    "relativePath": "Script/ui/TableView.ts"
+  },
+  "d971452a-064a-43e7-af3f-052078f12162": {
+    "asset": 1765904439885,
+    "meta": 1766149879708,
+    "relativePath": "Script/ui/TipPanel.ts"
+  },
+  "201ec743-9b06-48a1-9fc3-a1177dc145d8": {
+    "asset": 1765815215790,
+    "meta": 1766149879711,
+    "relativePath": "Script/ui/UIPanel.ts"
+  },
+  "b009f4a7-66d4-4e5a-a287-42b4eff247ce": {
+    "asset": 1766127262118,
+    "meta": 1766149879711,
+    "relativePath": "Script/ui/wallet"
+  },
+  "66a7f1c3-33f1-40d9-ab91-8c53f41337d8": {
+    "asset": 1766131419465,
+    "meta": 1766149879718,
+    "relativePath": "Script/ui/wallet/ETHWalletPanel.ts"
+  },
+  "22437c34-34e1-4532-a412-87d825300d50": {
+    "asset": 1766128924359,
+    "meta": 1766149879728,
+    "relativePath": "Script/ui/wallet/ICPWalletPanel.ts"
+  },
+  "f58f74ef-29d9-47e3-b2b8-31c9e6442532": {
+    "asset": 1766130490686,
+    "meta": 1766149879741,
+    "relativePath": "Script/ui/wallet/WalletPanel.ts"
+  },
+  "ec50cb9c-d228-4b3d-8f00-a3c2771f9dcf": {
+    "asset": 1766149963570,
+    "meta": 1766149963574,
+    "relativePath": "resources/prefab/icpwalletpanel.prefab"
+  },
+  "08a3ce9a-ec15-4fdd-9074-7b59a230d5e4": {
+    "asset": 1766150883436,
+    "meta": 1766151181337,
+    "relativePath": "Script/mg/ICPManager.ts"
   }
 }

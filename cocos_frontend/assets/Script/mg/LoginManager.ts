@@ -4,6 +4,7 @@ import "./GlobalPolyfill";
 import DfinityAuthClient = require("../Lib/dfinity-auth-client");
 
 const AuthClient = (DfinityAuthClient as any).AuthClient;
+const LocalStorage = (DfinityAuthClient as any).LocalStorage;
 
 import {ECMDID} from "../CommonEnum";
 
@@ -16,6 +17,40 @@ export default class LoginManager {
     private constructor() {}
 
     private authClient: any = null;
+
+    private getBrowserLocalStorage(): Storage | null {
+        try {
+            const g: any = (typeof globalThis !== 'undefined')
+                ? globalThis
+                : (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {}));
+            return (g && g.localStorage) ? (g.localStorage as Storage) : null;
+        } catch {
+            return null;
+        }
+    }
+
+    private clearAuthClientStorage(): void {
+        const ls = this.getBrowserLocalStorage();
+        if (!ls) return;
+
+        // auth-client 的默认 LocalStorage 前缀是 "ic-"，key 为 identity/delegation/iv
+        const keys = [
+            'ic-identity',
+            'ic-delegation',
+            'ic-iv',
+            // 兼容某些环境/旧版本未加前缀的情况
+            'identity',
+            'delegation',
+            'iv',
+        ];
+        for (let i = 0; i < keys.length; i++) {
+            try {
+                ls.removeItem(keys[i]);
+            } catch {
+                // ignore
+            }
+        }
+    }
 
     Init() {
         // void this.ensureAuthClient().catch(() => {
@@ -38,12 +73,27 @@ export default class LoginManager {
 
     public async ensureAuthClient(): Promise<any> {
         if (this.authClient) return this.authClient;
-        
-        const client = await AuthClient.create();
-        if (!client) throw new Error('AuthClient creation failed');
-        this.authClient = client;
 
-        return this.authClient;
+        // Cocos 环境下 IndexedDB 可能不可用/数据损坏；强制使用 LocalStorage 更稳。
+        try {
+            const client = await AuthClient.create({ storage: new LocalStorage() });
+            if (!client) throw new Error('AuthClient creation failed');
+            this.authClient = client;
+            return this.authClient;
+        } catch (e: any) {
+            const msg = (e && e.message) ? String(e.message) : String(e);
+            // 常见：历史缓存 delegation/identity 损坏导致 DelegationChain.fromJSON 报错
+            if (msg.indexOf('Invalid hexadecimal string') >= 0 || msg.indexOf('DelegationChain') >= 0) {
+                this.clearAuthClientStorage();
+                const client = await AuthClient.create({ storage: new LocalStorage() });
+                if (!client) throw new Error('AuthClient creation failed');
+                this.authClient = client;
+                return this.authClient;
+            }
+            throw e;
+        }
+
+        // unreachable
     }
 
     async isAuthenticated(): Promise<boolean> {

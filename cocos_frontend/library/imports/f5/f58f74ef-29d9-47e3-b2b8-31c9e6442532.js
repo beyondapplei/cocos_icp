@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, 'f58f7TvKdlH47K4McnmRCUy', 'WalletPanel');
-// Script/ui/WalletPanel.ts
+// Script/ui/wallet/WalletPanel.ts
 
 "use strict";
 var __extends = (this && this.__extends) || (function () {
@@ -23,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var UIPanel_1 = require("./UIPanel");
-var TableView_1 = require("./TableView");
-var ResManager_1 = require("../ResManager");
+var UIPanel_1 = require("../UIPanel");
+var UIManager_1 = require("../../UIManager");
+var CommonEnum_1 = require("../../CommonEnum");
+var TableView_1 = require("../TableView");
+var ResManager_1 = require("../../ResManager");
 var WalletData = /** @class */ (function (_super) {
     __extends(WalletData, _super);
     function WalletData() {
@@ -56,14 +58,14 @@ var WalletCellData = /** @class */ (function () {
     return WalletCellData;
 }());
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
-var HomeListPanel = /** @class */ (function (_super) {
-    __extends(HomeListPanel, _super);
-    function HomeListPanel() {
+var WalletPanel = /** @class */ (function (_super) {
+    __extends(WalletPanel, _super);
+    function WalletPanel() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.vListData = [];
         return _this;
     }
-    HomeListPanel.prototype.onLoad = function () {
+    WalletPanel.prototype.onLoad = function () {
         this.nOrderState = 0;
         this.nIndexReq = 0;
         // let btnBeginNode = this.node.getChildByName('btnback');
@@ -74,15 +76,15 @@ var HomeListPanel = /** @class */ (function (_super) {
         this.tableview.setRefreshCellCallBack(this, this.refreshCell, this.getCellHeight);
         this.tableview.nodeElement.active = false;
     };
-    HomeListPanel.prototype.start = function () {
+    WalletPanel.prototype.start = function () {
     };
-    HomeListPanel.prototype.RefreshUI = function () {
+    WalletPanel.prototype.RefreshUI = function () {
         this.tableview.reloadData(this.vListData.length);
     };
-    HomeListPanel.prototype.UpdateCurPrice = function (strSymbol, nPriceCur) {
+    WalletPanel.prototype.UpdateCurPrice = function (strSymbol, nPriceCur) {
         var mapCoinTab = ResManager_1.default.Instance.mapCoinTab;
     };
-    HomeListPanel.prototype.OnResult = function (strResponseText) {
+    WalletPanel.prototype.OnResult = function (strResponseText) {
         cc.log("OnResult");
         cc.log(strResponseText);
         var jsObj = JSON.parse(strResponseText);
@@ -90,7 +92,7 @@ var HomeListPanel = /** @class */ (function (_super) {
         var strSymbol = jsObj["result"]["asset_id_base"];
         this.UpdateCurPrice(strSymbol, nPriceCur);
     };
-    HomeListPanel.prototype.RefreshData = function () {
+    WalletPanel.prototype.RefreshData = function () {
         this.nIndexReq = 0;
         this.vListData = [];
         //for(nindex)
@@ -103,16 +105,16 @@ var HomeListPanel = /** @class */ (function (_super) {
             this.vListData.push(cellInfo);
         }
     };
-    HomeListPanel.prototype.OnOpen = function (strParam) {
+    WalletPanel.prototype.OnOpen = function (strParam) {
         this.RefreshData();
         this.RefreshUI();
     };
-    HomeListPanel.prototype.OnClose = function () {
+    WalletPanel.prototype.OnClose = function () {
     };
-    HomeListPanel.prototype.getCellHeight = function (nIndex) {
+    WalletPanel.prototype.getCellHeight = function (nIndex) {
         return 200;
     };
-    HomeListPanel.prototype.refreshCell = function (nIndex) {
+    WalletPanel.prototype.refreshCell = function (nIndex) {
         var cellData = this.tableview.dequeueCell();
         if (cellData === null) {
             cellData = new WalletData();
@@ -127,7 +129,7 @@ var HomeListPanel = /** @class */ (function (_super) {
         cellData.btnIcon.nTag = nIndex;
         return cellData;
     };
-    HomeListPanel.prototype.clickCell = function (btnIcon) {
+    WalletPanel.prototype.clickCell = function (btnIcon) {
         var nIndex = btnIcon.nTag;
         cc.log('clickcell=' + nIndex);
         var nId = this.vListData[nIndex].nId;
@@ -136,18 +138,19 @@ var HomeListPanel = /** @class */ (function (_super) {
         else if (nId === 2) {
             // UIManager.Instance.OpenPanel(EUIPanelType.GAME);
         }
+        UIManager_1.default.OpenPanel(CommonEnum_1.EUIPanelType.WALLET_ICP);
     };
-    HomeListPanel.prototype.clickBegin = function (nTag) {
+    WalletPanel.prototype.clickBegin = function (nTag) {
         cc.log('clickbegin' + nTag);
         //UIManager.Instance.OpenPanel(EUIPanelType.HOME);
     };
-    HomeListPanel.prototype.clickOrder = function (nTag) {
+    WalletPanel.prototype.clickOrder = function (nTag) {
     };
-    HomeListPanel = __decorate([
+    WalletPanel = __decorate([
         ccclass
-    ], HomeListPanel);
-    return HomeListPanel;
+    ], WalletPanel);
+    return WalletPanel;
 }(UIPanel_1.default));
-exports.default = HomeListPanel;
+exports.default = WalletPanel;
 
 cc._RF.pop();

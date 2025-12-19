@@ -7,3 +7,4 @@ nId,strName,strPrefabName,nRemove
 5,EditPanel,prefab/editpanel,1
 6,HomeListPanel,prefab/homelistpanel,1
 7,WalletPanel,prefab/walletpanel,1
+8,ICPWalletPanel,prefab/icpwalletpanel,1

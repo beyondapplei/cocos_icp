@@ -43,11 +43,46 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("./GlobalPolyfill");
 var DfinityAuthClient = require("../Lib/dfinity-auth-client");
 var AuthClient = DfinityAuthClient.AuthClient;
+var LocalStorage = DfinityAuthClient.LocalStorage;
 var DefData_1 = require("./DefData");
 var LoginManager = /** @class */ (function () {
     function LoginManager() {
         this.authClient = null;
     }
+    LoginManager.prototype.getBrowserLocalStorage = function () {
+        try {
+            var g = (typeof globalThis !== 'undefined')
+                ? globalThis
+                : (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {}));
+            return (g && g.localStorage) ? g.localStorage : null;
+        }
+        catch (_a) {
+            return null;
+        }
+    };
+    LoginManager.prototype.clearAuthClientStorage = function () {
+        var ls = this.getBrowserLocalStorage();
+        if (!ls)
+            return;
+        // auth-client 的默认 LocalStorage 前缀是 "ic-"，key 为 identity/delegation/iv
+        var keys = [
+            'ic-identity',
+            'ic-delegation',
+            'ic-iv',
+            // 兼容某些环境/旧版本未加前缀的情况
+            'identity',
+            'delegation',
+            'iv',
+        ];
+        for (var i = 0; i < keys.length; i++) {
+            try {
+                ls.removeItem(keys[i]);
+            }
+            catch (_a) {
+                // ignore
+            }
+        }
+    };
     LoginManager.prototype.Init = function () {
         // void this.ensureAuthClient().catch(() => {
         //     // UI 层自行提示；这里不抛出
@@ -66,19 +101,36 @@ var LoginManager = /** @class */ (function () {
     // }
     LoginManager.prototype.ensureAuthClient = function () {
         return __awaiter(this, void 0, Promise, function () {
-            var client;
+            var client, e_1, msg, client;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (this.authClient)
                             return [2 /*return*/, this.authClient];
-                        return [4 /*yield*/, AuthClient.create()];
+                        _a.label = 1;
                     case 1:
+                        _a.trys.push([1, 3, , 6]);
+                        return [4 /*yield*/, AuthClient.create({ storage: new LocalStorage() })];
+                    case 2:
                         client = _a.sent();
                         if (!client)
                             throw new Error('AuthClient creation failed');
                         this.authClient = client;
                         return [2 /*return*/, this.authClient];
+                    case 3:
+                        e_1 = _a.sent();
+                        msg = (e_1 && e_1.message) ? String(e_1.message) : String(e_1);
+                        if (!(msg.indexOf('Invalid hexadecimal string') >= 0 || msg.indexOf('DelegationChain') >= 0)) return [3 /*break*/, 5];
+                        this.clearAuthClientStorage();
+                        return [4 /*yield*/, AuthClient.create({ storage: new LocalStorage() })];
+                    case 4:
+                        client = _a.sent();
+                        if (!client)
+                            throw new Error('AuthClient creation failed');
+                        this.authClient = client;
+                        return [2 /*return*/, this.authClient];
+                    case 5: throw e_1;
+                    case 6: return [2 /*return*/];
                 }
             });
         });

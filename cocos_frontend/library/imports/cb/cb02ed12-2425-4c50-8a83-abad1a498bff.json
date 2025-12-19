@@ -3,5 +3,5 @@
   "_name": "uipanel",
   "_objFlags": 0,
   "_native": "",
-  "text": "number,string,string,number\r\nnId,strName,strPrefabName,nRemove\r\n1,LoginPanel,prefab/loginpanel,1\r\n2,HomePanel,prefab/homepanel,1\r\n3,GamePanel,prefab/gamepanel,1\r\n4,GameEndPanel,prefab/gameendpanel,1\r\n5,EditPanel,prefab/editpanel,1\r\n6,HomeListPanel,prefab/homelistpanel,1\r\n7,WalletPanel,prefab/walletpanel,1\r\n"
+  "text": "number,string,string,number\r\nnId,strName,strPrefabName,nRemove\r\n1,LoginPanel,prefab/loginpanel,1\r\n2,HomePanel,prefab/homepanel,1\r\n3,GamePanel,prefab/gamepanel,1\r\n4,GameEndPanel,prefab/gameendpanel,1\r\n5,EditPanel,prefab/editpanel,1\r\n6,HomeListPanel,prefab/homelistpanel,1\r\n7,WalletPanel,prefab/walletpanel,1\r\n8,ICPWalletPanel,prefab/icpwalletpanel,1\r\n"
 }

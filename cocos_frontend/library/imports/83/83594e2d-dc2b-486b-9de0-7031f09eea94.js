@@ -96,11 +96,13 @@ var HomeListPanel = /** @class */ (function (_super) {
         this.nIndexReq = 0;
         this.vListData = [];
         //for(nindex)
+        var vName = ["多链钱包", "veKeys", "游戏中心", "ZK", "wallet5", "wallet6", "wallet7", "wallet8", "wallet9", "wallet10",
+            "wallet11", "wallet12", "wallet13", "wallet14", "wallet15", "wallet16", "wallet17", "wallet18", "wallet19", "wallet20"];
         //写个循环创建20个数据
-        for (var i = 1; i <= 20; i++) {
+        for (var i = 1; i <= vName.length; i++) {
             var cellInfo = new ListCellData();
             cellInfo.nId = i;
-            cellInfo.sName = "wallet" + i;
+            cellInfo.sName = vName[i - 1];
             this.vListData.push(cellInfo);
         }
     };

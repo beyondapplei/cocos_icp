@@ -36,6 +36,7 @@ var EUIPanelType;
     EUIPanelType[EUIPanelType["EDIT"] = 5] = "EDIT";
     EUIPanelType[EUIPanelType["HOMELIST"] = 6] = "HOMELIST";
     EUIPanelType[EUIPanelType["WALLET"] = 7] = "WALLET";
+    EUIPanelType[EUIPanelType["WALLET_ICP"] = 8] = "WALLET_ICP";
 })(EUIPanelType = exports.EUIPanelType || (exports.EUIPanelType = {}));
 
 cc._RF.pop();

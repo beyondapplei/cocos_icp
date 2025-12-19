@@ -2,6 +2,7 @@
 import BackManager from "./BackManager";
 import UIManager from ".././UIManager";
 import LoginManager from "./LoginManager";
+import ICPManager from "./ICPManager";
 
 
 
@@ -14,6 +15,7 @@ export default class AppManager {
     Init(){
         LoginManager.Instance.Init();
         BackManager.Instance.Init();
+        ICPManager.Instance.Init();
         
     }
 

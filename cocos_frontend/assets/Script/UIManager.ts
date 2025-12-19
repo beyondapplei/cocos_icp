@@ -16,6 +16,7 @@ export default class UIManager {
     
     public static ShowTip(strTip: string)
     {
+        cc.log('UIManager ShowTip='+strTip);
         UIManager.Instance.showtip(strTip);
     }
 
