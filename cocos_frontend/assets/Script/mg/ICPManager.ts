@@ -3,18 +3,13 @@ import UIManager from "../UIManager";
 import LoginManager from "./LoginManager";
 import { DFX_NETWORK, LEAGER_ICP_ID_LOCAL } from "./DefData";
 
-//可以用
-import { Principal } from "@dfinity/principal";
+// Revert to bundled file
+const DfinityAgent = (window as any).DfinityAgent;
+const Principal = DfinityAgent ? DfinityAgent.Principal : null;
+const Actor = DfinityAgent ? DfinityAgent.Actor : null;
+const HttpAgent = DfinityAgent ? DfinityAgent.HttpAgent : null;
 
-//不能用
-// import { Actor, HttpAgent } from "@dfinity/agent";
-// import { idlFactory } from "./icp_ledger.did";
-
-import DfinityAgent = require("../Lib/dfinity-agent");
 import { idlFactory } from "./icp_ledger.did";
-const Actor = (DfinityAgent as any).Actor;
-const HttpAgent = (DfinityAgent as any).HttpAgent;
-
 
 
 

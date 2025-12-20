@@ -1,9 +1,10 @@
 
 //import EventManager from "../EventManager";
 
-// import DfinityAuthClient = require("../Lib/dfinity-auth-client");
-const AuthClient = (window as any).DfinityAuthClient ? (window as any).DfinityAuthClient.AuthClient : null;
-const LocalStorage = (window as any).DfinityAuthClient ? (window as any).DfinityAuthClient.LocalStorage : null;
+const globalAuth = (window as any).DfinityAuthClient;
+console.log("LoginManager: globalAuth is", globalAuth);
+const AuthClient = globalAuth ? globalAuth.AuthClient : null;
+const LocalStorage = globalAuth ? globalAuth.LocalStorage : null;
 
 //import {ECMDID} from "../CommonEnum";
 
@@ -74,6 +75,11 @@ export default class LoginManager {
 
     public async ensureAuthClient(): Promise<any> {
         if (this.authClient) return this.authClient;
+
+        if (!AuthClient) {
+            console.error("LoginManager: AuthClient class is missing! Check dfinity-auth-client.js");
+            return null;
+        }
 
         // Cocos 环境下 IndexedDB 可能不可用/数据损坏；强制使用 LocalStorage 更稳。
         try {

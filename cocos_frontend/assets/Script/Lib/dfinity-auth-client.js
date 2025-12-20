@@ -1,41 +1,12 @@
 var DfinityAuthClient = (() => {
   var __defProp = Object.defineProperty;
-  var __defProps = Object.defineProperties;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
   var __getOwnPropNames = Object.getOwnPropertyNames;
-  var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
-  var __propIsEnum = Object.prototype.propertyIsEnumerable;
   var __typeError = (msg) => {
     throw TypeError(msg);
   };
-  var __pow = Math.pow;
   var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-  var __spreadValues = (a, b) => {
-    for (var prop in b || (b = {}))
-      if (__hasOwnProp.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
-    if (__getOwnPropSymbols)
-      for (var prop of __getOwnPropSymbols(b)) {
-        if (__propIsEnum.call(b, prop))
-          __defNormalProp(a, prop, b[prop]);
-      }
-    return a;
-  };
-  var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-  var __objRest = (source, exclude) => {
-    var target = {};
-    for (var prop in source)
-      if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-        target[prop] = source[prop];
-    if (source != null && __getOwnPropSymbols)
-      for (var prop of __getOwnPropSymbols(source)) {
-        if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-          target[prop] = source[prop];
-      }
-    return target;
-  };
   var __export = (target, all) => {
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
@@ -54,37 +25,11 @@ var DfinityAuthClient = (() => {
   var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
   var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
   var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
-  var __async = (__this, __arguments, generator) => {
-    return new Promise((resolve, reject) => {
-      var fulfilled = (value) => {
-        try {
-          step(generator.next(value));
-        } catch (e) {
-          reject(e);
-        }
-      };
-      var rejected = (value) => {
-        try {
-          step(generator.throw(value));
-        } catch (e) {
-          reject(e);
-        }
-      };
-      var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-      step((generator = generator.apply(__this, __arguments)).next());
-    });
-  };
 
-  // node_modules/@icp-sdk/auth/dist/esm/client/index.js
-  var index_exports = {};
-  __export(index_exports, {
+  // assets/Script/Lib/bundle_auth_entry.js
+  var bundle_auth_entry_exports = {};
+  __export(bundle_auth_entry_exports, {
     AuthClient: () => AuthClient,
-    ERROR_USER_INTERRUPT: () => ERROR_USER_INTERRUPT,
-    IdbKeyVal: () => IdbKeyVal,
-    IdbStorage: () => IdbStorage,
-    IdleManager: () => IdleManager,
-    KEY_STORAGE_DELEGATION: () => KEY_STORAGE_DELEGATION,
-    KEY_STORAGE_KEY: () => KEY_STORAGE_KEY,
     LocalStorage: () => LocalStorage
   });
 
@@ -701,7 +646,7 @@ var DfinityAuthClient = (() => {
   ]);
 
   // node_modules/@noble/hashes/esm/_u64.js
-  var U32_MASK64 = /* @__PURE__ */ BigInt(__pow(2, 32) - 1);
+  var U32_MASK64 = /* @__PURE__ */ BigInt(2 ** 32 - 1);
   var _32n = /* @__PURE__ */ BigInt(32);
   function fromBig(n, le = false) {
     if (le)
@@ -726,14 +671,14 @@ var DfinityAuthClient = (() => {
   var rotrBL = (h, l, s) => h >>> s - 32 | l << 64 - s;
   function add(Ah, Al, Bh, Bl) {
     const l = (Al >>> 0) + (Bl >>> 0);
-    return { h: Ah + Bh + (l / __pow(2, 32) | 0) | 0, l: l | 0 };
+    return { h: Ah + Bh + (l / 2 ** 32 | 0) | 0, l: l | 0 };
   }
   var add3L = (Al, Bl, Cl) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0);
-  var add3H = (low, Ah, Bh, Ch) => Ah + Bh + Ch + (low / __pow(2, 32) | 0) | 0;
+  var add3H = (low, Ah, Bh, Ch) => Ah + Bh + Ch + (low / 2 ** 32 | 0) | 0;
   var add4L = (Al, Bl, Cl, Dl) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0) + (Dl >>> 0);
-  var add4H = (low, Ah, Bh, Ch, Dh) => Ah + Bh + Ch + Dh + (low / __pow(2, 32) | 0) | 0;
+  var add4H = (low, Ah, Bh, Ch, Dh) => Ah + Bh + Ch + Dh + (low / 2 ** 32 | 0) | 0;
   var add5L = (Al, Bl, Cl, Dl, El) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0) + (Dl >>> 0) + (El >>> 0);
-  var add5H = (low, Ah, Bh, Ch, Dh, Eh) => Ah + Bh + Ch + Dh + Eh + (low / __pow(2, 32) | 0) | 0;
+  var add5H = (low, Ah, Bh, Ch, Dh, Eh) => Ah + Bh + Ch + Dh + Eh + (low / 2 ** 32 | 0) | 0;
 
   // node_modules/@noble/hashes/esm/sha2.js
   var SHA256_K = /* @__PURE__ */ Uint32Array.from([
@@ -1368,11 +1313,11 @@ Call context:
      * @param buffer an optional buffer to start with
      * @param length an optional amount of bytes to use for the length.
      */
-    constructor(buffer, length = (buffer == null ? void 0 : buffer.byteLength) || 0) {
+    constructor(buffer, length = buffer?.byteLength || 0) {
       if (buffer && !(buffer instanceof Uint8Array)) {
         try {
           buffer = uint8FromBufLike(buffer);
-        } catch (e) {
+        } catch {
           throw new Error("Buffer must be a Uint8Array");
         }
       }
@@ -1608,30 +1553,28 @@ Call context:
      * anything, but must be serializable to CBOR.
      * @param request - internet computer request to transform
      */
-    transformRequest(request) {
-      return __async(this, null, function* () {
-        const _a = request, { body } = _a, fields = __objRest(_a, ["body"]);
-        const requestId = requestIdOf(body);
-        return __spreadProps(__spreadValues({}, fields), {
-          body: {
-            content: body,
-            sender_pubkey: this.getPublicKey().toDer(),
-            sender_sig: yield this.sign(concatBytes(IC_REQUEST_DOMAIN_SEPARATOR, requestId))
-          }
-        });
-      });
+    async transformRequest(request) {
+      const { body, ...fields } = request;
+      const requestId = requestIdOf(body);
+      return {
+        ...fields,
+        body: {
+          content: body,
+          sender_pubkey: this.getPublicKey().toDer(),
+          sender_sig: await this.sign(concatBytes(IC_REQUEST_DOMAIN_SEPARATOR, requestId))
+        }
+      };
     }
   };
   var AnonymousIdentity = class {
     getPrincipal() {
       return Principal.anonymous();
     }
-    transformRequest(request) {
-      return __async(this, null, function* () {
-        return __spreadProps(__spreadValues({}, request), {
-          body: { content: request.body }
-        });
-      });
+    async transformRequest(request) {
+      return {
+        ...request,
+        body: { content: request.body }
+      };
     }
   };
 
@@ -1647,7 +1590,7 @@ Call context:
   }
   function _abytes2(value, length, title = "") {
     const bytes = isBytes(value);
-    const len = value == null ? void 0 : value.length;
+    const len = value?.length;
     const needsLen = length !== void 0;
     if (!bytes || needsLen && len !== length) {
       const prefix = title && `"${title}" `;
@@ -2092,8 +2035,8 @@ Call context:
   function calcWOpts(W, scalarBits) {
     validateW(W, scalarBits);
     const windows = Math.ceil(scalarBits / W) + 1;
-    const windowSize = __pow(2, W - 1);
-    const maxNumber = __pow(2, W);
+    const windowSize = 2 ** (W - 1);
+    const maxNumber = 2 ** W;
     const mask = bitMask(W);
     const shiftBy = BigInt(W);
     return { windows, windowSize, mask, maxNumber, shiftBy };
@@ -2951,7 +2894,8 @@ Call context:
   }
   var Fp = /* @__PURE__ */ (() => Field(ed25519_CURVE.p, { isLE: true }))();
   var Fn = /* @__PURE__ */ (() => Field(ed25519_CURVE.n, { isLE: true }))();
-  var ed25519Defaults = /* @__PURE__ */ (() => __spreadProps(__spreadValues({}, ed25519_CURVE), {
+  var ed25519Defaults = /* @__PURE__ */ (() => ({
+    ...ed25519_CURVE,
     Fp,
     hash: sha512,
     adjustScalarBytes,
@@ -3407,15 +3351,13 @@ Call context:
      * Signs a blob of data, with this identity's private key.
      * @param challenge - challenge to sign with this identity's secretKey, producing a signature
      */
-    sign(challenge) {
-      return __async(this, null, function* () {
-        const signature = ed25519.sign(challenge, __privateGet(this, _privateKey).slice(0, 32));
-        Object.defineProperty(signature, "__signature__", {
-          enumerable: false,
-          value: void 0
-        });
-        return signature;
+    async sign(challenge) {
+      const signature = ed25519.sign(challenge, __privateGet(this, _privateKey).slice(0, 32));
+      Object.defineProperty(signature, "__signature__", {
+        enumerable: false,
+        value: void 0
       });
+      return signature;
     }
     /**
      * Verify
@@ -3467,20 +3409,18 @@ Call context:
      * @param {CryptoKeyOptions['subtleCrypto']} options.subtleCrypto interface
      * @returns a {@link ECDSAKeyIdentity}
      */
-    static generate(options) {
-      return __async(this, null, function* () {
-        const { extractable = false, keyUsages = ["sign", "verify"], subtleCrypto } = options != null ? options : {};
-        const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
-        const keyPair = yield effectiveCrypto.generateKey({
-          name: "ECDSA",
-          namedCurve: "P-256"
-        }, extractable, keyUsages);
-        const derKey = uint8FromBufLike(yield effectiveCrypto.exportKey("spki", keyPair.publicKey));
-        Object.assign(derKey, {
-          __derEncodedPublicKey__: void 0
-        });
-        return new this(keyPair, derKey, effectiveCrypto);
+    static async generate(options) {
+      const { extractable = false, keyUsages = ["sign", "verify"], subtleCrypto } = options ?? {};
+      const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
+      const keyPair = await effectiveCrypto.generateKey({
+        name: "ECDSA",
+        namedCurve: "P-256"
+      }, extractable, keyUsages);
+      const derKey = uint8FromBufLike(await effectiveCrypto.exportKey("spki", keyPair.publicKey));
+      Object.assign(derKey, {
+        __derEncodedPublicKey__: void 0
       });
+      return new this(keyPair, derKey, effectiveCrypto);
     }
     /**
      * generates an identity from a public and private key. Please ensure that you are generating these keys securely and protect the user's private key
@@ -3488,15 +3428,13 @@ Call context:
      * @param subtleCrypto - a SubtleCrypto interface in case one is not available globally
      * @returns an {@link ECDSAKeyIdentity}
      */
-    static fromKeyPair(keyPair, subtleCrypto) {
-      return __async(this, null, function* () {
-        const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
-        const derKey = uint8FromBufLike(yield effectiveCrypto.exportKey("spki", keyPair.publicKey));
-        Object.assign(derKey, {
-          __derEncodedPublicKey__: void 0
-        });
-        return new _ECDSAKeyIdentity(keyPair, derKey, effectiveCrypto);
+    static async fromKeyPair(keyPair, subtleCrypto) {
+      const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
+      const derKey = uint8FromBufLike(await effectiveCrypto.exportKey("spki", keyPair.publicKey));
+      Object.assign(derKey, {
+        __derEncodedPublicKey__: void 0
       });
+      return new _ECDSAKeyIdentity(keyPair, derKey, effectiveCrypto);
     }
     // `fromKeyPair` and `generate` should be used for instantiation, not this constructor.
     constructor(keyPair, derKey, subtleCrypto) {
@@ -3529,18 +3467,16 @@ Call context:
      * @param {Uint8Array} challenge - challenge to sign with this identity's secretKey, producing a signature
      * @returns {Promise<Signature>} signature
      */
-    sign(challenge) {
-      return __async(this, null, function* () {
-        const params = {
-          name: "ECDSA",
-          hash: { name: "SHA-256" }
-        };
-        const signature = uint8FromBufLike(yield this._subtleCrypto.sign(params, this._keyPair.privateKey, challenge));
-        Object.assign(signature, {
-          __signature__: void 0
-        });
-        return signature;
+    async sign(challenge) {
+      const params = {
+        name: "ECDSA",
+        hash: { name: "SHA-256" }
+      };
+      const signature = uint8FromBufLike(await this._subtleCrypto.sign(params, this._keyPair.privateKey, challenge));
+      Object.assign(signature, {
+        __signature__: void 0
       });
+      return signature;
     }
   };
 
@@ -3613,38 +3549,38 @@ Call context:
       this.targets = targets;
     }
     toCborValue() {
-      return __spreadValues({
+      return {
         pubkey: this.pubkey,
-        expiration: this.expiration
-      }, this.targets && {
-        targets: this.targets
-      });
+        expiration: this.expiration,
+        ...this.targets && {
+          targets: this.targets
+        }
+      };
     }
     toJSON() {
-      return __spreadValues({
+      return {
         expiration: this.expiration.toString(16),
-        pubkey: safeBytesToHex(this.pubkey)
-      }, this.targets && { targets: this.targets.map((p) => p.toHex()) });
+        pubkey: safeBytesToHex(this.pubkey),
+        ...this.targets && { targets: this.targets.map((p) => p.toHex()) }
+      };
     }
   };
-  function _createSingleDelegation(from, to, expiration, targets) {
-    return __async(this, null, function* () {
-      const delegation = new Delegation(
-        to.toDer(),
-        BigInt(+expiration) * BigInt(1e6),
-        // In nanoseconds.
-        targets
-      );
-      const challenge = new Uint8Array([
-        ...IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR,
-        ...new Uint8Array(requestIdOf(__spreadValues({}, delegation)))
-      ]);
-      const signature = yield from.sign(challenge);
-      return {
-        delegation,
-        signature
-      };
-    });
+  async function _createSingleDelegation(from, to, expiration, targets) {
+    const delegation = new Delegation(
+      to.toDer(),
+      BigInt(+expiration) * BigInt(1e6),
+      // In nanoseconds.
+      targets
+    );
+    const challenge = new Uint8Array([
+      ...IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR,
+      ...new Uint8Array(requestIdOf({ ...delegation }))
+    ]);
+    const signature = await from.sign(challenge);
+    return {
+      delegation,
+      signature
+    };
   }
   var DelegationChain = class _DelegationChain {
     /**
@@ -3676,12 +3612,9 @@ Call context:
      * @param options.previous - Another DelegationChain that this chain should start with.
      * @param options.targets - targets that scope the delegation (e.g. Canister Principals)
      */
-    static create(_0, _1) {
-      return __async(this, arguments, function* (from, to, expiration = new Date(Date.now() + 15 * 60 * 1e3), options = {}) {
-        var _a, _b;
-        const delegation = yield _createSingleDelegation(from, to, expiration, options.targets);
-        return new _DelegationChain([...((_a = options.previous) == null ? void 0 : _a.delegations) || [], delegation], ((_b = options.previous) == null ? void 0 : _b.publicKey) || from.getPublicKey().toDer());
-      });
+    static async create(from, to, expiration = new Date(Date.now() + 15 * 60 * 1e3), options = {}) {
+      const delegation = await _createSingleDelegation(from, to, expiration, options.targets);
+      return new _DelegationChain([...options.previous?.delegations || [], delegation], options.previous?.publicKey || from.getPublicKey().toDer());
     }
     /**
      * Creates a DelegationChain object from a JSON string.
@@ -3733,12 +3666,13 @@ Call context:
           const { delegation, signature } = signedDelegation;
           const { targets } = delegation;
           return {
-            delegation: __spreadValues({
+            delegation: {
               expiration: delegation.expiration.toString(16),
-              pubkey: safeBytesToHex(delegation.pubkey)
-            }, targets && {
-              targets: targets.map((t) => t.toHex())
-            }),
+              pubkey: safeBytesToHex(delegation.pubkey),
+              ...targets && {
+                targets: targets.map((t) => t.toHex())
+              }
+            },
             signature: safeBytesToHex(signature)
           };
         }),
@@ -3772,19 +3706,18 @@ Call context:
     sign(blob) {
       return this._inner.sign(blob);
     }
-    transformRequest(request) {
-      return __async(this, null, function* () {
-        const _a = request, { body } = _a, fields = __objRest(_a, ["body"]);
-        const requestId = yield requestIdOf(body);
-        return __spreadProps(__spreadValues({}, fields), {
-          body: {
-            content: body,
-            sender_sig: yield this.sign(new Uint8Array([...IC_REQUEST_DOMAIN_SEPARATOR, ...new Uint8Array(requestId)])),
-            sender_delegation: this._delegation.delegations,
-            sender_pubkey: this._delegation.publicKey
-          }
-        });
-      });
+    async transformRequest(request) {
+      const { body, ...fields } = request;
+      const requestId = await requestIdOf(body);
+      return {
+        ...fields,
+        body: {
+          content: body,
+          sender_sig: await this.sign(new Uint8Array([...IC_REQUEST_DOMAIN_SEPARATOR, ...new Uint8Array(requestId)])),
+          sender_delegation: this._delegation.delegations,
+          sender_pubkey: this._delegation.publicKey
+        }
+      };
     }
   };
   var _delegation;
@@ -3818,7 +3751,7 @@ Call context:
       }
     }
     const scopes = [];
-    const maybeScope = checks == null ? void 0 : checks.scope;
+    const maybeScope = checks?.scope;
     if (maybeScope) {
       if (Array.isArray(maybeScope)) {
         scopes.push(...maybeScope.map((s) => typeof s === "string" ? Principal.fromText(s) : s));
@@ -3858,7 +3791,6 @@ Call context:
       __publicField(this, "callbacks", []);
       __publicField(this, "idleTimeout", 10 * 60 * 1e3);
       __publicField(this, "timeoutID");
-      var _a;
       const { onIdle, idleTimeout = 10 * 60 * 1e3 } = options || {};
       this.callbacks = onIdle ? [onIdle] : [];
       this.idleTimeout = idleTimeout;
@@ -3879,8 +3811,8 @@ Call context:
           timeout = window.setTimeout(later, wait);
         };
       };
-      if (options == null ? void 0 : options.captureScroll) {
-        const scroll = debounce(_resetTimer, (_a = options == null ? void 0 : options.scrollDebounce) != null ? _a : 100);
+      if (options?.captureScroll) {
+        const scroll = debounce(_resetTimer, options?.scrollDebounce ?? 100);
         window.addEventListener("scroll", scroll, true);
       }
       _resetTimer();
@@ -4115,22 +4047,21 @@ Call context:
     ) {
       return;
     }
-    const method = function(storeName, ...args) {
-      return __async(this, null, function* () {
-        const tx = this.transaction(storeName, isWrite ? "readwrite" : "readonly");
-        let target2 = tx.store;
-        if (useIndex)
-          target2 = target2.index(args.shift());
-        return (yield Promise.all([
-          target2[targetFuncName](...args),
-          isWrite && tx.done
-        ]))[0];
-      });
+    const method = async function(storeName, ...args) {
+      const tx = this.transaction(storeName, isWrite ? "readwrite" : "readonly");
+      let target2 = tx.store;
+      if (useIndex)
+        target2 = target2.index(args.shift());
+      return (await Promise.all([
+        target2[targetFuncName](...args),
+        isWrite && tx.done
+      ]))[0];
     };
     cachedMethods.set(prop, method);
     return method;
   }
-  replaceTraps((oldTraps) => __spreadProps(__spreadValues({}, oldTraps), {
+  replaceTraps((oldTraps) => ({
+    ...oldTraps,
     get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
     has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop)
   }));
@@ -4138,13 +4069,12 @@ Call context:
   // node_modules/@icp-sdk/auth/dist/esm/client/db.js
   var AUTH_DB_NAME = "auth-client-db";
   var OBJECT_STORE_NAME = "ic-keyval";
-  var _openDbStore = (..._0) => __async(null, [..._0], function* (dbName = AUTH_DB_NAME, storeName = OBJECT_STORE_NAME, version) {
-    var _a;
-    if ((_a = globalThis.localStorage) == null ? void 0 : _a.getItem(KEY_STORAGE_DELEGATION)) {
+  var _openDbStore = async (dbName = AUTH_DB_NAME, storeName = OBJECT_STORE_NAME, version) => {
+    if (globalThis.localStorage?.getItem(KEY_STORAGE_DELEGATION)) {
       globalThis.localStorage.removeItem(KEY_STORAGE_DELEGATION);
       globalThis.localStorage.removeItem(KEY_STORAGE_KEY);
     }
-    return yield openDB(dbName, version, {
+    return await openDB(dbName, version, {
       upgrade: (database) => {
         if (database.objectStoreNames.contains(storeName)) {
           database.clear(storeName);
@@ -4152,21 +4082,15 @@ Call context:
         database.createObjectStore(storeName);
       }
     });
-  });
-  function _getValue(db, storeName, key) {
-    return __async(this, null, function* () {
-      return yield db.get(storeName, key);
-    });
+  };
+  async function _getValue(db, storeName, key) {
+    return await db.get(storeName, key);
   }
-  function _setValue(db, storeName, key, value) {
-    return __async(this, null, function* () {
-      return yield db.put(storeName, value, key);
-    });
+  async function _setValue(db, storeName, key, value) {
+    return await db.put(storeName, value, key);
   }
-  function _removeValue(db, storeName, key) {
-    return __async(this, null, function* () {
-      return yield db.delete(storeName, key);
-    });
+  async function _removeValue(db, storeName, key) {
+    return await db.delete(storeName, key);
   }
   var IdbKeyVal = class _IdbKeyVal {
     // Do not use - instead prefer create
@@ -4182,16 +4106,14 @@ Call context:
      * @default
      * @param {DBCreateOptions['version']} options.version version of the database. Increment to safely upgrade
      */
-    static create(options) {
-      return __async(this, null, function* () {
-        const {
-          dbName = AUTH_DB_NAME,
-          storeName = OBJECT_STORE_NAME,
-          version = DB_VERSION
-        } = options != null ? options : {};
-        const db = yield _openDbStore(dbName, storeName, version);
-        return new _IdbKeyVal(db, storeName);
-      });
+    static async create(options) {
+      const {
+        dbName = AUTH_DB_NAME,
+        storeName = OBJECT_STORE_NAME,
+        version = DB_VERSION
+      } = options ?? {};
+      const db = await _openDbStore(dbName, storeName, version);
+      return new _IdbKeyVal(db, storeName);
     }
     /**
      * Basic setter
@@ -4199,10 +4121,8 @@ Call context:
      * @param value value to set
      * @returns void
      */
-    set(key, value) {
-      return __async(this, null, function* () {
-        return yield _setValue(this._db, this._storeName, key, value);
-      });
+    async set(key, value) {
+      return await _setValue(this._db, this._storeName, key, value);
     }
     /**
      * Basic getter
@@ -4212,21 +4132,16 @@ Call context:
      * @example
      * await get<string>('exampleKey') -> 'exampleValue'
      */
-    get(key) {
-      return __async(this, null, function* () {
-        var _a;
-        return (_a = yield _getValue(this._db, this._storeName, key)) != null ? _a : null;
-      });
+    async get(key) {
+      return await _getValue(this._db, this._storeName, key) ?? null;
     }
     /**
      * Remove a key
      * @param key {@link IDBValidKey}
      * @returns void
      */
-    remove(key) {
-      return __async(this, null, function* () {
-        return yield _removeValue(this._db, this._storeName, key);
-      });
+    async remove(key) {
+      return await _removeValue(this._db, this._storeName, key);
     }
   };
 
@@ -4278,7 +4193,7 @@ Call context:
       __privateAdd(this, _options);
       // Initializes a KeyVal on first request
       __publicField(this, "initializedDb");
-      __privateSet(this, _options, options != null ? options : {});
+      __privateSet(this, _options, options ?? {});
     }
     get _db() {
       return new Promise((resolve, reject) => {
@@ -4292,23 +4207,17 @@ Call context:
         }).catch(reject);
       });
     }
-    get(key) {
-      return __async(this, null, function* () {
-        const db = yield this._db;
-        return yield db.get(key);
-      });
+    async get(key) {
+      const db = await this._db;
+      return await db.get(key);
     }
-    set(key, value) {
-      return __async(this, null, function* () {
-        const db = yield this._db;
-        yield db.set(key, value);
-      });
+    async set(key, value) {
+      const db = await this._db;
+      await db.set(key, value);
     }
-    remove(key) {
-      return __async(this, null, function* () {
-        const db = yield this._db;
-        yield db.remove(key);
-      });
+    async remove(key) {
+      const db = await this._db;
+      await db.remove(key);
     }
   };
   _options = new WeakMap();
@@ -4355,160 +4264,151 @@ Call context:
      *   }
      * })
      */
-    static create() {
-      return __async(this, arguments, function* (options = {}) {
-        var _a, _b, _c;
-        const storage = (_a = options.storage) != null ? _a : new IdbStorage();
-        const keyType = (_b = options.keyType) != null ? _b : ECDSA_KEY_LABEL;
-        let key = null;
-        if (options.identity) {
-          key = options.identity;
-        } else {
-          let maybeIdentityStorage = yield storage.get(KEY_STORAGE_KEY);
-          if (!maybeIdentityStorage) {
-            try {
-              const fallbackLocalStorage = new LocalStorage();
-              const localChain = yield fallbackLocalStorage.get(KEY_STORAGE_DELEGATION);
-              const localKey = yield fallbackLocalStorage.get(KEY_STORAGE_KEY);
-              if (localChain && localKey && keyType === ECDSA_KEY_LABEL) {
-                console.log("Discovered an identity stored in localstorage. Migrating to IndexedDB");
-                yield storage.set(KEY_STORAGE_DELEGATION, localChain);
-                yield storage.set(KEY_STORAGE_KEY, localKey);
-                maybeIdentityStorage = localChain;
-                yield fallbackLocalStorage.remove(KEY_STORAGE_DELEGATION);
-                yield fallbackLocalStorage.remove(KEY_STORAGE_KEY);
-              }
-            } catch (error) {
-              console.error(`error while attempting to recover localstorage: ${error}`);
-            }
-          }
-          if (maybeIdentityStorage) {
-            try {
-              if (typeof maybeIdentityStorage === "object") {
-                if (keyType === ED25519_KEY_LABEL && typeof maybeIdentityStorage === "string") {
-                  key = Ed25519KeyIdentity.fromJSON(maybeIdentityStorage);
-                } else {
-                  key = yield ECDSAKeyIdentity.fromKeyPair(maybeIdentityStorage);
-                }
-              } else if (typeof maybeIdentityStorage === "string") {
-                key = Ed25519KeyIdentity.fromJSON(maybeIdentityStorage);
-              }
-            } catch (e) {
-            }
-          }
-        }
-        let identity = new AnonymousIdentity();
-        let chain = null;
-        if (key) {
+    static async create(options = {}) {
+      const storage = options.storage ?? new IdbStorage();
+      const keyType = options.keyType ?? ECDSA_KEY_LABEL;
+      let key = null;
+      if (options.identity) {
+        key = options.identity;
+      } else {
+        let maybeIdentityStorage = await storage.get(KEY_STORAGE_KEY);
+        if (!maybeIdentityStorage) {
           try {
-            const chainStorage = yield storage.get(KEY_STORAGE_DELEGATION);
-            if (typeof chainStorage === "object" && chainStorage !== null) {
-              throw new Error(
-                "Delegation chain is incorrectly stored. A delegation chain should be stored as a string."
-              );
+            const fallbackLocalStorage = new LocalStorage();
+            const localChain = await fallbackLocalStorage.get(KEY_STORAGE_DELEGATION);
+            const localKey = await fallbackLocalStorage.get(KEY_STORAGE_KEY);
+            if (localChain && localKey && keyType === ECDSA_KEY_LABEL) {
+              console.log("Discovered an identity stored in localstorage. Migrating to IndexedDB");
+              await storage.set(KEY_STORAGE_DELEGATION, localChain);
+              await storage.set(KEY_STORAGE_KEY, localKey);
+              maybeIdentityStorage = localChain;
+              await fallbackLocalStorage.remove(KEY_STORAGE_DELEGATION);
+              await fallbackLocalStorage.remove(KEY_STORAGE_KEY);
             }
-            if (options.identity) {
-              identity = options.identity;
-            } else if (chainStorage) {
-              chain = DelegationChain.fromJSON(chainStorage);
-              if (!isDelegationValid(chain)) {
-                yield _deleteStorage(storage);
-                key = null;
+          } catch (error) {
+            console.error(`error while attempting to recover localstorage: ${error}`);
+          }
+        }
+        if (maybeIdentityStorage) {
+          try {
+            if (typeof maybeIdentityStorage === "object") {
+              if (keyType === ED25519_KEY_LABEL && typeof maybeIdentityStorage === "string") {
+                key = Ed25519KeyIdentity.fromJSON(maybeIdentityStorage);
               } else {
-                if ("toDer" in key) {
-                  identity = PartialDelegationIdentity.fromDelegation(key, chain);
-                } else {
-                  identity = DelegationIdentity.fromDelegation(key, chain);
-                }
+                key = await ECDSAKeyIdentity.fromKeyPair(maybeIdentityStorage);
+              }
+            } else if (typeof maybeIdentityStorage === "string") {
+              key = Ed25519KeyIdentity.fromJSON(maybeIdentityStorage);
+            }
+          } catch {
+          }
+        }
+      }
+      let identity = new AnonymousIdentity();
+      let chain = null;
+      if (key) {
+        try {
+          const chainStorage = await storage.get(KEY_STORAGE_DELEGATION);
+          if (typeof chainStorage === "object" && chainStorage !== null) {
+            throw new Error(
+              "Delegation chain is incorrectly stored. A delegation chain should be stored as a string."
+            );
+          }
+          if (options.identity) {
+            identity = options.identity;
+          } else if (chainStorage) {
+            chain = DelegationChain.fromJSON(chainStorage);
+            if (!isDelegationValid(chain)) {
+              await _deleteStorage(storage);
+              key = null;
+            } else {
+              if ("toDer" in key) {
+                identity = PartialDelegationIdentity.fromDelegation(key, chain);
+              } else {
+                identity = DelegationIdentity.fromDelegation(key, chain);
               }
             }
-          } catch (e) {
-            console.error(e);
-            yield _deleteStorage(storage);
-            key = null;
           }
+        } catch (e) {
+          console.error(e);
+          await _deleteStorage(storage);
+          key = null;
         }
-        let idleManager;
-        if ((_c = options.idleOptions) == null ? void 0 : _c.disableIdle) {
-          idleManager = void 0;
-        } else if (chain || options.identity) {
-          idleManager = IdleManager.create(options.idleOptions);
-        }
-        if (!key) {
-          if (keyType === ED25519_KEY_LABEL) {
-            key = Ed25519KeyIdentity.generate();
-          } else {
-            if (options.storage && keyType === ECDSA_KEY_LABEL) {
-              console.warn(
-                `You are using a custom storage provider that may not support CryptoKey storage. If you are using a custom storage provider that does not support CryptoKey storage, you should use '${ED25519_KEY_LABEL}' as the key type, as it can serialize to a string`
-              );
-            }
-            key = yield ECDSAKeyIdentity.generate();
+      }
+      let idleManager;
+      if (options.idleOptions?.disableIdle) {
+        idleManager = void 0;
+      } else if (chain || options.identity) {
+        idleManager = IdleManager.create(options.idleOptions);
+      }
+      if (!key) {
+        if (keyType === ED25519_KEY_LABEL) {
+          key = Ed25519KeyIdentity.generate();
+        } else {
+          if (options.storage && keyType === ECDSA_KEY_LABEL) {
+            console.warn(
+              `You are using a custom storage provider that may not support CryptoKey storage. If you are using a custom storage provider that does not support CryptoKey storage, you should use '${ED25519_KEY_LABEL}' as the key type, as it can serialize to a string`
+            );
           }
-          yield persistKey(storage, key);
+          key = await ECDSAKeyIdentity.generate();
         }
-        return new _AuthClient(identity, key, chain, storage, idleManager, options);
-      });
+        await persistKey(storage, key);
+      }
+      return new _AuthClient(identity, key, chain, storage, idleManager, options);
     }
     _registerDefaultIdleCallback() {
-      var _a, _b;
-      const idleOptions = (_a = this._createOptions) == null ? void 0 : _a.idleOptions;
-      if (!(idleOptions == null ? void 0 : idleOptions.onIdle) && !(idleOptions == null ? void 0 : idleOptions.disableDefaultIdleCallback)) {
-        (_b = this.idleManager) == null ? void 0 : _b.registerCallback(() => {
+      const idleOptions = this._createOptions?.idleOptions;
+      if (!idleOptions?.onIdle && !idleOptions?.disableDefaultIdleCallback) {
+        this.idleManager?.registerCallback(() => {
           this.logout();
           location.reload();
         });
       }
     }
-    _handleSuccess(message, onSuccess) {
-      return __async(this, null, function* () {
-        var _a, _b;
-        const delegations = message.delegations.map((signedDelegation) => {
-          return {
-            delegation: new Delegation(
-              signedDelegation.delegation.pubkey,
-              signedDelegation.delegation.expiration,
-              signedDelegation.delegation.targets
-            ),
-            signature: signedDelegation.signature
-          };
-        });
-        const delegationChain = DelegationChain.fromDelegations(
-          delegations,
-          message.userPublicKey
-        );
-        const key = this._key;
-        if (!key) {
-          return;
-        }
-        this._chain = delegationChain;
-        if ("toDer" in key) {
-          this._identity = PartialDelegationIdentity.fromDelegation(key, this._chain);
-        } else {
-          this._identity = DelegationIdentity.fromDelegation(key, this._chain);
-        }
-        (_a = this._idpWindow) == null ? void 0 : _a.close();
-        const idleOptions = (_b = this._createOptions) == null ? void 0 : _b.idleOptions;
-        if (!this.idleManager && !(idleOptions == null ? void 0 : idleOptions.disableIdle)) {
-          this.idleManager = IdleManager.create(idleOptions);
-          this._registerDefaultIdleCallback();
-        }
-        this._removeEventListener();
-        delete this._idpWindow;
-        if (this._chain) {
-          yield this._storage.set(KEY_STORAGE_DELEGATION, JSON.stringify(this._chain.toJSON()));
-        }
-        yield persistKey(this._storage, this._key);
-        onSuccess == null ? void 0 : onSuccess(message);
+    async _handleSuccess(message, onSuccess) {
+      const delegations = message.delegations.map((signedDelegation) => {
+        return {
+          delegation: new Delegation(
+            signedDelegation.delegation.pubkey,
+            signedDelegation.delegation.expiration,
+            signedDelegation.delegation.targets
+          ),
+          signature: signedDelegation.signature
+        };
       });
+      const delegationChain = DelegationChain.fromDelegations(
+        delegations,
+        message.userPublicKey
+      );
+      const key = this._key;
+      if (!key) {
+        return;
+      }
+      this._chain = delegationChain;
+      if ("toDer" in key) {
+        this._identity = PartialDelegationIdentity.fromDelegation(key, this._chain);
+      } else {
+        this._identity = DelegationIdentity.fromDelegation(key, this._chain);
+      }
+      this._idpWindow?.close();
+      const idleOptions = this._createOptions?.idleOptions;
+      if (!this.idleManager && !idleOptions?.disableIdle) {
+        this.idleManager = IdleManager.create(idleOptions);
+        this._registerDefaultIdleCallback();
+      }
+      this._removeEventListener();
+      delete this._idpWindow;
+      if (this._chain) {
+        await this._storage.set(KEY_STORAGE_DELEGATION, JSON.stringify(this._chain.toJSON()));
+      }
+      await persistKey(this._storage, this._key);
+      onSuccess?.(message);
     }
     getIdentity() {
       return this._identity;
     }
-    isAuthenticated() {
-      return __async(this, null, function* () {
-        return !this.getIdentity().getPrincipal().isAnonymous() && this._chain !== null && isDelegationValid(this._chain);
-      });
+    async isAuthenticated() {
+      return !this.getIdentity().getPrincipal().isAnonymous() && this._chain !== null && isDelegationValid(this._chain);
     }
     /**
      * AuthClient Login - Opens up a new window to authenticate with Internet Identity
@@ -4535,74 +4435,72 @@ Call context:
      *  }
      * });
      */
-    login(options) {
-      return __async(this, null, function* () {
-        var _a, _b, _c, _d, _e;
-        const loginOptions = mergeLoginOptions((_a = this._createOptions) == null ? void 0 : _a.loginOptions, options);
-        const maxTimeToLive = (_b = loginOptions == null ? void 0 : loginOptions.maxTimeToLive) != null ? _b : DEFAULT_MAX_TIME_TO_LIVE;
-        const identityProviderUrl = new URL(
-          ((_c = loginOptions == null ? void 0 : loginOptions.identityProvider) == null ? void 0 : _c.toString()) || IDENTITY_PROVIDER_DEFAULT
-        );
-        identityProviderUrl.hash = IDENTITY_PROVIDER_ENDPOINT;
-        (_d = this._idpWindow) == null ? void 0 : _d.close();
-        this._removeEventListener();
-        this._eventHandler = this._getEventHandler(identityProviderUrl, __spreadValues({
-          maxTimeToLive
-        }, loginOptions));
-        window.addEventListener("message", this._eventHandler);
-        this._idpWindow = (_e = window.open(
-          identityProviderUrl.toString(),
-          "idpWindow",
-          loginOptions == null ? void 0 : loginOptions.windowOpenerFeatures
-        )) != null ? _e : void 0;
-        const checkInterruption = () => {
-          if (this._idpWindow) {
-            if (this._idpWindow.closed) {
-              this._handleFailure(ERROR_USER_INTERRUPT, loginOptions == null ? void 0 : loginOptions.onError);
-            } else {
-              setTimeout(checkInterruption, INTERRUPT_CHECK_INTERVAL);
-            }
-          }
-        };
-        checkInterruption();
+    async login(options) {
+      const loginOptions = mergeLoginOptions(this._createOptions?.loginOptions, options);
+      const maxTimeToLive = loginOptions?.maxTimeToLive ?? DEFAULT_MAX_TIME_TO_LIVE;
+      const identityProviderUrl = new URL(
+        loginOptions?.identityProvider?.toString() || IDENTITY_PROVIDER_DEFAULT
+      );
+      identityProviderUrl.hash = IDENTITY_PROVIDER_ENDPOINT;
+      this._idpWindow?.close();
+      this._removeEventListener();
+      this._eventHandler = this._getEventHandler(identityProviderUrl, {
+        maxTimeToLive,
+        ...loginOptions
       });
+      window.addEventListener("message", this._eventHandler);
+      this._idpWindow = window.open(
+        identityProviderUrl.toString(),
+        "idpWindow",
+        loginOptions?.windowOpenerFeatures
+      ) ?? void 0;
+      const checkInterruption = () => {
+        if (this._idpWindow) {
+          if (this._idpWindow.closed) {
+            this._handleFailure(ERROR_USER_INTERRUPT, loginOptions?.onError);
+          } else {
+            setTimeout(checkInterruption, INTERRUPT_CHECK_INTERVAL);
+          }
+        }
+      };
+      checkInterruption();
     }
     _getEventHandler(identityProviderUrl, options) {
-      return (event) => __async(this, null, function* () {
-        var _a, _b, _c;
+      return async (event) => {
         if (event.origin !== identityProviderUrl.origin) {
           return;
         }
         const message = event.data;
         switch (message.kind) {
           case "authorize-ready": {
-            const request = __spreadValues({
+            const request = {
               kind: "authorize-client",
-              sessionPublicKey: new Uint8Array((_a = this._key) == null ? void 0 : _a.getPublicKey().toDer()),
-              maxTimeToLive: options == null ? void 0 : options.maxTimeToLive,
-              allowPinAuthentication: options == null ? void 0 : options.allowPinAuthentication,
-              derivationOrigin: (_b = options == null ? void 0 : options.derivationOrigin) == null ? void 0 : _b.toString()
-            }, options == null ? void 0 : options.customValues);
-            (_c = this._idpWindow) == null ? void 0 : _c.postMessage(request, identityProviderUrl.origin);
+              sessionPublicKey: new Uint8Array(this._key?.getPublicKey().toDer()),
+              maxTimeToLive: options?.maxTimeToLive,
+              allowPinAuthentication: options?.allowPinAuthentication,
+              derivationOrigin: options?.derivationOrigin?.toString(),
+              // Pass any custom values to the IDP.
+              ...options?.customValues
+            };
+            this._idpWindow?.postMessage(request, identityProviderUrl.origin);
             break;
           }
           case "authorize-client-success":
             try {
-              yield this._handleSuccess(message, options == null ? void 0 : options.onSuccess);
+              await this._handleSuccess(message, options?.onSuccess);
             } catch (err) {
-              this._handleFailure(err.message, options == null ? void 0 : options.onError);
+              this._handleFailure(err.message, options?.onError);
             }
             break;
           case "authorize-client-failure":
-            this._handleFailure(message.text, options == null ? void 0 : options.onError);
+            this._handleFailure(message.text, options?.onError);
             break;
         }
-      });
+      };
     }
     _handleFailure(errorMessage, onError) {
-      var _a;
-      (_a = this._idpWindow) == null ? void 0 : _a.close();
-      onError == null ? void 0 : onError(errorMessage);
+      this._idpWindow?.close();
+      onError?.(errorMessage);
       this._removeEventListener();
       delete this._idpWindow;
     }
@@ -4612,36 +4510,37 @@ Call context:
       }
       this._eventHandler = void 0;
     }
-    logout() {
-      return __async(this, arguments, function* (options = {}) {
-        yield _deleteStorage(this._storage);
-        this._identity = new AnonymousIdentity();
-        this._chain = null;
-        if (options.returnTo) {
-          try {
-            window.history.pushState({}, "", options.returnTo);
-          } catch (e) {
-            window.location.href = options.returnTo;
-          }
+    async logout(options = {}) {
+      await _deleteStorage(this._storage);
+      this._identity = new AnonymousIdentity();
+      this._chain = null;
+      if (options.returnTo) {
+        try {
+          window.history.pushState({}, "", options.returnTo);
+        } catch {
+          window.location.href = options.returnTo;
         }
-      });
+      }
     }
   };
-  function _deleteStorage(storage) {
-    return __async(this, null, function* () {
-      yield storage.remove(KEY_STORAGE_KEY);
-      yield storage.remove(KEY_STORAGE_DELEGATION);
-      yield storage.remove(KEY_VECTOR);
-    });
+  async function _deleteStorage(storage) {
+    await storage.remove(KEY_STORAGE_KEY);
+    await storage.remove(KEY_STORAGE_DELEGATION);
+    await storage.remove(KEY_VECTOR);
   }
   function mergeLoginOptions(loginOptions, otherLoginOptions) {
     if (!loginOptions && !otherLoginOptions) {
       return void 0;
     }
-    const customValues = (loginOptions == null ? void 0 : loginOptions.customValues) || (otherLoginOptions == null ? void 0 : otherLoginOptions.customValues) ? __spreadValues(__spreadValues({}, loginOptions == null ? void 0 : loginOptions.customValues), otherLoginOptions == null ? void 0 : otherLoginOptions.customValues) : void 0;
-    return __spreadProps(__spreadValues(__spreadValues({}, loginOptions), otherLoginOptions), {
+    const customValues = loginOptions?.customValues || otherLoginOptions?.customValues ? {
+      ...loginOptions?.customValues,
+      ...otherLoginOptions?.customValues
+    } : void 0;
+    return {
+      ...loginOptions,
+      ...otherLoginOptions,
       customValues
-    });
+    };
   }
   function toStoredKey(key) {
     if (key instanceof ECDSAKeyIdentity) {
@@ -4652,13 +4551,11 @@ Call context:
     }
     throw new Error("Unsupported key type");
   }
-  function persistKey(storage, key) {
-    return __async(this, null, function* () {
-      const serialized = toStoredKey(key);
-      yield storage.set(KEY_STORAGE_KEY, serialized);
-    });
+  async function persistKey(storage, key) {
+    const serialized = toStoredKey(key);
+    await storage.set(KEY_STORAGE_KEY, serialized);
   }
-  return __toCommonJS(index_exports);
+  return __toCommonJS(bundle_auth_entry_exports);
 })();
 /*! Bundled license information:
 

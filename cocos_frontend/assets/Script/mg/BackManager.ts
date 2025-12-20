@@ -2,13 +2,12 @@
 
 import LoginManager from "./LoginManager";
 import { ethers } from "ethers";
-import DfinityAgent = require("../Lib/dfinity-agent");
 import { idlFactory } from "./backend.did";
 
-const Actor = (DfinityAgent as any).Actor;
-const HttpAgent = (DfinityAgent as any).HttpAgent;
-
-
+// import DfinityAgent = require("../Lib/dfinity-agent-wrapper");
+const DfinityAgent = (window as any).DfinityAgent;
+const Actor = DfinityAgent ? DfinityAgent.Actor : null;
+const HttpAgent = DfinityAgent ? DfinityAgent.HttpAgent : null;
 
 import { DFX_NETWORK, II_CANISTER_ID_LOCAL,BACKEND_CANISTER_ID_LOCAL_FALLBACK } from "./DefData";
 

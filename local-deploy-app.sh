@@ -3,7 +3,6 @@ set -e
 
 # 0. 切换到生产环境库文件
 echo "Switching to Production Dfinity Libraries..."
-cp cocos_frontend/assets/Script/Lib/dfinity-agent-dev.js cocos_frontend/assets/Script/Lib/dfinity-agent.js
 
 # 1. 构建 Cocos Creator 前端 (确保代码修改生效)
 echo "Building Cocos Creator project..."

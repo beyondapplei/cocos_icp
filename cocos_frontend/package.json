@@ -11,6 +11,8 @@
     "@dfinity/auth-client": "^2.4.1",
     "@dfinity/candid": "^2.4.1",
     "@dfinity/principal": "^2.4.1",
+    "@icp-sdk/auth": "^5.0.0",
+    "@icp-sdk/core": "^5.0.0",
     "ethers": "^5.8.0"
   }
 }
