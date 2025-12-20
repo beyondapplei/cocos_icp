@@ -9,7 +9,7 @@ const Principal = DfinityAgent ? DfinityAgent.Principal : null;
 const Actor = DfinityAgent ? DfinityAgent.Actor : null;
 const HttpAgent = DfinityAgent ? DfinityAgent.HttpAgent : null;
 
-import { idlFactory } from "./icp_ledger.did";
+import { idlFactoryLedger } from "./icp_ledger.did";
 
 
 
@@ -68,7 +68,7 @@ export default class ICPManager {
         }
         //如果不是本地环境，不用调用 fetchRootKey
 
-        this.ledgerActor = Actor.createActor(idlFactory, { agent, canisterId });
+        this.ledgerActor = Actor.createActor(idlFactoryLedger, { agent, canisterId });
         this.ledgerCanisterId = canisterId;
         return this.ledgerActor;
     }

@@ -6,4 +6,4 @@ export const idlFactoryBack = ({ IDL }) => {
     'sign' : IDL.Func([IDL.Vec(IDL.Nat8)], [IDL.Vec(IDL.Nat8)], []),
   });
 };
-export const init = ({ IDL }) => { return []; };
+export const initBack = ({ IDL }) => { return []; };

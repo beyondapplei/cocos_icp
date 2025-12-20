@@ -1,6 +1,6 @@
 // Minimal ICRC-1 interface for ICP Ledger (supports icrc1_balance_of / icrc1_transfer)
 // Works with @dfinity/agent style Actor.createActor(IDL)
-export const idlFactory = ({ IDL }) => {
+export const idlFactoryLedger = ({ IDL }) => {
   const Subaccount = IDL.Vec(IDL.Nat8);
   const Account = IDL.Record({
     owner: IDL.Principal,
@@ -38,6 +38,6 @@ export const idlFactory = ({ IDL }) => {
   });
 };
 
-export const init = ({ IDL }) => {
+export const initLedger = ({ IDL }) => {
   return [];
 };
