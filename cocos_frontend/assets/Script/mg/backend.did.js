@@ -1,4 +1,4 @@
-export const idlFactory = ({ IDL }) => {
+export const idlFactoryBack = ({ IDL }) => {
   return IDL.Service({
     'get_eth_public_key' : IDL.Func([], [IDL.Vec(IDL.Nat8)], []),
     'greet' : IDL.Func([IDL.Text], [IDL.Text], ['query']),

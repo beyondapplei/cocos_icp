@@ -8,4 +8,4 @@ nId,strName,strPrefabName,nRemove
 6,HomeListPanel,prefab/homelistpanel,1
 7,WalletPanel,prefab/walletpanel,1
 8,ICPWalletPanel,prefab/icpwalletpanel,1
-9,ETHWalletPanel,prefab/ethwalletpanel,1
+9,ETHWalletPanel,prefab/icpwalletpanel,1

@@ -13,7 +13,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ETHWalletPanel extends UIPanel {
 
-    tableview: TableView;
   
     editBox: cc.EditBox;
     nIndexReq: number;
@@ -31,6 +30,10 @@ export default class ETHWalletPanel extends UIPanel {
         const btnNode =  this.node.getChildByName('btnbegin');
         btnNode.on(cc.Node.EventType.TOUCH_END, this.clickBegin.bind(this, 109825), this);
         
+         const btnBack =  this.node.getChildByName('btnback');
+        btnBack.on(cc.Node.EventType.TOUCH_END, this.clickBack.bind(this, 1098215), this);
+        
+
         this.labelrec = this.node.getChildByName('labelrec').getComponent(cc.Label);
         this.labelbalance = this.node.getChildByName('labelbalance').getComponent(cc.Label);
     
@@ -38,7 +41,7 @@ export default class ETHWalletPanel extends UIPanel {
         this.boxamount = this.node.getChildByName('boxamount').getComponent(cc.EditBox);
     
         
-        this.labelrec.string = "ETH Rec Address:\n" + "abcd-efgh-ijkl-mnop-qrst-uvwx-yz12-3456-7890";
+        this.labelrec.string = "ETH Rec Address:\n" + "456-7890";
         this.labelbalance.string = "Balance: 123.456 ETH";
 
     }
@@ -51,9 +54,10 @@ export default class ETHWalletPanel extends UIPanel {
     RefreshData() {
 
     }
-    async OnOpen(strParam: string) {
+     OnOpen(strParam: string) {
    
-       this.uiend
+        cc.log("ETHWalletPanel: OnOpen called");
+       this.uiend()
       
 
     }
@@ -66,7 +70,10 @@ export default class ETHWalletPanel extends UIPanel {
         this.labelbalance.string = "Balance: loading...";
         let strEthLedgerCanisterId = LEAGER_ICP_ID_LOCAL;
         let ethAddress = await BackManager.Instance.GetEthAddress();
+        this.labelrec.string = "ETH Address:\n" + ethAddress;
         
+        UIManager.ShowTip('Loading ETH Balance='+ ethAddress);
+
         // ETHManager.Instance.GetBalanceETH(ethAddress).then((balanceText) => {
         //         this.labelbalance.string = balanceText;
         //     })
@@ -76,13 +83,25 @@ export default class ETHWalletPanel extends UIPanel {
         //     });
      }
 
+        // ETHManager.Instance.GetBalanceETH(ethAddress).then((balanceText) => {
+        //         this.labelbalance.string = balanceText;
+        //     })
+        //     .catch((e) => {
+        //         cc.error('ETHWalletPanel: GetBalance failed:', e);
+        //         this.labelbalance.string = 'Balance: error';
+        //     });
+     
+
     
 
     OnClose()
     {
         
     }
- 
+    clickBack(nTag){
+         cc.log('clickback'+nTag);
+         UIManager.Instance.OpenPanel(EUIPanelType.WALLET);
+     }
 
     clickBegin(nTag){
         cc.log('clickbegin'+nTag);
@@ -97,9 +116,6 @@ export default class ETHWalletPanel extends UIPanel {
             return;
         }
 
-        //此处用于测试 硬编码测试 bwtest
-        toText = "vo6oa-rnbla-yuwhp-omwcn-ujfnh-pqlhz-ukcbb-xyr75-zqvlm-hxzd6-jqe"
-        amountText = "1"
 
         
         const strEthLedgerCanisterId = LEAGER_ICP_ID_LOCAL;

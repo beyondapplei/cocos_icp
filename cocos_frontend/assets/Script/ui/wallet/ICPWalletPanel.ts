@@ -30,9 +30,16 @@ export default class ICPWalletPanel extends UIPanel {
         const btnNode =  this.node.getChildByName('btnbegin');
         btnNode.on(cc.Node.EventType.TOUCH_END, this.clickBegin.bind(this, 109825), this);
         
+        const btnBack =  this.node.getChildByName('btnback');
+        btnBack.on(cc.Node.EventType.TOUCH_END, this.clickBack.bind(this, 1098215), this);
+        
+
+
         this.labelrec = this.node.getChildByName('labelrec').getComponent(cc.Label);
         this.labelbalance = this.node.getChildByName('labelbalance').getComponent(cc.Label);
     
+
+
         this.boxtoaddress = this.node.getChildByName('boxtoaddress').getComponent(cc.EditBox);
         this.boxamount = this.node.getChildByName('boxamount').getComponent(cc.EditBox);
     
@@ -78,6 +85,10 @@ export default class ICPWalletPanel extends UIPanel {
         
     }
  
+    clickBack(nTag){
+        cc.log('clickback'+nTag);
+        UIManager.Instance.OpenPanel(EUIPanelType.WALLET);
+    }
 
     clickBegin(nTag){
         cc.log('clickbegin'+nTag);

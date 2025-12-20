@@ -10246,7 +10246,7 @@ variant ${k2} -> ${e.message}`);
       const requestId = requestIdOf(submit);
       try {
         const requestSync = () => {
-          const url = new URL(`/api/v4/canister/${ecid.toText()}/call`, this.host);
+          const url = new URL(`/api/v2/canister/${ecid.toText()}/call`, this.host);
           this.log.print(`fetching "${url.pathname}" with request:`, transformedRequest);
           return __privateGet(this, _fetch).call(this, url, {
             ...__privateGet(this, _callOptions),
