@@ -1,7 +1,0 @@
-{
-  "__type__": "cc.TextAsset",
-  "_name": "functiontype",
-  "_objFlags": 0,
-  "_native": "",
-  "text": "number,string\r\nnId,strName\r\n1,UITableView\r\n2,Game1\r\n"
-}
