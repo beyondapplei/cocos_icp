@@ -1,16 +1,16 @@
  
 import UIManager from "../UIManager";
 import LoginManager from "./LoginManager";
-import { DFX_NETWORK, LEAGER_ICP_ID_LOCAL } from "./DefData";
+import { DFX_NETWORK } from "./DefData";
 
 // 导入 ethers.js 相关（需要先安装 ethers.js 库）
 //import { JsonRpcProvider, Transaction, parseEther, keccak256, getBytes, hexlify } from 'ethers';
 
-
+import { ethers } from 'ethers';
 export default class ETHManager {
     public static readonly Instance: ETHManager = new ETHManager();
-    private ETHManager(){
-    }           
+    private constructor(){}
+    private provider: any = null;    
  
     Init(){
    
@@ -18,20 +18,22 @@ export default class ETHManager {
     private backendActor: any = null; // 后端 canister actor 用于签名
    // private provider: JsonRpcProvider | null = null;
    
-    // async GetBalanceETH(ethAddress: string): Promise<string> {
+    async GetBalanceETH(ethAddress: string): Promise<string> {
         
-    //     try {
-    //         if (!this.provider) {
-    //             this.provider = new JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
-    //         }
-    //         const bal = await this.provider.getBalance(ethAddress);
-    //         const balanceInEth = parseFloat(bal.toString()) / 1e18; // 转换为 ETH
-    //         return `Balance: ${balanceInEth.toFixed(6)} ETH`;
-    //     } catch (e) {
-    //         console.error(e);
-    //         return 'Balance: error';
-    //     }
-    // }
+        try {
+            //https://ethereum-rpc.publicnode.com
+            //https://ethereum-sepolia-rpc.publicnode.com
+            if (!this.provider) {
+                this.provider = new ethers.providers.JsonRpcProvider('https://ethereum-rpc.publicnode.com');
+            }
+            const bal = await this.provider.getBalance(ethAddress);
+            const balanceInEth = parseFloat(ethers.utils.formatEther(bal)); // 转换为 ETH
+            return `Balance: ${balanceInEth.toFixed(6)} ETH`;
+        } catch (e) {
+            console.error(e);
+            return 'Balance: error';
+        }
+    }
 
     // async SendETH(fromAddr: string,toAddr: string, amountStr: string): Promise<string> {
        

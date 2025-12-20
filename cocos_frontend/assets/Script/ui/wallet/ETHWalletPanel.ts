@@ -1,11 +1,9 @@
 import UIPanel from "../UIPanel"
 import UIManager from "../../UIManager";
 import { EUIPanelType } from "../../CommonEnum";
-import {TableView,CellData} from "../TableView";
-import ResManager from "../../ResManager";
-import ETHManager from "../../mg/ETHManager";
+
 import LoginManager from "../../mg/LoginManager";
-import { LEAGER_ICP_ID_LOCAL } from "../../mg/DefData";
+import ETHManager from "../../mg/ETHManager";
 import BackManager from "../../mg/BackManager";
 
 const {ccclass, property} = cc._decorator;
@@ -68,19 +66,20 @@ export default class ETHWalletPanel extends UIPanel {
         this.labelrec.string =  principalText || "";
 
         this.labelbalance.string = "Balance: loading...";
-        let strEthLedgerCanisterId = LEAGER_ICP_ID_LOCAL;
+        
         let ethAddress = await BackManager.Instance.GetEthAddress();
         this.labelrec.string = "ETH Address:\n" + ethAddress;
         
         UIManager.ShowTip('Loading ETH Balance='+ ethAddress);
 
-        // ETHManager.Instance.GetBalanceETH(ethAddress).then((balanceText) => {
-        //         this.labelbalance.string = balanceText;
-        //     })
-        //     .catch((e) => {
-        //         cc.error('ETHWalletPanel: GetBalance failed:', e);
-        //         this.labelbalance.string = 'Balance: error';
-        //     });
+        //bwtest 0xdadB0d80178819F2319190D340ce9A924f783711
+        ETHManager.Instance.GetBalanceETH("0xdadB0d80178819F2319190D340ce9A924f783711").then((balanceText) => {
+                this.labelbalance.string = balanceText;
+            })
+            .catch((e) => {
+                cc.error('ETHWalletPanel: GetBalance failed:', e);
+                this.labelbalance.string = 'Balance: error';
+            });
      }
 
         // ETHManager.Instance.GetBalanceETH(ethAddress).then((balanceText) => {
@@ -118,7 +117,7 @@ export default class ETHWalletPanel extends UIPanel {
 
 
         
-        const strEthLedgerCanisterId = LEAGER_ICP_ID_LOCAL;
+        
         UIManager.ShowTip('Sending ETH...');
         // ETHManager.Instance.SendETH(toText, amountText, strEthLedgerCanisterId)
         //     .then((msg) => {

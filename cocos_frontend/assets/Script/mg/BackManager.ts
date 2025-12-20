@@ -9,7 +9,8 @@ const DfinityAgent = (window as any).DfinityAgent;
 const Actor = DfinityAgent ? DfinityAgent.Actor : null;
 const HttpAgent = DfinityAgent ? DfinityAgent.HttpAgent : null;
 
-import { DFX_NETWORK, II_CANISTER_ID_LOCAL,BACKEND_CANISTER_ID_LOCAL_FALLBACK } from "./DefData";
+import { DFX_NETWORK } from "./DefData";
+import AppManager from "./AppkManager";
 
 
 
@@ -32,12 +33,8 @@ export default class BackManager {
                 : (typeof self !== 'undefined' ? self : {})));
     }
 
-    private getBackendCanisterId(): string | null {
-        // const g = this.getGlobal();
-        // const injected = (g && (g.CANISTER_ID_backend || g.CANISTER_ID_BACKEND || g.BACKEND_CANISTER_ID)) as string | undefined;
-        // if (injected && typeof injected === 'string' && injected.length > 0) return injected;
-        if (DFX_NETWORK === 'local') return BACKEND_CANISTER_ID_LOCAL_FALLBACK;
-        return null;
+    private getBackendCanisterId(): string {
+       return AppManager.Instance.GetBackendCanisterId();
     }
 
     private getAgentHost(): string | undefined {
