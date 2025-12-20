@@ -8,6 +8,8 @@ import { idlFactory } from "./backend.did";
 const Actor = (DfinityAgent as any).Actor;
 const HttpAgent = (DfinityAgent as any).HttpAgent;
 
+
+
 import { DFX_NETWORK, II_CANISTER_ID_LOCAL,BACKEND_CANISTER_ID_LOCAL_FALLBACK } from "./DefData";
 
 
@@ -22,11 +24,6 @@ export default class BackManager {
     Init() {
         // 预加载后端交互所需的脚本
     }
-
-    // private isEditorOrPreview(): boolean {
-    //     return ((typeof CC_EDITOR !== 'undefined' && (CC_EDITOR as any)) ||
-    //         (typeof CC_PREVIEW !== 'undefined' && (CC_PREVIEW as any))) as any;
-    // }
 
     private getGlobal(): any {
         return (typeof globalThis !== 'undefined'
@@ -74,7 +71,7 @@ export default class BackManager {
         return this.backendActor;
     }
 
-    async getEthAddress(): Promise<string> {
+    async GetEthAddress(): Promise<string> {
         const actor = await this.ensureBackendActor();
         
         const publicKey = await actor.get_eth_public_key();

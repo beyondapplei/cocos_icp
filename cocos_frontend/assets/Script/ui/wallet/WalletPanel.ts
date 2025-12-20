@@ -121,13 +121,13 @@ export default class WalletPanel extends UIPanel {
         this.vListData = []
 
         //for(nindex)
-        let vFunName = ["ICP","BTC","ETH","LTC","DOGE","XRP","BCH","EOS","ADA","XLM","LINK","DOT","YFI","USDT","USDC","DAI","WBTC","SHIB","MATIC","SOL"]
+        let vFunName = ["ICP","ETH ","BTC","LTC","DOGE","XRP","BCH","EOS","ADA","XLM","LINK","DOT","YFI","USDT","USDC","DAI","WBTC","SHIB","MATIC","SOL"]
 
         //写个循环创建20个数据
-        for(let i = 1; i <= vFunName.length; i++) {
+        for(let i = 0; i < vFunName.length; i++) {
             let cellInfo = new WalletCellData();
             cellInfo.nId = i;
-            cellInfo.sName = vFunName[i-1];
+            cellInfo.sName = vFunName[i];
             this.vListData.push(cellInfo);
         }
        
@@ -177,16 +177,18 @@ export default class WalletPanel extends UIPanel {
         cc.log('clickcell='+nIndex);
 
         let nId = this.vListData[nIndex].nId;
-        if(nId === 1 )
+        if(nId === 0 )
         {
 
+              UIManager.OpenPanel(EUIPanelType.WALLET_ICP);
         }
-        else if(nId === 2 )
+        else if(nId === 1 )
         {
            // UIManager.Instance.OpenPanel(EUIPanelType.GAME);
-
+           
+            UIManager.OpenPanel(EUIPanelType.WALLET_ETH);
         }
-        UIManager.OpenPanel(EUIPanelType.WALLET_ICP);
+      
         
     }
   
