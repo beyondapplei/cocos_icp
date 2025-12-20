@@ -1313,7 +1313,7 @@ Call context:
      * @param buffer an optional buffer to start with
      * @param length an optional amount of bytes to use for the length.
      */
-    constructor(buffer, length = buffer?.byteLength || 0) {
+    constructor(buffer, length = (buffer == null ? void 0 : buffer.byteLength) || 0) {
       if (buffer && !(buffer instanceof Uint8Array)) {
         try {
           buffer = uint8FromBufLike(buffer);
@@ -1590,7 +1590,7 @@ Call context:
   }
   function _abytes2(value, length, title = "") {
     const bytes = isBytes(value);
-    const len = value?.length;
+    const len = value == null ? void 0 : value.length;
     const needsLen = length !== void 0;
     if (!bytes || needsLen && len !== length) {
       const prefix = title && `"${title}" `;
@@ -3410,7 +3410,7 @@ Call context:
      * @returns a {@link ECDSAKeyIdentity}
      */
     static async generate(options) {
-      const { extractable = false, keyUsages = ["sign", "verify"], subtleCrypto } = options ?? {};
+      const { extractable = false, keyUsages = ["sign", "verify"], subtleCrypto } = options != null ? options : {};
       const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
       const keyPair = await effectiveCrypto.generateKey({
         name: "ECDSA",
@@ -3613,8 +3613,9 @@ Call context:
      * @param options.targets - targets that scope the delegation (e.g. Canister Principals)
      */
     static async create(from, to, expiration = new Date(Date.now() + 15 * 60 * 1e3), options = {}) {
+      var _a, _b;
       const delegation = await _createSingleDelegation(from, to, expiration, options.targets);
-      return new _DelegationChain([...options.previous?.delegations || [], delegation], options.previous?.publicKey || from.getPublicKey().toDer());
+      return new _DelegationChain([...((_a = options.previous) == null ? void 0 : _a.delegations) || [], delegation], ((_b = options.previous) == null ? void 0 : _b.publicKey) || from.getPublicKey().toDer());
     }
     /**
      * Creates a DelegationChain object from a JSON string.
@@ -3751,7 +3752,7 @@ Call context:
       }
     }
     const scopes = [];
-    const maybeScope = checks?.scope;
+    const maybeScope = checks == null ? void 0 : checks.scope;
     if (maybeScope) {
       if (Array.isArray(maybeScope)) {
         scopes.push(...maybeScope.map((s) => typeof s === "string" ? Principal.fromText(s) : s));
@@ -3791,6 +3792,7 @@ Call context:
       __publicField(this, "callbacks", []);
       __publicField(this, "idleTimeout", 10 * 60 * 1e3);
       __publicField(this, "timeoutID");
+      var _a;
       const { onIdle, idleTimeout = 10 * 60 * 1e3 } = options || {};
       this.callbacks = onIdle ? [onIdle] : [];
       this.idleTimeout = idleTimeout;
@@ -3811,8 +3813,8 @@ Call context:
           timeout = window.setTimeout(later, wait);
         };
       };
-      if (options?.captureScroll) {
-        const scroll = debounce(_resetTimer, options?.scrollDebounce ?? 100);
+      if (options == null ? void 0 : options.captureScroll) {
+        const scroll = debounce(_resetTimer, (_a = options == null ? void 0 : options.scrollDebounce) != null ? _a : 100);
         window.addEventListener("scroll", scroll, true);
       }
       _resetTimer();
@@ -4070,7 +4072,8 @@ Call context:
   var AUTH_DB_NAME = "auth-client-db";
   var OBJECT_STORE_NAME = "ic-keyval";
   var _openDbStore = async (dbName = AUTH_DB_NAME, storeName = OBJECT_STORE_NAME, version) => {
-    if (globalThis.localStorage?.getItem(KEY_STORAGE_DELEGATION)) {
+    var _a;
+    if ((_a = globalThis.localStorage) == null ? void 0 : _a.getItem(KEY_STORAGE_DELEGATION)) {
       globalThis.localStorage.removeItem(KEY_STORAGE_DELEGATION);
       globalThis.localStorage.removeItem(KEY_STORAGE_KEY);
     }
@@ -4111,7 +4114,7 @@ Call context:
         dbName = AUTH_DB_NAME,
         storeName = OBJECT_STORE_NAME,
         version = DB_VERSION
-      } = options ?? {};
+      } = options != null ? options : {};
       const db = await _openDbStore(dbName, storeName, version);
       return new _IdbKeyVal(db, storeName);
     }
@@ -4133,7 +4136,8 @@ Call context:
      * await get<string>('exampleKey') -> 'exampleValue'
      */
     async get(key) {
-      return await _getValue(this._db, this._storeName, key) ?? null;
+      var _a;
+      return (_a = await _getValue(this._db, this._storeName, key)) != null ? _a : null;
     }
     /**
      * Remove a key
@@ -4193,7 +4197,7 @@ Call context:
       __privateAdd(this, _options);
       // Initializes a KeyVal on first request
       __publicField(this, "initializedDb");
-      __privateSet(this, _options, options ?? {});
+      __privateSet(this, _options, options != null ? options : {});
     }
     get _db() {
       return new Promise((resolve, reject) => {
@@ -4265,8 +4269,9 @@ Call context:
      * })
      */
     static async create(options = {}) {
-      const storage = options.storage ?? new IdbStorage();
-      const keyType = options.keyType ?? ECDSA_KEY_LABEL;
+      var _a, _b, _c;
+      const storage = (_a = options.storage) != null ? _a : new IdbStorage();
+      const keyType = (_b = options.keyType) != null ? _b : ECDSA_KEY_LABEL;
       let key = null;
       if (options.identity) {
         key = options.identity;
@@ -4336,7 +4341,7 @@ Call context:
         }
       }
       let idleManager;
-      if (options.idleOptions?.disableIdle) {
+      if ((_c = options.idleOptions) == null ? void 0 : _c.disableIdle) {
         idleManager = void 0;
       } else if (chain || options.identity) {
         idleManager = IdleManager.create(options.idleOptions);
@@ -4357,15 +4362,17 @@ Call context:
       return new _AuthClient(identity, key, chain, storage, idleManager, options);
     }
     _registerDefaultIdleCallback() {
-      const idleOptions = this._createOptions?.idleOptions;
-      if (!idleOptions?.onIdle && !idleOptions?.disableDefaultIdleCallback) {
-        this.idleManager?.registerCallback(() => {
+      var _a, _b;
+      const idleOptions = (_a = this._createOptions) == null ? void 0 : _a.idleOptions;
+      if (!(idleOptions == null ? void 0 : idleOptions.onIdle) && !(idleOptions == null ? void 0 : idleOptions.disableDefaultIdleCallback)) {
+        (_b = this.idleManager) == null ? void 0 : _b.registerCallback(() => {
           this.logout();
           location.reload();
         });
       }
     }
     async _handleSuccess(message, onSuccess) {
+      var _a, _b;
       const delegations = message.delegations.map((signedDelegation) => {
         return {
           delegation: new Delegation(
@@ -4390,9 +4397,9 @@ Call context:
       } else {
         this._identity = DelegationIdentity.fromDelegation(key, this._chain);
       }
-      this._idpWindow?.close();
-      const idleOptions = this._createOptions?.idleOptions;
-      if (!this.idleManager && !idleOptions?.disableIdle) {
+      (_a = this._idpWindow) == null ? void 0 : _a.close();
+      const idleOptions = (_b = this._createOptions) == null ? void 0 : _b.idleOptions;
+      if (!this.idleManager && !(idleOptions == null ? void 0 : idleOptions.disableIdle)) {
         this.idleManager = IdleManager.create(idleOptions);
         this._registerDefaultIdleCallback();
       }
@@ -4402,7 +4409,7 @@ Call context:
         await this._storage.set(KEY_STORAGE_DELEGATION, JSON.stringify(this._chain.toJSON()));
       }
       await persistKey(this._storage, this._key);
-      onSuccess?.(message);
+      onSuccess == null ? void 0 : onSuccess(message);
     }
     getIdentity() {
       return this._identity;
@@ -4436,28 +4443,29 @@ Call context:
      * });
      */
     async login(options) {
-      const loginOptions = mergeLoginOptions(this._createOptions?.loginOptions, options);
-      const maxTimeToLive = loginOptions?.maxTimeToLive ?? DEFAULT_MAX_TIME_TO_LIVE;
+      var _a, _b, _c, _d, _e;
+      const loginOptions = mergeLoginOptions((_a = this._createOptions) == null ? void 0 : _a.loginOptions, options);
+      const maxTimeToLive = (_b = loginOptions == null ? void 0 : loginOptions.maxTimeToLive) != null ? _b : DEFAULT_MAX_TIME_TO_LIVE;
       const identityProviderUrl = new URL(
-        loginOptions?.identityProvider?.toString() || IDENTITY_PROVIDER_DEFAULT
+        ((_c = loginOptions == null ? void 0 : loginOptions.identityProvider) == null ? void 0 : _c.toString()) || IDENTITY_PROVIDER_DEFAULT
       );
       identityProviderUrl.hash = IDENTITY_PROVIDER_ENDPOINT;
-      this._idpWindow?.close();
+      (_d = this._idpWindow) == null ? void 0 : _d.close();
       this._removeEventListener();
       this._eventHandler = this._getEventHandler(identityProviderUrl, {
         maxTimeToLive,
         ...loginOptions
       });
       window.addEventListener("message", this._eventHandler);
-      this._idpWindow = window.open(
+      this._idpWindow = (_e = window.open(
         identityProviderUrl.toString(),
         "idpWindow",
-        loginOptions?.windowOpenerFeatures
-      ) ?? void 0;
+        loginOptions == null ? void 0 : loginOptions.windowOpenerFeatures
+      )) != null ? _e : void 0;
       const checkInterruption = () => {
         if (this._idpWindow) {
           if (this._idpWindow.closed) {
-            this._handleFailure(ERROR_USER_INTERRUPT, loginOptions?.onError);
+            this._handleFailure(ERROR_USER_INTERRUPT, loginOptions == null ? void 0 : loginOptions.onError);
           } else {
             setTimeout(checkInterruption, INTERRUPT_CHECK_INTERVAL);
           }
@@ -4467,6 +4475,7 @@ Call context:
     }
     _getEventHandler(identityProviderUrl, options) {
       return async (event) => {
+        var _a, _b, _c;
         if (event.origin !== identityProviderUrl.origin) {
           return;
         }
@@ -4475,32 +4484,33 @@ Call context:
           case "authorize-ready": {
             const request = {
               kind: "authorize-client",
-              sessionPublicKey: new Uint8Array(this._key?.getPublicKey().toDer()),
-              maxTimeToLive: options?.maxTimeToLive,
-              allowPinAuthentication: options?.allowPinAuthentication,
-              derivationOrigin: options?.derivationOrigin?.toString(),
+              sessionPublicKey: new Uint8Array((_a = this._key) == null ? void 0 : _a.getPublicKey().toDer()),
+              maxTimeToLive: options == null ? void 0 : options.maxTimeToLive,
+              allowPinAuthentication: options == null ? void 0 : options.allowPinAuthentication,
+              derivationOrigin: (_b = options == null ? void 0 : options.derivationOrigin) == null ? void 0 : _b.toString(),
               // Pass any custom values to the IDP.
-              ...options?.customValues
+              ...options == null ? void 0 : options.customValues
             };
-            this._idpWindow?.postMessage(request, identityProviderUrl.origin);
+            (_c = this._idpWindow) == null ? void 0 : _c.postMessage(request, identityProviderUrl.origin);
             break;
           }
           case "authorize-client-success":
             try {
-              await this._handleSuccess(message, options?.onSuccess);
+              await this._handleSuccess(message, options == null ? void 0 : options.onSuccess);
             } catch (err) {
-              this._handleFailure(err.message, options?.onError);
+              this._handleFailure(err.message, options == null ? void 0 : options.onError);
             }
             break;
           case "authorize-client-failure":
-            this._handleFailure(message.text, options?.onError);
+            this._handleFailure(message.text, options == null ? void 0 : options.onError);
             break;
         }
       };
     }
     _handleFailure(errorMessage, onError) {
-      this._idpWindow?.close();
-      onError?.(errorMessage);
+      var _a;
+      (_a = this._idpWindow) == null ? void 0 : _a.close();
+      onError == null ? void 0 : onError(errorMessage);
       this._removeEventListener();
       delete this._idpWindow;
     }
@@ -4532,9 +4542,9 @@ Call context:
     if (!loginOptions && !otherLoginOptions) {
       return void 0;
     }
-    const customValues = loginOptions?.customValues || otherLoginOptions?.customValues ? {
-      ...loginOptions?.customValues,
-      ...otherLoginOptions?.customValues
+    const customValues = (loginOptions == null ? void 0 : loginOptions.customValues) || (otherLoginOptions == null ? void 0 : otherLoginOptions.customValues) ? {
+      ...loginOptions == null ? void 0 : loginOptions.customValues,
+      ...otherLoginOptions == null ? void 0 : otherLoginOptions.customValues
     } : void 0;
     return {
       ...loginOptions,

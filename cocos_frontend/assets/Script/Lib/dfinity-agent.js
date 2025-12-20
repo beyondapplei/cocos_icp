@@ -33,183 +33,37 @@ var DfinityAgent = (() => {
     }
   });
 
-  // node_modules/@icp-sdk/core/lib/esm/bundle_entry.js
+  // assets/Script/Lib/bundle_entry.js
   var bundle_entry_exports = {};
   __export(bundle_entry_exports, {
-    ACTOR_METHOD_WITH_CERTIFICATE: () => ACTOR_METHOD_WITH_CERTIFICATE,
-    ACTOR_METHOD_WITH_HTTP_DETAILS: () => ACTOR_METHOD_WITH_HTTP_DETAILS,
-    Actor: () => Actor2,
-    AgentError: () => AgentError,
-    AnonymousIdentity: () => AnonymousIdentity3,
-    BLS12_381_G2_OID: () => BLS12_381_G2_OID,
-    CanisterStatus: () => canisterStatus_exports,
-    Cbor: () => Cbor2,
-    CborDecodeErrorCode: () => CborDecodeErrorCode,
-    CborEncodeErrorCode: () => CborEncodeErrorCode,
-    Certificate: () => Certificate,
-    CertificateHasTooManyDelegationsErrorCode: () => CertificateHasTooManyDelegationsErrorCode,
-    CertificateNotAuthorizedErrorCode: () => CertificateNotAuthorizedErrorCode,
-    CertificateNotAuthorizedForSubnetErrorCode: () => CertificateNotAuthorizedForSubnetErrorCode,
-    CertificateOutdatedErrorCode: () => CertificateOutdatedErrorCode,
-    CertificateTimeErrorCode: () => CertificateTimeErrorCode,
-    CertificateVerificationErrorCode: () => CertificateVerificationErrorCode,
-    CertifiedRejectErrorCode: () => CertifiedRejectErrorCode,
-    CreateHttpAgentErrorCode: () => CreateHttpAgentErrorCode,
-    CryptoError: () => CryptoError,
-    DEFAULT_POLLING_OPTIONS: () => DEFAULT_POLLING_OPTIONS,
-    DER_COSE_OID: () => DER_COSE_OID,
-    Delegation: () => Delegation,
-    DelegationChain: () => DelegationChain,
-    DelegationIdentity: () => DelegationIdentity,
-    DerDecodeErrorCode: () => DerDecodeErrorCode,
-    DerDecodeLengthMismatchErrorCode: () => DerDecodeLengthMismatchErrorCode,
-    DerEncodeErrorCode: () => DerEncodeErrorCode,
-    DerKeyLengthMismatchErrorCode: () => DerKeyLengthMismatchErrorCode,
-    DerPrefixMismatchErrorCode: () => DerPrefixMismatchErrorCode,
-    ECDSAKeyIdentity: () => ECDSAKeyIdentity,
-    ED25519_OID: () => ED25519_OID,
-    Ed25519KeyIdentity: () => Ed25519KeyIdentity,
-    EmptyCookieErrorCode: () => EmptyCookieErrorCode,
-    Endpoint: () => Endpoint,
-    ErrorKindEnum: () => ErrorKindEnum,
-    Expiry: () => Expiry,
-    ExpiryJsonDeserializeErrorCode: () => ExpiryJsonDeserializeErrorCode,
-    ExternalError: () => ExternalError,
-    HashTreeDecodeErrorCode: () => HashTreeDecodeErrorCode,
-    HashValueErrorCode: () => HashValueErrorCode,
-    HexDecodeErrorCode: () => HexDecodeErrorCode,
-    HttpAgent: () => HttpAgent2,
-    HttpDefaultFetchErrorCode: () => HttpDefaultFetchErrorCode,
-    HttpErrorCode: () => HttpErrorCode,
-    HttpFetchErrorCode: () => HttpFetchErrorCode,
-    HttpV4ApiNotSupportedErrorCode: () => HttpV4ApiNotSupportedErrorCode,
-    IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR: () => IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR,
-    IC_REQUEST_DOMAIN_SEPARATOR: () => IC_REQUEST_DOMAIN_SEPARATOR,
-    IC_RESPONSE_DOMAIN_SEPARATOR: () => IC_RESPONSE_DOMAIN_SEPARATOR,
-    IC_ROOT_KEY: () => IC_ROOT_KEY,
-    IC_STATE_ROOT_DOMAIN_SEPARATOR: () => IC_STATE_ROOT_DOMAIN_SEPARATOR,
-    IDL: () => IDL,
-    IdentityInvalidErrorCode: () => IdentityInvalidErrorCode,
-    IngressExpiryInvalidErrorCode: () => IngressExpiryInvalidErrorCode,
-    InputBox: () => InputBox,
-    InputError: () => InputError,
-    InputForm: () => InputForm,
-    InvalidReadStateRequestErrorCode: () => InvalidReadStateRequestErrorCode,
-    InvalidRootKeyErrorCode: () => InvalidRootKeyErrorCode,
-    JSON_KEY_EXPIRY: () => JSON_KEY_EXPIRY,
-    LimitError: () => LimitError,
-    LookupErrorCode: () => LookupErrorCode,
-    LookupLabelStatus: () => LookupLabelStatus,
-    LookupPathStatus: () => LookupPathStatus,
-    LookupSubtreeStatus: () => LookupSubtreeStatus,
-    MANAGEMENT_CANISTER_ID: () => MANAGEMENT_CANISTER_ID,
-    MalformedLookupFoundValueErrorCode: () => MalformedLookupFoundValueErrorCode,
-    MalformedPublicKeyErrorCode: () => MalformedPublicKeyErrorCode,
-    MalformedSignatureErrorCode: () => MalformedSignatureErrorCode,
-    MissingCanisterIdErrorCode: () => MissingCanisterIdErrorCode,
-    MissingCookieErrorCode: () => MissingCookieErrorCode,
-    MissingLookupValueErrorCode: () => MissingLookupValueErrorCode,
-    MissingRootKeyErrorCode: () => MissingRootKeyErrorCode,
-    MissingSignatureErrorCode: () => MissingSignatureErrorCode,
-    NodeType: () => NodeType,
-    Observable: () => Observable,
-    ObservableLog: () => ObservableLog,
-    OptionForm: () => OptionForm,
-    PartialDelegationIdentity: () => PartialDelegationIdentity,
-    PartialIdentity: () => PartialIdentity,
-    PipeArrayBuffer: () => PipeArrayBuffer,
-    Principal: () => Principal,
-    ProtocolError: () => ProtocolError,
-    QueryResponseStatus: () => QueryResponseStatus,
-    QuerySignatureVerificationFailedErrorCode: () => QuerySignatureVerificationFailedErrorCode,
-    ReadRequestType: () => ReadRequestType,
-    RecordForm: () => RecordForm,
-    RejectError: () => RejectError,
-    Render: () => Render,
-    ReplicaRejectCode: () => ReplicaRejectCode,
-    RequestStatusDoneNoReplyErrorCode: () => RequestStatusDoneNoReplyErrorCode,
-    RequestStatusResponseStatus: () => RequestStatusResponseStatus,
-    SECP256K1_OID: () => SECP256K1_OID,
-    SignIdentity: () => SignIdentity,
-    SubmitRequestType: () => SubmitRequestType,
-    SubnetStatus: () => subnetStatus_exports,
-    TimeoutWaitingForResponseErrorCode: () => TimeoutWaitingForResponseErrorCode,
-    ToCborValue: () => ToCborValue,
-    TransportError: () => TransportError,
-    TrustError: () => TrustError,
-    TupleForm: () => TupleForm,
-    UNREACHABLE_ERROR: () => UNREACHABLE_ERROR,
-    UncertifiedRejectErrorCode: () => UncertifiedRejectErrorCode,
-    UncertifiedRejectUpdateErrorCode: () => UncertifiedRejectUpdateErrorCode,
-    UnexpectedErrorCode: () => UnexpectedErrorCode,
-    UnknownError: () => UnknownError,
-    VariantForm: () => VariantForm,
-    VecForm: () => VecForm,
-    WebAuthnIdentity: () => WebAuthnIdentity,
-    blsVerify: () => blsVerify,
-    calculateIngressExpiry: () => calculateIngressExpiry,
-    check_canister_ranges: () => check_canister_ranges,
-    compare: () => compare,
-    concat: () => concat,
-    constructRequest: () => constructRequest,
-    createIdentityDescriptor: () => createIdentityDescriptor,
-    decodeCanisterRanges: () => decodeCanisterRanges,
-    decodeLen: () => decodeLen,
-    decodeLenBytes: () => decodeLenBytes,
-    defaultStrategy: () => defaultStrategy,
-    domain_sep: () => domain_sep,
-    encodeLen: () => encodeLen,
-    encodeLenBytes: () => encodeLenBytes,
-    fetchCandid: () => fetchCandid,
-    find_label: () => find_label,
-    flatten_forks: () => flatten_forks,
-    getSubnetIdFromCertificate: () => getSubnetIdFromCertificate,
-    hashOfMap: () => hashOfMap,
-    hashTreeToString: () => hashTreeToString,
-    hashValue: () => hashValue,
-    httpHeadersTransform: () => httpHeadersTransform,
-    idlLabelToId: () => idlLabelToId,
-    inputBox: () => inputBox,
-    isDelegationValid: () => isDelegationValid,
-    isV2ResponseBody: () => isV2ResponseBody,
-    isV4ResponseBody: () => isV4ResponseBody,
-    lebDecode: () => lebDecode,
-    lebEncode: () => lebEncode,
-    lookupCanisterRanges: () => lookupCanisterRanges,
-    lookupCanisterRangesFallback: () => lookupCanisterRangesFallback,
-    lookupResultToBuffer: () => lookupResultToBuffer,
-    lookup_path: () => lookup_path,
-    lookup_subtree: () => lookup_subtree,
-    makeExpiryTransform: () => makeExpiryTransform,
-    makeNonce: () => makeNonce,
-    makeNonceTransform: () => makeNonceTransform,
-    optForm: () => optForm,
-    pollForResponse: () => pollForResponse,
-    polling: () => polling_exports,
-    randomNumber: () => randomNumber,
-    readIntLE: () => readIntLE,
-    readUIntLE: () => readUIntLE,
-    reconstruct: () => reconstruct,
-    recordForm: () => recordForm,
-    renderInput: () => renderInput,
-    renderValue: () => renderValue,
-    requestIdOf: () => requestIdOf,
-    safeRead: () => safeRead,
-    safeReadUint8: () => safeReadUint8,
-    slebDecode: () => slebDecode,
-    slebEncode: () => slebEncode,
-    strategy: () => strategy_exports,
-    tupleForm: () => tupleForm,
-    uint8ToBuf: () => uint8ToBuf,
-    uint8ToDataView: () => uint8ToDataView,
-    unwrapDER: () => unwrapDER,
-    variantForm: () => variantForm,
-    vecForm: () => vecForm,
-    verify: () => verify,
-    wrapDER: () => wrapDER,
-    writeIntLE: () => writeIntLE,
-    writeUIntLE: () => writeUIntLE
+    Actor: () => Actor,
+    AnonymousIdentity: () => AnonymousIdentity,
+    Cbor: () => Cbor,
+    HttpAgent: () => HttpAgent,
+    IDL: () => idl_exports,
+    Principal: () => Principal
   });
+
+  // node_modules/@icp-sdk/core/lib/esm/agent/agent/api.js
+  var ReplicaRejectCode;
+  (function(ReplicaRejectCode2) {
+    ReplicaRejectCode2[ReplicaRejectCode2["SysFatal"] = 1] = "SysFatal";
+    ReplicaRejectCode2[ReplicaRejectCode2["SysTransient"] = 2] = "SysTransient";
+    ReplicaRejectCode2[ReplicaRejectCode2["DestinationInvalid"] = 3] = "DestinationInvalid";
+    ReplicaRejectCode2[ReplicaRejectCode2["CanisterReject"] = 4] = "CanisterReject";
+    ReplicaRejectCode2[ReplicaRejectCode2["CanisterError"] = 5] = "CanisterError";
+  })(ReplicaRejectCode || (ReplicaRejectCode = {}));
+  var QueryResponseStatus;
+  (function(QueryResponseStatus2) {
+    QueryResponseStatus2["Replied"] = "replied";
+    QueryResponseStatus2["Rejected"] = "rejected";
+  })(QueryResponseStatus || (QueryResponseStatus = {}));
+  function isV2ResponseBody(body) {
+    return body !== null && body !== void 0 && "reject_code" in body;
+  }
+  function isV4ResponseBody(body) {
+    return body !== null && body !== void 0 && "certificate" in body;
+  }
 
   // node_modules/@icp-sdk/core/lib/esm/principal/utils/base32.js
   var alphabet = "abcdefghijklmnopqrstuvwxyz234567";
@@ -633,9 +487,6 @@ var DfinityAgent = (() => {
     if (typeof str !== "string")
       throw new Error("string expected");
     return new Uint8Array(new TextEncoder().encode(str));
-  }
-  function bytesToUtf8(bytes) {
-    return new TextDecoder().decode(bytes);
   }
   function toBytes(data) {
     if (typeof data === "string")
@@ -1343,27 +1194,6 @@ var DfinityAgent = (() => {
     }
   };
 
-  // node_modules/@icp-sdk/core/lib/esm/agent/agent/api.js
-  var ReplicaRejectCode;
-  (function(ReplicaRejectCode2) {
-    ReplicaRejectCode2[ReplicaRejectCode2["SysFatal"] = 1] = "SysFatal";
-    ReplicaRejectCode2[ReplicaRejectCode2["SysTransient"] = 2] = "SysTransient";
-    ReplicaRejectCode2[ReplicaRejectCode2["DestinationInvalid"] = 3] = "DestinationInvalid";
-    ReplicaRejectCode2[ReplicaRejectCode2["CanisterReject"] = 4] = "CanisterReject";
-    ReplicaRejectCode2[ReplicaRejectCode2["CanisterError"] = 5] = "CanisterError";
-  })(ReplicaRejectCode || (ReplicaRejectCode = {}));
-  var QueryResponseStatus;
-  (function(QueryResponseStatus2) {
-    QueryResponseStatus2["Replied"] = "replied";
-    QueryResponseStatus2["Rejected"] = "rejected";
-  })(QueryResponseStatus || (QueryResponseStatus = {}));
-  function isV2ResponseBody(body) {
-    return body !== null && body !== void 0 && "reject_code" in body;
-  }
-  function isV4ResponseBody(body) {
-    return body !== null && body !== void 0 && "certificate" in body;
-  }
-
   // node_modules/@icp-sdk/core/lib/esm/agent/errors.js
   var ErrorKindEnum;
   (function(ErrorKindEnum2) {
@@ -1471,13 +1301,6 @@ Call context:
       super(code, ErrorKindEnum.External);
       this.name = "ExternalError";
       Object.setPrototypeOf(this, _ExternalError.prototype);
-    }
-  };
-  var LimitError = class _LimitError extends ErrorKind {
-    constructor(code) {
-      super(code, ErrorKindEnum.Limit);
-      this.name = "LimitError";
-      Object.setPrototypeOf(this, _LimitError.prototype);
     }
   };
   var InputError = class _InputError extends ErrorKind {
@@ -1672,17 +1495,6 @@ Call context:
     }
     toErrorMessage() {
       return `Failed to encode CBOR: ${formatUnknownError(this.error)}, input: ${this.value}`;
-    }
-  };
-  var HexDecodeErrorCode = class _HexDecodeErrorCode extends ErrorCode {
-    constructor(error) {
-      super();
-      this.error = error;
-      this.name = "HexDecodeErrorCode";
-      Object.setPrototypeOf(this, _HexDecodeErrorCode.prototype);
-    }
-    toErrorMessage() {
-      return `Failed to decode hex: ${this.error}`;
     }
   };
   var TimeoutWaitingForResponseErrorCode = class _TimeoutWaitingForResponseErrorCode extends ErrorCode {
@@ -2006,43 +1818,10 @@ Call context:
       return `Failed to deserialize expiry: ${this.error}`;
     }
   };
-  var InvalidRootKeyErrorCode = class _InvalidRootKeyErrorCode extends ErrorCode {
-    constructor(rootKey, expectedLength) {
-      super();
-      this.rootKey = rootKey;
-      this.expectedLength = expectedLength;
-      this.name = "InvalidRootKeyErrorCode";
-      Object.setPrototypeOf(this, _InvalidRootKeyErrorCode.prototype);
-    }
-    toErrorMessage() {
-      return `Invalid root key. Expected length: ${this.expectedLength}, actual length: ${this.rootKey.length}`;
-    }
-  };
-  var MissingCookieErrorCode = class _MissingCookieErrorCode extends ErrorCode {
-    constructor(expectedCookieName) {
-      super();
-      this.expectedCookieName = expectedCookieName;
-      this.name = "MissingCookieErrorCode";
-      Object.setPrototypeOf(this, _MissingCookieErrorCode.prototype);
-    }
-    toErrorMessage() {
-      return `Cookie '${this.expectedCookieName}' not found`;
-    }
-  };
-  var EmptyCookieErrorCode = class _EmptyCookieErrorCode extends ErrorCode {
-    constructor(expectedCookieName) {
-      super();
-      this.expectedCookieName = expectedCookieName;
-      this.name = "EmptyCookieErrorCode";
-      Object.setPrototypeOf(this, _EmptyCookieErrorCode.prototype);
-    }
-    toErrorMessage() {
-      return `Cookie '${this.expectedCookieName}' is empty`;
-    }
-  };
   function formatUnknownError(error) {
+    var _a2;
     if (error instanceof Error) {
-      return error.stack ?? error.message;
+      return (_a2 = error.stack) != null ? _a2 : error.message;
     }
     try {
       return JSON.stringify(error);
@@ -2144,7 +1923,7 @@ Call context:
      * @param buffer an optional buffer to start with
      * @param length an optional amount of bytes to use for the length.
      */
-    constructor(buffer, length = buffer?.byteLength || 0) {
+    constructor(buffer, length = (buffer == null ? void 0 : buffer.byteLength) || 0) {
       if (buffer && !(buffer instanceof Uint8Array)) {
         try {
           buffer = uint8FromBufLike(buffer);
@@ -2249,9 +2028,6 @@ Call context:
       }
     }
     return 0;
-  }
-  function uint8Equals(u1, u2) {
-    return compare(u1, u2) === 0;
   }
   function uint8ToDataView(uint8) {
     if (!(uint8 instanceof Uint8Array)) {
@@ -3784,7 +3560,8 @@ variant ${k2} -> ${e.message}`);
       T2.add(this, concat(opCode, argLen, args, retLen, rets, annLen, anns));
     }
     decodeValue(b2, t) {
-      const tt2 = t instanceof RecClass ? t.getType() ?? t : t;
+      var _a2;
+      const tt2 = t instanceof RecClass ? (_a2 = t.getType()) != null ? _a2 : t : t;
       if (!subtype(tt2, this)) {
         throw new Error(`Cannot decode function reference at type ${this.display()} from wire type ${tt2.display()}`);
       }
@@ -3870,7 +3647,8 @@ variant ${k2} -> ${e.message}`);
       T2.add(this, concat(opCode, len, ...meths));
     }
     decodeValue(b2, t) {
-      const tt2 = t instanceof RecClass ? t.getType() ?? t : t;
+      var _a2;
+      const tt2 = t instanceof RecClass ? (_a2 = t.getType()) != null ? _a2 : t : t;
       if (!subtype(tt2, this)) {
         throw new Error(`Cannot decode service reference at type ${this.display()} from wire type ${tt2.display()}`);
       }
@@ -4213,7 +3991,8 @@ variant ${k2} -> ${e.message}`);
     /// Returns whether we know for sure that a relation holds or doesn't (`true` or `false`), or
     /// if we don't know yet (`undefined`)
     known(t1, t2) {
-      return this.rels.get(t1.name)?.get(t2.name);
+      var _a2;
+      return (_a2 = this.rels.get(t1.name)) == null ? void 0 : _a2.get(t2.name);
     }
     addNegative(t1, t2) {
       this.addNames(t1.name, t2.name, false);
@@ -4359,488 +4138,6 @@ variant ${k2} -> ${e.message}`);
     return false;
   }
 
-  // node_modules/@icp-sdk/core/lib/esm/candid/candid-core.js
-  var InputBox = class {
-    constructor(idl, ui) {
-      this.idl = idl;
-      this.ui = ui;
-      this.label = null;
-      this.value = void 0;
-      const status = document.createElement("span");
-      status.className = "status";
-      this.status = status;
-      if (ui.input) {
-        ui.input.addEventListener("blur", () => {
-          if (ui.input.value === "") {
-            return;
-          }
-          this.parse();
-        });
-        ui.input.addEventListener("input", () => {
-          status.style.display = "none";
-          ui.input.classList.remove("reject");
-        });
-      }
-    }
-    isRejected() {
-      return this.value === void 0;
-    }
-    parse(config = {}) {
-      if (this.ui.form) {
-        const value = this.ui.form.parse(config);
-        this.value = value;
-        return value;
-      }
-      if (this.ui.input) {
-        const input = this.ui.input;
-        try {
-          const value = this.ui.parse(this.idl, config, input.value);
-          if (!this.idl.covariant(value)) {
-            throw new Error(`${input.value} is not of type ${this.idl.display()}`);
-          }
-          this.status.style.display = "none";
-          this.value = value;
-          return value;
-        } catch (err) {
-          input.classList.add("reject");
-          this.status.style.display = "block";
-          this.status.innerHTML = "InputError: " + err.message;
-          this.value = void 0;
-          return void 0;
-        }
-      }
-      return null;
-    }
-    render(dom) {
-      const container = document.createElement("span");
-      if (this.label) {
-        const label = document.createElement("label");
-        label.innerText = this.label;
-        container.appendChild(label);
-      }
-      if (this.ui.input) {
-        container.appendChild(this.ui.input);
-        container.appendChild(this.status);
-      }
-      if (this.ui.form) {
-        this.ui.form.render(container);
-      }
-      dom.appendChild(container);
-    }
-  };
-  var InputForm = class {
-    constructor(ui) {
-      this.ui = ui;
-      this.form = [];
-    }
-    renderForm(dom) {
-      if (this.ui.container) {
-        this.form.forEach((e) => e.render(this.ui.container));
-        dom.appendChild(this.ui.container);
-      } else {
-        this.form.forEach((e) => e.render(dom));
-      }
-    }
-    render(dom) {
-      if (this.ui.open && this.ui.event) {
-        dom.appendChild(this.ui.open);
-        const form = this;
-        form.ui.open.addEventListener(form.ui.event, () => {
-          if (form.ui.container) {
-            form.ui.container.innerHTML = "";
-          } else {
-            const oldContainer = form.ui.open.nextElementSibling;
-            if (oldContainer) {
-              oldContainer.parentNode.removeChild(oldContainer);
-            }
-          }
-          form.generateForm();
-          form.renderForm(dom);
-        });
-      } else {
-        this.generateForm();
-        this.renderForm(dom);
-      }
-    }
-  };
-  var RecordForm = class extends InputForm {
-    constructor(fields, ui) {
-      super(ui);
-      this.fields = fields;
-      this.ui = ui;
-    }
-    generateForm() {
-      this.form = this.fields.map(([key, type]) => {
-        const input = this.ui.render(type);
-        if (this.ui.labelMap && this.ui.labelMap.hasOwnProperty(key)) {
-          input.label = this.ui.labelMap[key] + " ";
-        } else {
-          input.label = key + " ";
-        }
-        return input;
-      });
-    }
-    parse(config) {
-      const v2 = {};
-      this.fields.forEach(([key, _2], i) => {
-        const value = this.form[i].parse(config);
-        v2[key] = value;
-      });
-      if (this.form.some((input) => input.isRejected())) {
-        return void 0;
-      }
-      return v2;
-    }
-  };
-  var TupleForm = class extends InputForm {
-    constructor(components, ui) {
-      super(ui);
-      this.components = components;
-      this.ui = ui;
-    }
-    generateForm() {
-      this.form = this.components.map((type) => {
-        const input = this.ui.render(type);
-        return input;
-      });
-    }
-    parse(config) {
-      const v2 = [];
-      this.components.forEach((_2, i) => {
-        const value = this.form[i].parse(config);
-        v2.push(value);
-      });
-      if (this.form.some((input) => input.isRejected())) {
-        return void 0;
-      }
-      return v2;
-    }
-  };
-  var VariantForm = class extends InputForm {
-    constructor(fields, ui) {
-      super(ui);
-      this.fields = fields;
-      this.ui = ui;
-    }
-    generateForm() {
-      const index = this.ui.open.selectedIndex;
-      const [_2, type] = this.fields[index];
-      const variant = this.ui.render(type);
-      this.form = [variant];
-    }
-    parse(config) {
-      const select = this.ui.open;
-      const selected = select.options[select.selectedIndex].value;
-      const value = this.form[0].parse(config);
-      if (value === void 0) {
-        return void 0;
-      }
-      const v2 = {};
-      v2[selected] = value;
-      return v2;
-    }
-  };
-  var OptionForm = class extends InputForm {
-    constructor(ty, ui) {
-      super(ui);
-      this.ty = ty;
-      this.ui = ui;
-    }
-    generateForm() {
-      if (this.ui.open.checked) {
-        const opt = this.ui.render(this.ty);
-        this.form = [opt];
-      } else {
-        this.form = [];
-      }
-    }
-    parse(config) {
-      if (this.form.length === 0) {
-        return [];
-      } else {
-        const value = this.form[0].parse(config);
-        if (value === void 0) {
-          return void 0;
-        }
-        return [value];
-      }
-    }
-  };
-  var VecForm = class extends InputForm {
-    constructor(ty, ui) {
-      super(ui);
-      this.ty = ty;
-      this.ui = ui;
-    }
-    generateForm() {
-      const len = +this.ui.open.value;
-      this.form = [];
-      for (let i = 0; i < len; i++) {
-        const t = this.ui.render(this.ty);
-        this.form.push(t);
-      }
-    }
-    parse(config) {
-      const value = this.form.map((input) => {
-        return input.parse(config);
-      });
-      if (this.form.some((input) => input.isRejected())) {
-        return void 0;
-      }
-      return value;
-    }
-  };
-
-  // node_modules/@icp-sdk/core/lib/esm/candid/candid-ui.js
-  var InputConfig = { parse: parsePrimitive };
-  var FormConfig = { render: renderInput };
-  var inputBox = (t, config) => {
-    return new InputBox(t, { ...InputConfig, ...config });
-  };
-  var recordForm = (fields, config) => {
-    return new RecordForm(fields, { ...FormConfig, ...config });
-  };
-  var tupleForm = (components, config) => {
-    return new TupleForm(components, { ...FormConfig, ...config });
-  };
-  var variantForm = (fields, config) => {
-    return new VariantForm(fields, { ...FormConfig, ...config });
-  };
-  var optForm = (ty, config) => {
-    return new OptionForm(ty, { ...FormConfig, ...config });
-  };
-  var vecForm = (ty, config) => {
-    return new VecForm(ty, { ...FormConfig, ...config });
-  };
-  var Render = class extends Visitor {
-    visitType(t, _d) {
-      const input = document.createElement("input");
-      input.classList.add("argument");
-      input.placeholder = t.display();
-      return inputBox(t, { input });
-    }
-    visitNull(t, _d) {
-      return inputBox(t, {});
-    }
-    visitRecord(t, fields, _d) {
-      let config = {};
-      if (fields.length > 1) {
-        const container = document.createElement("div");
-        container.classList.add("popup-form");
-        config = { container };
-      }
-      const form = recordForm(fields, config);
-      return inputBox(t, { form });
-    }
-    visitTuple(t, components, _d) {
-      let config = {};
-      if (components.length > 1) {
-        const container = document.createElement("div");
-        container.classList.add("popup-form");
-        config = { container };
-      }
-      const form = tupleForm(components, config);
-      return inputBox(t, { form });
-    }
-    visitVariant(t, fields, _d) {
-      const select = document.createElement("select");
-      for (const [key, _type] of fields) {
-        const option = new Option(key);
-        select.add(option);
-      }
-      select.selectedIndex = -1;
-      select.classList.add("open");
-      const config = { open: select, event: "change" };
-      const form = variantForm(fields, config);
-      return inputBox(t, { form });
-    }
-    visitOpt(t, ty, _d) {
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.classList.add("open");
-      const form = optForm(ty, { open: checkbox, event: "change" });
-      return inputBox(t, { form });
-    }
-    visitVec(t, ty, _d) {
-      const len = document.createElement("input");
-      len.type = "number";
-      len.min = "0";
-      len.max = "100";
-      len.style.width = "8rem";
-      len.placeholder = "len";
-      len.classList.add("open");
-      const container = document.createElement("div");
-      container.classList.add("popup-form");
-      const form = vecForm(ty, { open: len, event: "change", container });
-      return inputBox(t, { form });
-    }
-    visitRec(_t, ty, _d) {
-      return renderInput(ty);
-    }
-  };
-  var Parse = class extends Visitor {
-    visitNull(_t, _v) {
-      return null;
-    }
-    visitBool(_t, v2) {
-      if (v2 === "true") {
-        return true;
-      }
-      if (v2 === "false") {
-        return false;
-      }
-      throw new Error(`Cannot parse ${v2} as boolean`);
-    }
-    visitText(_t, v2) {
-      return v2;
-    }
-    visitFloat(_t, v2) {
-      return parseFloat(v2);
-    }
-    visitFixedInt(t, v2) {
-      if (t._bits <= 32) {
-        return parseInt(v2, 10);
-      } else {
-        return BigInt(v2);
-      }
-    }
-    visitFixedNat(t, v2) {
-      if (t._bits <= 32) {
-        return parseInt(v2, 10);
-      } else {
-        return BigInt(v2);
-      }
-    }
-    visitNumber(_t, v2) {
-      return BigInt(v2);
-    }
-    visitPrincipal(_t, v2) {
-      return Principal.fromText(v2);
-    }
-    visitService(_t, v2) {
-      return Principal.fromText(v2);
-    }
-    visitFunc(_t, v2) {
-      const x2 = v2.split(".", 2);
-      return [Principal.fromText(x2[0]), x2[1]];
-    }
-  };
-  var Random = class extends Visitor {
-    visitNull(_t, _v) {
-      return null;
-    }
-    visitBool(_t, _v) {
-      return Math.random() < 0.5;
-    }
-    visitText(_t, _v) {
-      return Math.random().toString(36).substring(6);
-    }
-    visitFloat(_t, _v) {
-      return Math.random();
-    }
-    visitInt(_t, _v) {
-      return BigInt(this.generateNumber(true));
-    }
-    visitNat(_t, _v) {
-      return BigInt(this.generateNumber(false));
-    }
-    visitFixedInt(t, v2) {
-      const x2 = this.generateNumber(true);
-      if (t._bits <= 32) {
-        return x2;
-      } else {
-        return BigInt(v2);
-      }
-    }
-    visitFixedNat(t, v2) {
-      const x2 = this.generateNumber(false);
-      if (t._bits <= 32) {
-        return x2;
-      } else {
-        return BigInt(v2);
-      }
-    }
-    generateNumber(signed) {
-      const num = Math.floor(Math.random() * 100);
-      if (signed && Math.random() < 0.5) {
-        return -num;
-      } else {
-        return num;
-      }
-    }
-  };
-  function parsePrimitive(t, config, d2) {
-    if (config.random && d2 === "") {
-      return t.accept(new Random(), d2);
-    } else {
-      return t.accept(new Parse(), d2);
-    }
-  }
-  function renderInput(t) {
-    return t.accept(new Render(), null);
-  }
-  function renderValue(t, input, value) {
-    return t.accept(new RenderValue(), { input, value });
-  }
-  var RenderValue = class extends Visitor {
-    visitType(t, d2) {
-      d2.input.ui.input.value = t.valueToString(d2.value);
-    }
-    visitNull(_t, _d) {
-    }
-    visitText(_t, d2) {
-      d2.input.ui.input.value = d2.value;
-    }
-    visitRec(_t, ty, d2) {
-      renderValue(ty, d2.input, d2.value);
-    }
-    visitOpt(_t, ty, d2) {
-      if (d2.value.length === 0) {
-        return;
-      } else {
-        const form = d2.input.ui.form;
-        const open = form.ui.open;
-        open.checked = true;
-        open.dispatchEvent(new Event(form.ui.event));
-        renderValue(ty, form.form[0], d2.value[0]);
-      }
-    }
-    visitRecord(_t, fields, d2) {
-      const form = d2.input.ui.form;
-      fields.forEach(([key, type], i) => {
-        renderValue(type, form.form[i], d2.value[key]);
-      });
-    }
-    visitTuple(_t, components, d2) {
-      const form = d2.input.ui.form;
-      components.forEach((type, i) => {
-        renderValue(type, form.form[i], d2.value[i]);
-      });
-    }
-    visitVariant(_t, fields, d2) {
-      const form = d2.input.ui.form;
-      const selected = Object.entries(d2.value)[0];
-      fields.forEach(([key, type], i) => {
-        if (key === selected[0]) {
-          const open = form.ui.open;
-          open.selectedIndex = i;
-          open.dispatchEvent(new Event(form.ui.event));
-          renderValue(type, form.form[0], selected[1]);
-        }
-      });
-    }
-    visitVec(_t, ty, d2) {
-      const form = d2.input.ui.form;
-      const len = d2.value.length;
-      const open = form.ui.open;
-      open.value = len;
-      open.dispatchEvent(new Event(form.ui.event));
-      d2.value.forEach((v2, i) => {
-        renderValue(ty, form.form[i], v2);
-      });
-    }
-  };
-
   // node_modules/@icp-sdk/core/lib/esm/agent/utils/buffer.js
   function uint8FromBufLike2(bufLike) {
     if (!bufLike) {
@@ -4860,13 +4157,7 @@ variant ${k2} -> ${e.message}`);
     }
     return new Uint8Array(bufLike);
   }
-  function uint8ToBuf(arr) {
-    const buf = new ArrayBuffer(arr.byteLength);
-    const view = new Uint8Array(buf);
-    view.set(arr);
-    return buf;
-  }
-  function uint8Equals2(a2, b2) {
+  function uint8Equals(a2, b2) {
     if (a2.length !== b2.length)
       return false;
     for (let i = 0; i < a2.length; i++) {
@@ -4928,36 +4219,6 @@ variant ${k2} -> ${e.message}`);
   var IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR = new TextEncoder().encode("ic-request-auth-delegation");
 
   // node_modules/@icp-sdk/core/lib/esm/agent/auth.js
-  var SignIdentity = class {
-    /**
-     * Get the principal represented by this identity. Normally should be a
-     * `Principal.selfAuthenticating()`.
-     */
-    getPrincipal() {
-      if (!this._principal) {
-        this._principal = Principal.selfAuthenticating(new Uint8Array(this.getPublicKey().toDer()));
-      }
-      return this._principal;
-    }
-    /**
-     * Transform a request into a signed version of the request. This is done last
-     * after the transforms on the body of a request. The returned object can be
-     * anything, but must be serializable to CBOR.
-     * @param request - internet computer request to transform
-     */
-    async transformRequest(request3) {
-      const { body, ...fields } = request3;
-      const requestId = requestIdOf(body);
-      return {
-        ...fields,
-        body: {
-          content: body,
-          sender_pubkey: this.getPublicKey().toDer(),
-          sender_sig: await this.sign(concatBytes(IC_REQUEST_DOMAIN_SEPARATOR, requestId))
-        }
-      };
-    }
-  };
   var AnonymousIdentity = class {
     getPrincipal() {
       return Principal.anonymous();
@@ -4969,12 +4230,8 @@ variant ${k2} -> ${e.message}`);
       };
     }
   };
-  function createIdentityDescriptor(identity) {
-    const identityIndicator = "getPublicKey" in identity ? { type: "PublicKeyIdentity", publicKey: bytesToHex(identity.getPublicKey().toDer()) } : { type: "AnonymousIdentity" };
-    return identityIndicator;
-  }
 
-  // node_modules/@dfinity/cbor/dist/cbor.mjs
+  // ../../node_modules/@dfinity/cbor/dist/cbor.mjs
   var w = class extends Error {
     constructor(n) {
       super(n), this.name = "DecodingError";
@@ -5009,9 +4266,10 @@ variant ${k2} -> ${e.message}`);
   var y;
   var a = 0;
   function ut(t, n) {
+    var _a2;
     A = t, a = 0;
     const e = B(n);
-    return (n == null ? void 0 : n(e)) ?? e;
+    return (_a2 = n == null ? void 0 : n(e)) != null ? _a2 : e;
   }
   function B(t) {
     const [n, e] = N();
@@ -5043,18 +4301,19 @@ variant ${k2} -> ${e.message}`);
     return a++, [n, e];
   }
   function J(t, n) {
+    var _a2, _b2;
     const e = E(t);
     if (e === 1 / 0) {
       const u = [];
       let f = B(n);
       for (; f !== L; )
-        u.push((n == null ? void 0 : n(f)) ?? f), f = B(n);
+        u.push((_a2 = n == null ? void 0 : n(f)) != null ? _a2 : f), f = B(n);
       return u;
     }
     const i = new Array(e);
     for (let u = 0; u < e; u++) {
       const f = B(n);
-      i[u] = (n == null ? void 0 : n(f)) ?? f;
+      i[u] = (_b2 = n == null ? void 0 : n(f)) != null ? _b2 : f;
     }
     return i;
   }
@@ -5074,12 +4333,13 @@ variant ${k2} -> ${e.message}`);
     throw new w(`Unrecognized simple type: ${t.toString(2)}`);
   }
   function b(t, n) {
+    var _a2, _b2;
     const e = E(t), i = {};
     if (e === 1 / 0) {
       let [u, f] = N();
       for (; u !== c.Simple && f !== g.Break; ) {
         const l = F(f), U = B(n);
-        i[l] = (n == null ? void 0 : n(U, l)) ?? U, [u, f] = N();
+        i[l] = (_a2 = n == null ? void 0 : n(U, l)) != null ? _a2 : U, [u, f] = N();
       }
       return i;
     }
@@ -5088,7 +4348,7 @@ variant ${k2} -> ${e.message}`);
       if (f !== c.TextString)
         throw new w("Map keys must be text strings");
       const U = F(l), D = B(n);
-      i[U] = (n == null ? void 0 : n(D, U)) ?? D;
+      i[U] = (_b2 = n == null ? void 0 : n(D, U)) != null ? _b2 : D;
     }
     return i;
   }
@@ -5112,7 +4372,7 @@ variant ${k2} -> ${e.message}`);
   }
   function j(t) {
     const n = E(t);
-    return typeof n == "number" ? -1 - n : -1n - n;
+    return typeof n == "number" ? -1 - n : -/* @__PURE__ */ BigInt("1") - n;
   }
   function $(t) {
     const n = E(t);
@@ -5147,8 +4407,9 @@ variant ${k2} -> ${e.message}`);
   var s = 0;
   var O = [];
   function dt(t, n) {
+    var _a2;
     s = 0;
-    const e = (n == null ? void 0 : n(t)) ?? t;
+    const e = (_a2 = n == null ? void 0 : n(t)) != null ? _a2 : t;
     return it(m, e, n), o.slice(0, s);
   }
   function _(t, n) {
@@ -5184,12 +4445,14 @@ variant ${k2} -> ${e.message}`);
   }
   function tt(t, n) {
     I(c.Array, t.length), t.forEach((e, i) => {
-      _((n == null ? void 0 : n(e, i.toString())) ?? e, n);
+      var _a2;
+      _((_a2 = n == null ? void 0 : n(e, i.toString())) != null ? _a2 : e, n);
     });
   }
   function nt(t, n) {
     O = Object.entries(t), I(c.Map, O.length), O.forEach(([e, i]) => {
-      X(e), _((n == null ? void 0 : n(i, e)) ?? i, n);
+      var _a2;
+      X(e), _((_a2 = n == null ? void 0 : n(i, e)) != null ? _a2 : i, n);
     });
   }
   function I(t, n) {
@@ -5256,7 +4519,7 @@ variant ${k2} -> ${e.message}`);
   function ot(t) {
     T(
       c.NegativeInteger,
-      typeof t == "bigint" ? -1n - t : -1 - t
+      typeof t == "bigint" ? -/* @__PURE__ */ BigInt("1") - t : -1 - t
     );
   }
   function ft(t) {
@@ -5273,8 +4536,6 @@ variant ${k2} -> ${e.message}`);
   }
 
   // node_modules/@icp-sdk/core/lib/esm/agent/cbor.js
-  var ToCborValue = class {
-  };
   function hasCborValueMethod(value) {
     return typeof value === "object" && value !== null && "toCborValue" in value;
   }
@@ -5443,11 +4704,6 @@ variant ${k2} -> ${e.message}`);
       }
     };
   }
-  function makeExpiryTransform(delayInMilliseconds) {
-    return async (request3) => {
-      request3.body.ingress_expiry = Expiry.fromDeltaInMilliseconds(delayInMilliseconds);
-    };
-  }
   function httpHeadersTransform(headers) {
     const headerFields = [];
     headers.forEach((value, key) => {
@@ -5455,15 +4711,6 @@ variant ${k2} -> ${e.message}`);
     });
     return headerFields;
   }
-
-  // node_modules/@icp-sdk/core/lib/esm/agent/canisterStatus/index.js
-  var canisterStatus_exports = {};
-  __export(canisterStatus_exports, {
-    CustomPath: () => CustomPath,
-    encodePath: () => encodePath,
-    fetchNodeKeys: () => fetchNodeKeys,
-    request: () => request
-  });
 
   // node_modules/@noble/curves/esm/utils.js
   var _0n = /* @__PURE__ */ BigInt(0);
@@ -5477,7 +4724,7 @@ variant ${k2} -> ${e.message}`);
   }
   function _abytes2(value, length, title = "") {
     const bytes = isBytes(value);
-    const len = value?.length;
+    const len = value == null ? void 0 : value.length;
     const needsLen = length !== void 0;
     if (!bytes || needsLen && len !== length) {
       const prefix = title && `"${title}" `;
@@ -7289,10 +6536,10 @@ variant ${k2} -> ${e.message}`);
     const { ShortSignature } = CURVE.G1;
     const { Signature } = CURVE.G2;
     function normP1Hash(point, htfOpts) {
-      return point instanceof G1.Point ? point : shortSignatures.hash(ensureBytes("point", point), htfOpts?.DST);
+      return point instanceof G1.Point ? point : shortSignatures.hash(ensureBytes("point", point), htfOpts == null ? void 0 : htfOpts.DST);
     }
     function normP2Hash(point, htfOpts) {
-      return point instanceof G2.Point ? point : longSignatures.hash(ensureBytes("point", point), htfOpts?.DST);
+      return point instanceof G2.Point ? point : longSignatures.hash(ensureBytes("point", point), htfOpts == null ? void 0 : htfOpts.DST);
     }
     function getPublicKey(privateKey) {
       return longSignatures.getPublicKey(privateKey).toBytes(true);
@@ -7310,7 +6557,7 @@ variant ${k2} -> ${e.message}`);
       const S2 = shortSignatures.sign(Hm, privateKey);
       return message instanceof G1.Point ? S2 : ShortSignature.toBytes(S2);
     }
-    function verify2(signature, message, publicKey, htfOpts) {
+    function verify(signature, message, publicKey, htfOpts) {
       const Hm = normP2Hash(message, htfOpts);
       return longSignatures.verify(signature, Hm, publicKey);
     }
@@ -7363,7 +6610,7 @@ variant ${k2} -> ${e.message}`);
       getPublicKeyForShortSignatures,
       sign,
       signShortSignature,
-      verify: verify2,
+      verify,
       verifyShortSignature,
       aggregatePublicKeys,
       aggregateSignatures,
@@ -8614,7 +7861,6 @@ variant ${k2} -> ${e.message}`);
   }
 
   // node_modules/@icp-sdk/core/lib/esm/agent/utils/bls.js
-  var verify;
   function blsVerify(pk, sig, msg) {
     const primaryKey = typeof pk === "string" ? pk : bytesToHex(pk);
     const signature = typeof sig === "string" ? sig : bytesToHex(sig);
@@ -8649,69 +7895,6 @@ variant ${k2} -> ${e.message}`);
     NodeType2[NodeType2["Leaf"] = 3] = "Leaf";
     NodeType2[NodeType2["Pruned"] = 4] = "Pruned";
   })(NodeType || (NodeType = {}));
-  function hashTreeToString(tree) {
-    const indent = (s2) => s2.split("\n").map((x2) => "  " + x2).join("\n");
-    function labelToString(label) {
-      const decoder = new TextDecoder(void 0, { fatal: true });
-      try {
-        return JSON.stringify(decoder.decode(label));
-      } catch (e) {
-        return `data(...${label.byteLength} bytes)`;
-      }
-    }
-    switch (tree[0]) {
-      case NodeType.Empty:
-        return "()";
-      case NodeType.Fork: {
-        if (tree[1] instanceof Array && tree[2] instanceof Uint8Array) {
-          const left = hashTreeToString(tree[1]);
-          const right = hashTreeToString(tree[2]);
-          return `sub(
- left:
-${indent(left)}
----
- right:
-${indent(right)}
-)`;
-        } else {
-          throw UnknownError.fromCode(new HashTreeDecodeErrorCode("Invalid tree structure for fork"));
-        }
-      }
-      case NodeType.Labeled: {
-        if (tree[1] instanceof Uint8Array && tree[2] instanceof Uint8Array) {
-          const label = labelToString(tree[1]);
-          const sub = hashTreeToString(tree[2]);
-          return `label(
- label:
-${indent(label)}
- sub:
-${indent(sub)}
-)`;
-        } else {
-          throw UnknownError.fromCode(new HashTreeDecodeErrorCode("Invalid tree structure for labeled"));
-        }
-      }
-      case NodeType.Leaf: {
-        if (!tree[1]) {
-          throw UnknownError.fromCode(new HashTreeDecodeErrorCode("Invalid tree structure for leaf"));
-        } else if (Array.isArray(tree[1])) {
-          return JSON.stringify(tree[1]);
-        }
-        return `leaf(...${tree[1].byteLength} bytes)`;
-      }
-      case NodeType.Pruned: {
-        if (!tree[1]) {
-          throw UnknownError.fromCode(new HashTreeDecodeErrorCode("Invalid tree structure for pruned"));
-        } else if (Array.isArray(tree[1])) {
-          return JSON.stringify(tree[1]);
-        }
-        return `pruned(${bytesToHex(new Uint8Array(tree[1]))}`;
-      }
-      default: {
-        return `unknown(${JSON.stringify(tree[0])})`;
-      }
-    }
-  }
   function isBufferGreaterThan(a2, b2) {
     for (let i = 0; i < a2.length; i++) {
       if (a2[i] > b2[i]) {
@@ -8746,7 +7929,8 @@ ${indent(sub)}
       return cert;
     }
     static createUnverified(options) {
-      return new _Certificate(options.certificate, options.rootKey, options.principal, options.blsVerify ?? blsVerify, options.maxAgeInMinutes, options.disableTimeVerification, options.agent);
+      var _a2;
+      return new _Certificate(options.certificate, options.rootKey, options.principal, (_a2 = options.blsVerify) != null ? _a2 : blsVerify, options.maxAgeInMinutes, options.disableTimeVerification, options.agent);
     }
     /**
      * Lookup a path in the certificate tree, using {@link lookup_path}.
@@ -8765,6 +7949,7 @@ ${indent(sub)}
       return lookup_subtree(path, this.cert.tree);
     }
     async verify() {
+      var _a2, _b2, _c;
       const rootHash = await reconstruct(this.cert.tree);
       const derKey = await this._checkDelegationAndGetKey(this.cert.delegation);
       const sig = this.cert.signature;
@@ -8775,7 +7960,7 @@ ${indent(sub)}
         throw ProtocolError.fromCode(new CertificateVerificationErrorCode("Certificate does not contain a time"));
       }
       if (!__privateGet(this, _disableTimeVerification)) {
-        const timeDiffMsecs = __privateGet(this, _agent)?.getTimeDiffMsecs() ?? 0;
+        const timeDiffMsecs = (_b2 = (_a2 = __privateGet(this, _agent)) == null ? void 0 : _a2.getTimeDiffMsecs()) != null ? _b2 : 0;
         const maxAgeInMsec = this._maxAgeInMinutes * MINUTES_TO_MSEC;
         const now = /* @__PURE__ */ new Date();
         const adjustedNow = now.getTime() + timeDiffMsecs;
@@ -8791,7 +7976,7 @@ ${indent(sub)}
         if (isCertificateTimePast) {
           throw TrustError.fromCode(new CertificateTimeErrorCode(this._maxAgeInMinutes, certTime, now, timeDiffMsecs, "past"));
         } else if (isCertificateTimeFuture) {
-          if (__privateGet(this, _agent)?.hasSyncedTime()) {
+          if ((_c = __privateGet(this, _agent)) == null ? void 0 : _c.hasSyncedTime()) {
             throw UnknownError.fromCode(new UnexpectedErrorCode("System time has been synced with the IC network, but certificate is still too far in the future."));
           }
           throw TrustError.fromCode(new CertificateTimeErrorCode(5, certTime, now, timeDiffMsecs, "future"));
@@ -8878,7 +8063,7 @@ ${indent(sub)}
       throw ProtocolError.fromCode(new DerKeyLengthMismatchErrorCode(expectedLength, buf.byteLength));
     }
     const prefix = buf.slice(0, DER_PREFIX.byteLength);
-    if (!uint8Equals2(prefix, DER_PREFIX)) {
+    if (!uint8Equals(prefix, DER_PREFIX)) {
       throw ProtocolError.fromCode(new DerPrefixMismatchErrorCode(DER_PREFIX, prefix));
     }
     return buf.slice(DER_PREFIX.byteLength);
@@ -9046,7 +8231,7 @@ ${indent(sub)}
             status: LookupLabelStatus.Greater
           };
         }
-        if (uint8Equals2(label, tree[1])) {
+        if (uint8Equals(label, tree[1])) {
           return {
             status: LookupLabelStatus.Found,
             value: tree[2]
@@ -9206,13 +8391,6 @@ ${indent(sub)}
 
   // node_modules/@icp-sdk/core/lib/esm/agent/utils/readState.js
   var IC_ROOT_SUBNET_ID = Principal.fromText("tdb26-jop6k-aogll-7ltgs-eruif-6kk7m-qpktf-gdiqx-mxtrf-vb5e6-eqe");
-  var CustomPath = class {
-    constructor(key, path, decodeStrategy) {
-      this.key = key;
-      this.path = path;
-      this.decodeStrategy = decodeStrategy;
-    }
-  };
   function decodeValue(data, strategy) {
     switch (strategy) {
       case "raw":
@@ -9407,14 +8585,6 @@ ${indent(sub)}
   };
 
   // node_modules/@icp-sdk/core/lib/esm/agent/subnetStatus/index.js
-  var subnetStatus_exports = {};
-  __export(subnetStatus_exports, {
-    CustomPath: () => CustomPath,
-    IC_ROOT_SUBNET_ID: () => IC_ROOT_SUBNET_ID,
-    encodePath: () => encodePath2,
-    lookupSubnetInfo: () => lookupSubnetInfo,
-    request: () => request2
-  });
   async function request2(options) {
     const { agent, paths, disableCertificateTimeVerification = false } = options;
     const subnetId = Principal.from(options.subnetId);
@@ -9498,23 +8668,6 @@ ${indent(sub)}
     });
     await Promise.all(promises);
     return status;
-  }
-  function lookupSubnetInfo(certificate, subnetId) {
-    const cert = decode2(certificate);
-    const nodeKeys = lookupNodeKeysFromCertificate(cert, subnetId);
-    const publicKey = lookupSubnetPublicKey(cert, subnetId);
-    return {
-      subnetId: subnetId.toText(),
-      nodeKeys,
-      publicKey
-    };
-  }
-  function lookupSubnetPublicKey(certificate, subnetId) {
-    const subnetLookupResult = lookup_path(["subnet", subnetId.toUint8Array(), "public_key"], certificate.tree);
-    if (subnetLookupResult.status !== LookupPathStatus.Found) {
-      throw ProtocolError.fromCode(new LookupErrorCode("Public key not found", subnetLookupResult.status));
-    }
-    return subnetLookupResult.value;
   }
   function encodePath2(path, subnetId) {
     const subnetUint8Array = subnetId.toUint8Array();
@@ -9956,7 +9109,7 @@ ${indent(sub)}
       return _abytes2(rs, lengths.signature, "result");
     }
     const verifyOpts = { zip215: true };
-    function verify2(sig, msg, publicKey, options = verifyOpts) {
+    function verify(sig, msg, publicKey, options = verifyOpts) {
       const { context, zip215 } = options;
       const len = lengths.signature;
       sig = ensureBytes("signature", sig, len);
@@ -10047,7 +9200,7 @@ ${indent(sub)}
       keygen,
       getPublicKey,
       sign,
-      verify: verify2,
+      verify,
       utils,
       Point,
       lengths
@@ -10585,7 +9738,7 @@ ${indent(sub)}
     const buf = new Uint8Array(derEncoded);
     expect(48, "sequence");
     offset += decodeLenBytes(buf, offset);
-    if (!uint8Equals2(buf.slice(offset, offset + oid.byteLength), oid)) {
+    if (!uint8Equals(buf.slice(offset, offset + oid.byteLength), oid)) {
       throw InputError.fromCode(new DerDecodeErrorCode("Not the expected OID."));
     }
     offset += oid.byteLength;
@@ -10773,7 +9926,6 @@ ${indent(sub)}
   var MSECS_TO_NANOSECONDS = 1e6;
   var DEFAULT_TIME_DIFF_MSECS = 0;
   var IC_ROOT_KEY = "308182301d060d2b0601040182dc7c0503010201060c2b0601040182dc7c05030201036100814c0e6ec71fab583b08bd81373c255c3c371b2e84863c98a4f1e08b74235d14fb5d9c0cd546d9685f913a0c0b2cc5341583bf4b4392e467db96d65b9bb4cb717112f8472e0d5a4d14505ffd7484b01291091c5f87b98883463f98091a0baaae";
-  var MANAGEMENT_CANISTER_ID = "aaaaa-aa";
   var IC0_DOMAIN = "ic0.app";
   var IC0_SUB_DOMAIN = ".ic0.app";
   var ICP0_DOMAIN = "icp0.io";
@@ -10819,7 +9971,7 @@ ${indent(sub)}
       const knownHosts = ["ic0.app", "icp0.io", "127.0.0.1", "localhost"];
       const remoteHosts = [".github.dev", ".gitpod.io"];
       const location = typeof window !== "undefined" ? window.location : void 0;
-      const hostname = location?.hostname;
+      const hostname = location == null ? void 0 : location.hostname;
       let knownHost;
       if (hostname && typeof hostname === "string") {
         if (remoteHosts.some((host2) => hostname.endsWith(host2))) {
@@ -10870,6 +10022,7 @@ ${indent(sub)}
        * @returns ApiQueryResponse
        */
       __privateAdd(this, _verifyQueryResponse);
+      var _a2, _b2, _c;
       __privateSet(this, _rootKeyPromise, null);
       __privateSet(this, _shouldFetchRootKey, false);
       __privateSet(this, _timeDiffMsecs, DEFAULT_TIME_DIFF_MSECS);
@@ -10932,8 +10085,8 @@ ${indent(sub)}
       __privateSet(this, _fetch, options.fetch || getDefaultFetch() || fetch.bind(global));
       __privateSet(this, _fetchOptions, options.fetchOptions);
       __privateSet(this, _callOptions, options.callOptions);
-      __privateSet(this, _shouldFetchRootKey, options.shouldFetchRootKey ?? false);
-      __privateSet(this, _shouldSyncTime, options.shouldSyncTime ?? false);
+      __privateSet(this, _shouldFetchRootKey, (_a2 = options.shouldFetchRootKey) != null ? _a2 : false);
+      __privateSet(this, _shouldSyncTime, (_b2 = options.shouldSyncTime) != null ? _b2 : false);
       if (options.rootKey) {
         this.rootKey = options.rootKey;
       } else if (__privateGet(this, _shouldFetchRootKey)) {
@@ -10946,7 +10099,7 @@ ${indent(sub)}
       if (options.verifyQuerySignatures !== void 0) {
         __privateSet(this, _verifyQuerySignatures, options.verifyQuerySignatures);
       }
-      __privateSet(this, _retryTimes, options.retryTimes ?? 3);
+      __privateSet(this, _retryTimes, (_c = options.retryTimes) != null ? _c : 3);
       const defaultBackoffFactory = () => new ExponentialBackoff({
         maxIterations: __privateGet(this, _retryTimes)
       });
@@ -10996,6 +10149,7 @@ ${indent(sub)}
       return agent;
     }
     static async from(agent) {
+      var _a2;
       try {
         if ("config" in agent) {
           return await _HttpAgent.create(agent.config);
@@ -11005,7 +10159,7 @@ ${indent(sub)}
           fetchOptions: agent._fetchOptions,
           callOptions: agent._callOptions,
           host: agent._host.toString(),
-          identity: agent._identity ?? void 0
+          identity: (_a2 = agent._identity) != null ? _a2 : void 0
         });
       } catch {
         throw InputError.fromCode(new CreateHttpAgentErrorCode());
@@ -11043,8 +10197,9 @@ ${indent(sub)}
      * @returns A promise that resolves to the response of the call, including the request ID and response details.
      */
     async call(canisterId, options, identity) {
-      const callSync = options.callSync ?? true;
-      const id = await (identity ?? __privateGet(this, _identity));
+      var _a2;
+      const callSync = (_a2 = options.callSync) != null ? _a2 : true;
+      const id = await (identity != null ? identity : __privateGet(this, _identity));
       if (!id) {
         throw ExternalError.fromCode(new IdentityInvalidErrorCode());
       }
@@ -11074,7 +10229,7 @@ ${indent(sub)}
         body: submit
       });
       let nonce;
-      if (options?.nonce) {
+      if (options == null ? void 0 : options.nonce) {
         nonce = toNonce(options.nonce);
       } else if (transformedRequest.body.nonce) {
         nonce = toNonce(transformedRequest.body.nonce);
@@ -11159,7 +10314,7 @@ ${indent(sub)}
       this.log.print(`ecid ${ecid.toString()}`);
       this.log.print(`canisterId ${canisterId.toString()}`);
       let transformedRequest;
-      const id = await (identity ?? __privateGet(this, _identity));
+      const id = await (identity != null ? identity : __privateGet(this, _identity));
       if (!id) {
         throw ExternalError.fromCode(new IdentityInvalidErrorCode());
       }
@@ -11255,7 +10410,7 @@ ${indent(sub)}
     }
     async createReadStateRequest(fields, identity) {
       await __privateMethod(this, _HttpAgent_instances, asyncGuard_fn).call(this);
-      const id = await (identity ?? __privateGet(this, _identity));
+      const id = await (identity != null ? identity : __privateGet(this, _identity));
       if (!id) {
         throw ExternalError.fromCode(new IdentityInvalidErrorCode());
       }
@@ -11285,7 +10440,7 @@ ${indent(sub)}
         for (const path of options.paths) {
           const [pathName, value] = path;
           const request_status = new TextEncoder().encode("request_status");
-          if (uint8Equals2(pathName, request_status)) {
+          if (uint8Equals(pathName, request_status)) {
             return value;
           }
         }
@@ -11312,10 +10467,11 @@ ${indent(sub)}
      * @returns The response from the read state request.
      */
     async readSubnetState(subnetId, options) {
+      var _a2;
       await __privateMethod(this, _HttpAgent_instances, rootKeyGuard_fn).call(this);
       const subnet = Principal.from(subnetId);
       const url = new URL(`/api/v2/subnet/${subnet.toString()}/read_state`, this.host);
-      const transformedRequest = await this.createReadStateRequest(options, __privateGet(this, _identity) ?? void 0);
+      const transformedRequest = await this.createReadStateRequest(options, (_a2 = __privateGet(this, _identity)) != null ? _a2 : void 0);
       return await __privateMethod(this, _HttpAgent_instances, readStateInner_fn).call(this, url, { subnetId: subnet }, transformedRequest);
     }
     parseTimeFromResponse(response) {
@@ -11348,20 +10504,22 @@ ${indent(sub)}
      * @param {Principal} canisterIdOverride - Pass a canister ID if you need to sync the time with a particular subnet. Uses the ICP ledger canister by default.
      */
     async syncTime(canisterIdOverride) {
-      __privateSet(this, _syncTimePromise, __privateGet(this, _syncTimePromise) ?? (async () => {
+      var _a2;
+      __privateSet(this, _syncTimePromise, (_a2 = __privateGet(this, _syncTimePromise)) != null ? _a2 : (async () => {
+        var _a3;
         await __privateMethod(this, _HttpAgent_instances, rootKeyGuard_fn).call(this);
         const callTime = Date.now();
         try {
           if (!canisterIdOverride) {
             this.log.print("Syncing time with the IC. No canisterId provided, so falling back to ryjl3-tyaaa-aaaaa-aaaba-cai");
           }
-          const canisterId = canisterIdOverride ?? Principal.from("ryjl3-tyaaa-aaaaa-aaaba-cai");
+          const canisterId = canisterIdOverride != null ? canisterIdOverride : Principal.from("ryjl3-tyaaa-aaaaa-aaaba-cai");
           const anonymousAgent = _HttpAgent.createSync({
             identity: new AnonymousIdentity(),
             host: this.host.toString(),
             fetch: __privateGet(this, _fetch),
             retryTimes: 0,
-            rootKey: this.rootKey ?? void 0,
+            rootKey: (_a3 = this.rootKey) != null ? _a3 : void 0,
             shouldSyncTime: false
           });
           const replicaTimes = await Promise.all(Array(3).fill(null).map(async () => {
@@ -11393,6 +10551,7 @@ ${indent(sub)}
      * @param {Principal} subnetId - Pass the subnet ID you need to sync the time with.
      */
     async syncTimeWithSubnet(subnetId) {
+      var _a2;
       await __privateMethod(this, _HttpAgent_instances, rootKeyGuard_fn).call(this);
       const callTime = Date.now();
       try {
@@ -11401,7 +10560,7 @@ ${indent(sub)}
           host: this.host.toString(),
           fetch: __privateGet(this, _fetch),
           retryTimes: 0,
-          rootKey: this.rootKey ?? void 0,
+          rootKey: (_a2 = this.rootKey) != null ? _a2 : void 0,
           shouldSyncTime: false
         });
         const replicaTimes = await Promise.all(Array(3).fill(null).map(async () => {
@@ -11439,7 +10598,8 @@ ${indent(sub)}
       return decode2(responseBodyBytes);
     }
     async fetchRootKey() {
-      __privateSet(this, _rootKeyPromise, __privateGet(this, _rootKeyPromise) ?? (async () => {
+      var _a2;
+      __privateSet(this, _rootKeyPromise, (_a2 = __privateGet(this, _rootKeyPromise)) != null ? _a2 : (async () => {
         const value = await this.status();
         this.rootKey = value.root_key;
         return this.rootKey;
@@ -11555,6 +10715,7 @@ ${indent(sub)}
   _subnetKeys = new WeakMap();
   _verifyQuerySignatures = new WeakMap();
   requestAndRetryQuery_fn = async function(args) {
+    var _a2, _b2;
     const { ecid, transformedRequest, body, requestId, backoff: backoff2, tries } = args;
     const delay = tries === 0 ? 0 : backoff2.next();
     const url = new URL(`/api/v2/canister/${ecid.toString()}/query`, this.host);
@@ -11611,7 +10772,7 @@ ${indent(sub)}
     if (!__privateGet(this, _verifyQuerySignatures)) {
       return response;
     }
-    const signatureTimestampNs = response.signatures?.[0]?.timestamp;
+    const signatureTimestampNs = (_b2 = (_a2 = response.signatures) == null ? void 0 : _a2[0]) == null ? void 0 : _b2.timestamp;
     if (!signatureTimestampNs) {
       throw ProtocolError.fromCode(new MalformedSignatureErrorCode("Timestamp not found in query response. This suggests a malformed or malicious response."));
     }
@@ -11707,7 +10868,7 @@ ${indent(sub)}
           return await __privateMethod(this, _HttpAgent_instances, readStateInner_fn).call(this, url, principal, transformedRequest, requestId);
         }
         error.code.requestContext = {
-          requestId: requestId ?? requestIdOf(transformedRequest),
+          requestId: requestId != null ? requestId : requestIdOf(transformedRequest),
           senderPubKey: transformedRequest.body.sender_pubkey,
           senderSignature: transformedRequest.body.sender_sig,
           ingressExpiry: transformedRequest.body.content.ingress_expiry
@@ -11759,28 +10920,7 @@ ${indent(sub)}
     return responseText.includes("Invalid request expiry: ");
   }
 
-  // node_modules/@icp-sdk/core/lib/esm/agent/polling/index.js
-  var polling_exports = {};
-  __export(polling_exports, {
-    DEFAULT_POLLING_OPTIONS: () => DEFAULT_POLLING_OPTIONS,
-    constructRequest: () => constructRequest,
-    defaultStrategy: () => defaultStrategy,
-    pollForResponse: () => pollForResponse,
-    strategy: () => strategy_exports
-  });
-
   // node_modules/@icp-sdk/core/lib/esm/agent/polling/strategy.js
-  var strategy_exports = {};
-  __export(strategy_exports, {
-    backoff: () => backoff,
-    chain: () => chain,
-    conditionalDelay: () => conditionalDelay,
-    defaultStrategy: () => defaultStrategy,
-    maxAttempts: () => maxAttempts,
-    once: () => once,
-    throttle: () => throttle,
-    timeout: () => timeout
-  });
   var FIVE_MINUTES_IN_MSEC = 5 * 60 * 1e3;
   function defaultStrategy() {
     return chain(conditionalDelay(once(), 1e3), backoff(1e3, 1.2), timeout(FIVE_MINUTES_IN_MSEC));
@@ -11801,17 +10941,6 @@ ${indent(sub)}
         return new Promise((resolve) => setTimeout(resolve, timeInMsec));
       }
     };
-  }
-  function maxAttempts(count) {
-    let attempts = count;
-    return async (_canisterId, requestId, status) => {
-      if (--attempts <= 0) {
-        throw ProtocolError.fromCode(new TimeoutWaitingForResponseErrorCode(`Failed to retrieve a reply for request after ${count} attempts`, requestId, status));
-      }
-    };
-  }
-  function throttle(throttleInMsec) {
-    return () => new Promise((resolve) => setTimeout(resolve, throttleInMsec));
   }
   function timeout(timeInMsec) {
     const end = Date.now() + timeInMsec;
@@ -11853,10 +10982,11 @@ ${indent(sub)}
     return isObjectWithProperty(value, "body") && isObjectWithProperty(value.body, "content") && value.body.content.request_type === ReadRequestType.ReadState && isObjectWithProperty(value.body.content, "ingress_expiry") && typeof value.body.content.ingress_expiry === "object" && value.body.content.ingress_expiry !== null && hasFunction(value.body.content.ingress_expiry, "toHash");
   }
   async function pollForResponse(agent, canisterId, requestId, options = {}) {
+    var _a2, _b2;
     const path = [utf8ToBytes("request_status"), requestId];
     let state;
     let currentRequest;
-    const preSignReadStateRequest = options.preSignReadStateRequest ?? false;
+    const preSignReadStateRequest = (_a2 = options.preSignReadStateRequest) != null ? _a2 : false;
     if (preSignReadStateRequest) {
       currentRequest = await constructRequest({
         paths: [path],
@@ -11894,7 +11024,7 @@ ${indent(sub)}
       case RequestStatusResponseStatus.Received:
       case RequestStatusResponseStatus.Unknown:
       case RequestStatusResponseStatus.Processing: {
-        const strategy = options.strategy ?? defaultStrategy();
+        const strategy = (_b2 = options.strategy) != null ? _b2 : defaultStrategy();
         await strategy(canisterId, requestId, status);
         return pollForResponse(agent, canisterId, requestId, {
           ...options,
@@ -11916,13 +11046,14 @@ ${indent(sub)}
     throw UNREACHABLE_ERROR;
   }
   async function constructRequest(options) {
+    var _a2;
     const { paths, agent, pollingOptions } = options;
     if (pollingOptions.request && isSignedReadStateRequestWithExpiry(pollingOptions.request)) {
       return pollingOptions.request;
     }
-    const request3 = await agent.createReadStateRequest?.({
+    const request3 = await ((_a2 = agent.createReadStateRequest) == null ? void 0 : _a2.call(agent, {
       paths
-    }, void 0);
+    }, void 0));
     if (!isSignedReadStateRequestWithExpiry(request3)) {
       throw InputError.fromCode(new InvalidReadStateRequestErrorCode(request3));
     }
@@ -11967,10 +11098,10 @@ ${indent(sub)}
             service
           });
           for (const [methodName, func] of service._fields) {
-            if (options?.httpDetails) {
+            if (options == null ? void 0 : options.httpDetails) {
               func.annotations.push(ACTOR_METHOD_WITH_HTTP_DETAILS);
             }
-            if (options?.certificate) {
+            if (options == null ? void 0 : options.certificate) {
               func.annotations.push(ACTOR_METHOD_WITH_CERTIFICATE);
             }
             this[methodName] = _createActorMethod(this, methodName, func, config.blsVerify);
@@ -12084,9 +11215,10 @@ ${indent(sub)}
     let caller;
     if (func.annotations.includes("query") || func.annotations.includes("composite_query")) {
       caller = async (options, ...args) => {
+        var _a2, _b2;
         options = {
           ...options,
-          ...actor[metadataSymbol].config.queryTransform?.(methodName, args, {
+          ...(_b2 = (_a2 = actor[metadataSymbol].config).queryTransform) == null ? void 0 : _b2.call(_a2, methodName, args, {
             ...actor[metadataSymbol].config,
             ...options
           })
@@ -12122,9 +11254,10 @@ ${indent(sub)}
       };
     } else {
       caller = async (options, ...args) => {
+        var _a2, _b2;
         options = {
           ...options,
-          ...actor[metadataSymbol].config.callTransform?.(methodName, args, {
+          ...(_b2 = (_a2 = actor[metadataSymbol].config).callTransform) == null ? void 0 : _b2.call(_a2, methodName, args, {
             ...actor[metadataSymbol].config,
             ...options
           })
@@ -12234,778 +11367,6 @@ ${indent(sub)}
     handler.withOptions = (options) => (...args) => caller(options, ...args);
     return handler;
   }
-
-  // node_modules/@icp-sdk/core/lib/esm/agent/fetch_candid.js
-  async function fetchCandid(canisterId, agent) {
-    if (!agent) {
-      agent = await HttpAgent.create();
-    }
-    const status = await request({
-      agent,
-      canisterId: Principal.fromText(canisterId),
-      paths: ["candid"]
-    });
-    const candid = status.get("candid");
-    if (candid) {
-      return candid;
-    }
-    const tmpHackInterface = ({ IDL: IDL2 }) => IDL2.Service({
-      __get_candid_interface_tmp_hack: IDL2.Func([], [IDL2.Text], ["query"])
-    });
-    const actor = Actor.createActor(tmpHackInterface, { agent, canisterId });
-    return await actor.__get_candid_interface_tmp_hack();
-  }
-
-  // node_modules/@icp-sdk/core/lib/esm/identity/identity/ed25519.js
-  function isObject(value) {
-    return value !== null && typeof value === "object";
-  }
-  var _rawKey2, _derKey2;
-  var _Ed25519PublicKey2 = class _Ed25519PublicKey2 {
-    // `fromRaw` and `fromDer` should be used for instantiation, not this constructor.
-    constructor(key) {
-      __privateAdd(this, _rawKey2);
-      __privateAdd(this, _derKey2);
-      if (key.byteLength !== _Ed25519PublicKey2.RAW_KEY_LENGTH) {
-        throw new Error("An Ed25519 public key must be exactly 32bytes long");
-      }
-      __privateSet(this, _rawKey2, key);
-      __privateSet(this, _derKey2, _Ed25519PublicKey2.derEncode(key));
-    }
-    /**
-     * Construct Ed25519PublicKey from an existing PublicKey
-     * @param {unknown} maybeKey - existing PublicKey, ArrayBuffer, DerEncodedPublicKey, or hex string
-     * @returns {Ed25519PublicKey} Instance of Ed25519PublicKey
-     */
-    static from(maybeKey) {
-      if (typeof maybeKey === "string") {
-        const key = hexToBytes(maybeKey);
-        return this.fromRaw(key);
-      } else if (isObject(maybeKey)) {
-        const key = maybeKey;
-        if (isObject(key) && Object.hasOwnProperty.call(key, "__derEncodedPublicKey__")) {
-          return this.fromDer(key);
-        } else if (ArrayBuffer.isView(key)) {
-          const view = key;
-          return this.fromRaw(uint8FromBufLike(view.buffer));
-        } else if (key instanceof ArrayBuffer) {
-          return this.fromRaw(uint8FromBufLike(key));
-        } else if ("rawKey" in key && key.rawKey instanceof Uint8Array) {
-          return this.fromRaw(key.rawKey);
-        } else if ("derKey" in key) {
-          return this.fromDer(key.derKey);
-        } else if ("toDer" in key) {
-          return this.fromDer(key.toDer());
-        }
-      }
-      throw new Error("Cannot construct Ed25519PublicKey from the provided key.");
-    }
-    static fromRaw(rawKey) {
-      return new _Ed25519PublicKey2(rawKey);
-    }
-    static fromDer(derKey) {
-      return new _Ed25519PublicKey2(this.derDecode(derKey));
-    }
-    static derEncode(publicKey) {
-      const key = wrapDER(publicKey, ED25519_OID);
-      key.__derEncodedPublicKey__ = void 0;
-      return key;
-    }
-    static derDecode(key) {
-      const unwrapped = unwrapDER(key, ED25519_OID);
-      if (unwrapped.length !== this.RAW_KEY_LENGTH) {
-        throw new Error("An Ed25519 public key must be exactly 32bytes long");
-      }
-      return unwrapped;
-    }
-    get rawKey() {
-      return __privateGet(this, _rawKey2);
-    }
-    get derKey() {
-      return __privateGet(this, _derKey2);
-    }
-    toDer() {
-      return this.derKey;
-    }
-    toRaw() {
-      return this.rawKey;
-    }
-  };
-  _rawKey2 = new WeakMap();
-  _derKey2 = new WeakMap();
-  _Ed25519PublicKey2.RAW_KEY_LENGTH = 32;
-  var Ed25519PublicKey2 = _Ed25519PublicKey2;
-  var _publicKey, _privateKey;
-  var _Ed25519KeyIdentity = class _Ed25519KeyIdentity extends SignIdentity {
-    // `fromRaw` and `fromDer` should be used for instantiation, not this constructor.
-    constructor(publicKey, privateKey) {
-      super();
-      __privateAdd(this, _publicKey);
-      __privateAdd(this, _privateKey);
-      __privateSet(this, _publicKey, Ed25519PublicKey2.from(publicKey));
-      __privateSet(this, _privateKey, privateKey);
-    }
-    /**
-     * Generate a new Ed25519KeyIdentity.
-     * @param seed a 32-byte seed for the private key. If not provided, a random seed will be generated.
-     * @returns Ed25519KeyIdentity
-     */
-    static generate(seed) {
-      if (seed && seed.length !== 32) {
-        throw new Error("Ed25519 Seed needs to be 32 bytes long.");
-      }
-      if (!seed)
-        seed = ed25519.utils.randomPrivateKey();
-      if (uint8Equals(seed, new Uint8Array(new Array(32).fill(0)))) {
-        console.warn("Seed is all zeros. This is not a secure seed. Please provide a seed with sufficient entropy if this is a production environment.");
-      }
-      const sk = new Uint8Array(32);
-      for (let i = 0; i < 32; i++) {
-        sk[i] = seed[i];
-      }
-      const pk = ed25519.getPublicKey(sk);
-      return _Ed25519KeyIdentity.fromKeyPair(pk, sk);
-    }
-    static fromParsedJson(obj) {
-      const [publicKeyDer, privateKeyRaw] = obj;
-      return new _Ed25519KeyIdentity(Ed25519PublicKey2.fromDer(hexToBytes(publicKeyDer)), hexToBytes(privateKeyRaw));
-    }
-    static fromJSON(json) {
-      const parsed = JSON.parse(json);
-      if (Array.isArray(parsed)) {
-        if (typeof parsed[0] === "string" && typeof parsed[1] === "string") {
-          return this.fromParsedJson([parsed[0], parsed[1]]);
-        } else {
-          throw new Error("Deserialization error: JSON must have at least 2 items.");
-        }
-      }
-      throw new Error(`Deserialization error: Invalid JSON type for string: ${JSON.stringify(json)}`);
-    }
-    static fromKeyPair(publicKey, privateKey) {
-      return new _Ed25519KeyIdentity(Ed25519PublicKey2.fromRaw(publicKey), privateKey);
-    }
-    static fromSecretKey(secretKey) {
-      const publicKey = ed25519.getPublicKey(secretKey);
-      return _Ed25519KeyIdentity.fromKeyPair(publicKey, secretKey);
-    }
-    /**
-     * Serialize this key to JSON.
-     */
-    toJSON() {
-      return [bytesToHex(__privateGet(this, _publicKey).toDer()), bytesToHex(__privateGet(this, _privateKey))];
-    }
-    /**
-     * Return a copy of the key pair.
-     */
-    getKeyPair() {
-      return {
-        secretKey: __privateGet(this, _privateKey),
-        publicKey: __privateGet(this, _publicKey)
-      };
-    }
-    /**
-     * Return the public key.
-     */
-    getPublicKey() {
-      return __privateGet(this, _publicKey);
-    }
-    /**
-     * Signs a blob of data, with this identity's private key.
-     * @param challenge - challenge to sign with this identity's secretKey, producing a signature
-     */
-    async sign(challenge) {
-      const signature = ed25519.sign(challenge, __privateGet(this, _privateKey).slice(0, 32));
-      Object.defineProperty(signature, "__signature__", {
-        enumerable: false,
-        value: void 0
-      });
-      return signature;
-    }
-    /**
-     * Verify
-     * @param sig - signature to verify
-     * @param msg - message to verify
-     * @param pk - public key
-     * @returns - true if the signature is valid, false otherwise
-     */
-    static verify(sig, msg, pk) {
-      const [signature, message, publicKey] = [sig, msg, pk].map((x2) => {
-        if (typeof x2 === "string") {
-          x2 = hexToBytes(x2);
-        }
-        return uint8FromBufLike(x2);
-      });
-      return ed25519.verify(signature, message, publicKey);
-    }
-  };
-  _publicKey = new WeakMap();
-  _privateKey = new WeakMap();
-  var Ed25519KeyIdentity = _Ed25519KeyIdentity;
-
-  // node_modules/@icp-sdk/core/lib/esm/identity/identity/ecdsa.js
-  var CryptoError = class _CryptoError extends Error {
-    constructor(message) {
-      super(message);
-      this.message = message;
-      Object.setPrototypeOf(this, _CryptoError.prototype);
-    }
-  };
-  function _getEffectiveCrypto(subtleCrypto) {
-    if (typeof global !== "undefined" && global["crypto"] && global["crypto"]["subtle"]) {
-      return global["crypto"]["subtle"];
-    }
-    if (subtleCrypto) {
-      return subtleCrypto;
-    } else if (typeof crypto !== "undefined" && crypto["subtle"]) {
-      return crypto.subtle;
-    } else {
-      throw new CryptoError("Global crypto was not available and none was provided. Please inlcude a SubtleCrypto implementation. See https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto");
-    }
-  }
-  var ECDSAKeyIdentity = class _ECDSAKeyIdentity extends SignIdentity {
-    /**
-     * Generates a randomly generated identity for use in calls to the Internet Computer.
-     * @param {CryptoKeyOptions} options optional settings
-     * @param {CryptoKeyOptions['extractable']} options.extractable - whether the key should allow itself to be used. Set to false for maximum security.
-     * @param {CryptoKeyOptions['keyUsages']} options.keyUsages - a list of key usages that the key can be used for
-     * @param {CryptoKeyOptions['subtleCrypto']} options.subtleCrypto interface
-     * @returns a {@link ECDSAKeyIdentity}
-     */
-    static async generate(options) {
-      const { extractable = false, keyUsages = ["sign", "verify"], subtleCrypto } = options ?? {};
-      const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
-      const keyPair = await effectiveCrypto.generateKey({
-        name: "ECDSA",
-        namedCurve: "P-256"
-      }, extractable, keyUsages);
-      const derKey = uint8FromBufLike(await effectiveCrypto.exportKey("spki", keyPair.publicKey));
-      Object.assign(derKey, {
-        __derEncodedPublicKey__: void 0
-      });
-      return new this(keyPair, derKey, effectiveCrypto);
-    }
-    /**
-     * generates an identity from a public and private key. Please ensure that you are generating these keys securely and protect the user's private key
-     * @param keyPair a CryptoKeyPair
-     * @param subtleCrypto - a SubtleCrypto interface in case one is not available globally
-     * @returns an {@link ECDSAKeyIdentity}
-     */
-    static async fromKeyPair(keyPair, subtleCrypto) {
-      const effectiveCrypto = _getEffectiveCrypto(subtleCrypto);
-      const derKey = uint8FromBufLike(await effectiveCrypto.exportKey("spki", keyPair.publicKey));
-      Object.assign(derKey, {
-        __derEncodedPublicKey__: void 0
-      });
-      return new _ECDSAKeyIdentity(keyPair, derKey, effectiveCrypto);
-    }
-    // `fromKeyPair` and `generate` should be used for instantiation, not this constructor.
-    constructor(keyPair, derKey, subtleCrypto) {
-      super();
-      this._keyPair = keyPair;
-      this._derKey = derKey;
-      this._subtleCrypto = subtleCrypto;
-    }
-    /**
-     * Return the internally-used key pair.
-     * @returns a CryptoKeyPair
-     */
-    getKeyPair() {
-      return this._keyPair;
-    }
-    /**
-     * Return the public key.
-     * @returns an {@link PublicKey & DerCryptoKey}
-     */
-    getPublicKey() {
-      const derKey = this._derKey;
-      const key = Object.create(this._keyPair.publicKey);
-      key.toDer = function() {
-        return derKey;
-      };
-      return key;
-    }
-    /**
-     * Signs a blob of data, with this identity's private key.
-     * @param {Uint8Array} challenge - challenge to sign with this identity's secretKey, producing a signature
-     * @returns {Promise<Signature>} signature
-     */
-    async sign(challenge) {
-      const params = {
-        name: "ECDSA",
-        hash: { name: "SHA-256" }
-      };
-      const signature = uint8FromBufLike(await this._subtleCrypto.sign(params, this._keyPair.privateKey, challenge));
-      Object.assign(signature, {
-        __signature__: void 0
-      });
-      return signature;
-    }
-  };
-
-  // node_modules/@icp-sdk/core/lib/esm/identity/identity/partial.js
-  var _inner2;
-  var PartialIdentity = class {
-    constructor(inner) {
-      __privateAdd(this, _inner2);
-      __privateSet(this, _inner2, inner);
-    }
-    /**
-     * The raw public key of this identity.
-     */
-    get rawKey() {
-      return __privateGet(this, _inner2).rawKey;
-    }
-    /**
-     * The DER-encoded public key of this identity.
-     */
-    get derKey() {
-      return __privateGet(this, _inner2).derKey;
-    }
-    /**
-     * The DER-encoded public key of this identity.
-     */
-    toDer() {
-      return __privateGet(this, _inner2).toDer();
-    }
-    /**
-     * The inner {@link PublicKey} used by this identity.
-     */
-    getPublicKey() {
-      return __privateGet(this, _inner2);
-    }
-    /**
-     * The {@link Principal} of this identity.
-     */
-    getPrincipal() {
-      if (!__privateGet(this, _inner2).rawKey) {
-        throw new Error("Cannot get principal from a public key without a raw key.");
-      }
-      return Principal.fromUint8Array(new Uint8Array(__privateGet(this, _inner2).rawKey));
-    }
-    /**
-     * Required for the Identity interface, but cannot implemented for just a public key.
-     */
-    transformRequest() {
-      return Promise.reject("Not implemented. You are attempting to use a partial identity to sign calls, but this identity only has access to the public key.To sign calls, use a DelegationIdentity instead.");
-    }
-  };
-  _inner2 = new WeakMap();
-
-  // node_modules/@icp-sdk/core/lib/esm/identity/identity/delegation.js
-  function safeBytesToHex(data) {
-    if (data instanceof Uint8Array) {
-      return bytesToHex(data);
-    }
-    return bytesToHex(new Uint8Array(data));
-  }
-  function _parseBlob(value) {
-    if (typeof value !== "string" || value.length < 64) {
-      throw new Error("Invalid public key.");
-    }
-    return hexToBytes(value);
-  }
-  var Delegation = class {
-    constructor(pubkey, expiration, targets) {
-      this.pubkey = pubkey;
-      this.expiration = expiration;
-      this.targets = targets;
-    }
-    toCborValue() {
-      return {
-        pubkey: this.pubkey,
-        expiration: this.expiration,
-        ...this.targets && {
-          targets: this.targets
-        }
-      };
-    }
-    toJSON() {
-      return {
-        expiration: this.expiration.toString(16),
-        pubkey: safeBytesToHex(this.pubkey),
-        ...this.targets && { targets: this.targets.map((p2) => p2.toHex()) }
-      };
-    }
-  };
-  async function _createSingleDelegation(from, to, expiration, targets) {
-    const delegation = new Delegation(
-      to.toDer(),
-      BigInt(+expiration) * BigInt(1e6),
-      // In nanoseconds.
-      targets
-    );
-    const challenge = new Uint8Array([
-      ...IC_REQUEST_AUTH_DELEGATION_DOMAIN_SEPARATOR,
-      ...new Uint8Array(requestIdOf({ ...delegation }))
-    ]);
-    const signature = await from.sign(challenge);
-    return {
-      delegation,
-      signature
-    };
-  }
-  var DelegationChain = class _DelegationChain {
-    /**
-     * Create a delegation chain between two (or more) keys. By default, the expiration time
-     * will be very short (15 minutes).
-     *
-     * To build a chain of more than 2 identities, this function needs to be called multiple times,
-     * passing the previous delegation chain into the options argument. For example:
-     * @example
-     * const rootKey = createKey();
-     * const middleKey = createKey();
-     * const bottomeKey = createKey();
-     *
-     * const rootToMiddle = await DelegationChain.create(
-     *   root, middle.getPublicKey(), Date.parse('2100-01-01'),
-     * );
-     * const middleToBottom = await DelegationChain.create(
-     *   middle, bottom.getPublicKey(), Date.parse('2100-01-01'), { previous: rootToMiddle },
-     * );
-     *
-     * // We can now use a delegation identity that uses the delegation above:
-     * const identity = DelegationIdentity.fromDelegation(bottomKey, middleToBottom);
-     * @param from The identity that will delegate.
-     * @param to The identity that gets delegated. It can now sign messages as if it was the
-     *           identity above.
-     * @param expiration The length the delegation is valid. By default, 15 minutes from calling
-     *                   this function.
-     * @param options A set of options for this delegation. expiration and previous
-     * @param options.previous - Another DelegationChain that this chain should start with.
-     * @param options.targets - targets that scope the delegation (e.g. Canister Principals)
-     */
-    static async create(from, to, expiration = new Date(Date.now() + 15 * 60 * 1e3), options = {}) {
-      const delegation = await _createSingleDelegation(from, to, expiration, options.targets);
-      return new _DelegationChain([...options.previous?.delegations || [], delegation], options.previous?.publicKey || from.getPublicKey().toDer());
-    }
-    /**
-     * Creates a DelegationChain object from a JSON string.
-     * @param json The JSON string to parse.
-     */
-    static fromJSON(json) {
-      const { publicKey, delegations } = typeof json === "string" ? JSON.parse(json) : json;
-      if (!Array.isArray(delegations)) {
-        throw new Error("Invalid delegations.");
-      }
-      const parsedDelegations = delegations.map((signedDelegation) => {
-        const { delegation, signature } = signedDelegation;
-        const { pubkey, expiration, targets } = delegation;
-        if (targets !== void 0 && !Array.isArray(targets)) {
-          throw new Error("Invalid targets.");
-        }
-        return {
-          delegation: new Delegation(
-            _parseBlob(pubkey),
-            BigInt("0x" + expiration),
-            // expiration in JSON is an hexa string (See toJSON() below).
-            targets && targets.map((t) => {
-              if (typeof t !== "string") {
-                throw new Error("Invalid target.");
-              }
-              return Principal.fromHex(t);
-            })
-          ),
-          signature: _parseBlob(signature)
-        };
-      });
-      return new this(parsedDelegations, _parseBlob(publicKey));
-    }
-    /**
-     * Creates a DelegationChain object from a list of delegations and a DER-encoded public key.
-     * @param delegations The list of delegations.
-     * @param publicKey The DER-encoded public key of the key-pair signing the first delegation.
-     */
-    static fromDelegations(delegations, publicKey) {
-      return new this(delegations, publicKey);
-    }
-    constructor(delegations, publicKey) {
-      this.delegations = delegations;
-      this.publicKey = publicKey;
-    }
-    toJSON() {
-      return {
-        delegations: this.delegations.map((signedDelegation) => {
-          const { delegation, signature } = signedDelegation;
-          const { targets } = delegation;
-          return {
-            delegation: {
-              expiration: delegation.expiration.toString(16),
-              pubkey: safeBytesToHex(delegation.pubkey),
-              ...targets && {
-                targets: targets.map((t) => t.toHex())
-              }
-            },
-            signature: safeBytesToHex(signature)
-          };
-        }),
-        publicKey: safeBytesToHex(this.publicKey)
-      };
-    }
-  };
-  var DelegationIdentity = class extends SignIdentity {
-    /**
-     * Create a delegation without having access to delegateKey.
-     * @param key The key used to sign the requests.
-     * @param delegation A delegation object created using `createDelegation`.
-     */
-    static fromDelegation(key, delegation) {
-      return new this(key, delegation);
-    }
-    constructor(_inner3, _delegation2) {
-      super();
-      this._inner = _inner3;
-      this._delegation = _delegation2;
-    }
-    getDelegation() {
-      return this._delegation;
-    }
-    getPublicKey() {
-      return {
-        derKey: this._delegation.publicKey,
-        toDer: () => this._delegation.publicKey
-      };
-    }
-    sign(blob) {
-      return this._inner.sign(blob);
-    }
-    async transformRequest(request3) {
-      const { body, ...fields } = request3;
-      const requestId = await requestIdOf(body);
-      return {
-        ...fields,
-        body: {
-          content: body,
-          sender_sig: await this.sign(new Uint8Array([...IC_REQUEST_DOMAIN_SEPARATOR, ...new Uint8Array(requestId)])),
-          sender_delegation: this._delegation.delegations,
-          sender_pubkey: this._delegation.publicKey
-        }
-      };
-    }
-  };
-  var _delegation;
-  var _PartialDelegationIdentity = class _PartialDelegationIdentity extends PartialIdentity {
-    constructor(inner, delegation) {
-      super(inner);
-      __privateAdd(this, _delegation);
-      __privateSet(this, _delegation, delegation);
-    }
-    /**
-     * The Delegation Chain of this identity.
-     */
-    get delegation() {
-      return __privateGet(this, _delegation);
-    }
-    /**
-     * Create a {@link PartialDelegationIdentity} from a {@link PublicKey} and a {@link DelegationChain}.
-     * @param key The {@link PublicKey} to delegate to.
-     * @param delegation a {@link DelegationChain} targeting the inner key.
-     */
-    static fromDelegation(key, delegation) {
-      return new _PartialDelegationIdentity(key, delegation);
-    }
-  };
-  _delegation = new WeakMap();
-  var PartialDelegationIdentity = _PartialDelegationIdentity;
-  function isDelegationValid(chain2, checks) {
-    for (const { delegation } of chain2.delegations) {
-      if (+new Date(Number(delegation.expiration / BigInt(1e6))) <= +Date.now()) {
-        return false;
-      }
-    }
-    const scopes = [];
-    const maybeScope = checks?.scope;
-    if (maybeScope) {
-      if (Array.isArray(maybeScope)) {
-        scopes.push(...maybeScope.map((s2) => typeof s2 === "string" ? Principal.fromText(s2) : s2));
-      } else {
-        scopes.push(typeof maybeScope === "string" ? Principal.fromText(maybeScope) : maybeScope);
-      }
-    }
-    for (const s2 of scopes) {
-      const scope = s2.toText();
-      for (const { delegation } of chain2.delegations) {
-        if (delegation.targets === void 0) {
-          continue;
-        }
-        let none = true;
-        for (const target of delegation.targets) {
-          if (target.toText() === scope) {
-            none = false;
-            break;
-          }
-        }
-        if (none) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-
-  // node_modules/@icp-sdk/core/lib/esm/identity/identity/webauthn.js
-  function _coseToDerEncodedBlob(cose) {
-    return wrapDER(cose, DER_COSE_OID);
-  }
-  function _authDataToCose(authData) {
-    const dataView = new DataView(new ArrayBuffer(2));
-    const idLenBytes = authData.slice(53, 55);
-    [...new Uint8Array(idLenBytes)].forEach((v2, i) => dataView.setUint8(i, v2));
-    const credentialIdLength = dataView.getUint16(0);
-    return authData.slice(55 + credentialIdLength);
-  }
-  var CosePublicKey = class {
-    constructor(_cose) {
-      this._cose = _cose;
-      this._encodedKey = _coseToDerEncodedBlob(_cose);
-    }
-    toDer() {
-      return this._encodedKey;
-    }
-    getCose() {
-      return this._cose;
-    }
-  };
-  function _createChallengeBuffer(challenge = "<ic0.app>") {
-    if (typeof challenge === "string") {
-      return Uint8Array.from(challenge, (c2) => c2.charCodeAt(0));
-    } else {
-      return challenge;
-    }
-  }
-  async function _createCredential(credentialCreationOptions) {
-    const creds = await navigator.credentials.create(credentialCreationOptions ?? {
-      publicKey: {
-        authenticatorSelection: {
-          userVerification: "preferred"
-        },
-        attestation: "direct",
-        challenge: _createChallengeBuffer(),
-        pubKeyCredParams: [{ type: "public-key", alg: PubKeyCoseAlgo.ECDSA_WITH_SHA256 }],
-        rp: {
-          name: "Internet Identity Service"
-        },
-        user: {
-          id: randomBytes(16),
-          name: "Internet Identity",
-          displayName: "Internet Identity"
-        }
-      }
-    });
-    if (creds === null) {
-      return null;
-    }
-    return {
-      // do _not_ use ...creds here, as creds is not enumerable in all cases
-      id: creds.id,
-      response: creds.response,
-      type: creds.type,
-      authenticatorAttachment: creds.authenticatorAttachment,
-      getClientExtensionResults: creds.getClientExtensionResults,
-      // Some password managers will return a Uint8Array, so we ensure we return an ArrayBuffer.
-      rawId: creds.rawId,
-      toJSON: creds.toJSON.bind(creds)
-      // Ensure the toJSON method is included
-    };
-  }
-  var PubKeyCoseAlgo;
-  (function(PubKeyCoseAlgo2) {
-    PubKeyCoseAlgo2[PubKeyCoseAlgo2["ECDSA_WITH_SHA256"] = -7] = "ECDSA_WITH_SHA256";
-  })(PubKeyCoseAlgo || (PubKeyCoseAlgo = {}));
-  var WebAuthnIdentity = class extends SignIdentity {
-    /**
-     * Create an identity from a JSON serialization.
-     * @param json - json to parse
-     */
-    static fromJSON(json) {
-      const { publicKey, rawId } = JSON.parse(json);
-      if (typeof publicKey !== "string" || typeof rawId !== "string") {
-        throw new Error("Invalid JSON string.");
-      }
-      return new this(hexToBytes(rawId), hexToBytes(publicKey), void 0);
-    }
-    /**
-     * Create an identity.
-     * @param credentialCreationOptions an optional CredentialCreationOptions Challenge
-     */
-    static async create(credentialCreationOptions) {
-      const creds = await _createCredential(credentialCreationOptions);
-      if (!creds || creds.type !== "public-key") {
-        throw new Error("Could not create credentials.");
-      }
-      const response = creds.response;
-      if (response.attestationObject === void 0) {
-        throw new Error("Was expecting an attestation response.");
-      }
-      const attObject = Cbor.decode(new Uint8Array(response.attestationObject));
-      return new this(uint8FromBufLike(creds.rawId), _authDataToCose(attObject.authData), creds.authenticatorAttachment ?? void 0);
-    }
-    constructor(rawId, cose, authenticatorAttachment) {
-      super();
-      this.rawId = rawId;
-      this.authenticatorAttachment = authenticatorAttachment;
-      this._publicKey = new CosePublicKey(cose);
-    }
-    getPublicKey() {
-      return this._publicKey;
-    }
-    /**
-     * WebAuthn level 3 spec introduces a new attribute on successful WebAuthn interactions,
-     * see https://w3c.github.io/webauthn/#dom-publickeycredential-authenticatorattachment.
-     * This attribute is already implemented for Chrome, Safari and Edge.
-     *
-     * Given the attribute is only available after a successful interaction, the information is
-     * provided opportunistically and might also be `undefined`.
-     */
-    getAuthenticatorAttachment() {
-      return this.authenticatorAttachment;
-    }
-    async sign(blob) {
-      const result = await navigator.credentials.get({
-        publicKey: {
-          allowCredentials: [
-            {
-              type: "public-key",
-              id: this.rawId
-            }
-          ],
-          challenge: blob,
-          userVerification: "preferred"
-        }
-      });
-      if (result.authenticatorAttachment !== null) {
-        this.authenticatorAttachment = result.authenticatorAttachment;
-      }
-      const response = result.response;
-      const encoded = Cbor.encode({
-        authenticator_data: response.authenticatorData,
-        client_data_json: bytesToUtf8(new Uint8Array(response.clientDataJSON)),
-        signature: response.signature
-      });
-      if (!encoded) {
-        throw new Error("failed to encode cbor");
-      }
-      Object.assign(encoded, {
-        __signature__: void 0
-      });
-      return encoded;
-    }
-    /**
-     * Allow for JSON serialization of all information needed to reuse this identity.
-     */
-    toJSON() {
-      return {
-        publicKey: bytesToHex(this._publicKey.getCose()),
-        rawId: bytesToHex(this.rawId)
-      };
-    }
-  };
-
-  // node_modules/@icp-sdk/core/lib/esm/bundle_entry.js
-  var Actor2 = Actor;
-  var HttpAgent2 = HttpAgent;
-  var Cbor2 = Cbor;
-  var AnonymousIdentity3 = void 0;
-  var IDL = idl_exports;
   return __toCommonJS(bundle_entry_exports);
 })();
 /*! Bundled license information:
