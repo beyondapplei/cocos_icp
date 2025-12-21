@@ -82,4 +82,32 @@ export default class BackManager {
 
         return ethers.utils.computeAddress(ethers.utils.hexlify(pkBytes));
     }
+
+    async Sign(data: Uint8Array | number[] | string): Promise<Uint8Array> {
+        cc.log("BackManager: Sign called");
+        const actor = await this.ensureBackendActor();
+        cc.log("BackManager: actor ensured for signing");
+
+        let bytes: Uint8Array;
+        if (typeof data === 'string') {
+            try {
+                bytes = ethers.utils.arrayify(data);
+            } catch (e) {
+                // 如果不是 hex 字符串，按 UTF-8 编码
+                bytes = new TextEncoder().encode(data);
+            }
+        } else if (data instanceof Uint8Array) {
+            bytes = data;
+        } else if (Array.isArray(data)) {
+            bytes = new Uint8Array(data);
+        } else {
+            throw new Error('BackManager.Sign: unsupported data type');
+        }
+
+        cc.log("BackManager: signing bytes length=", bytes.length);
+        const sigBlob = await actor.sign(Array.from(bytes));
+        const sigBytes = new Uint8Array(sigBlob);
+        cc.log("BackManager: signature bytes length=", sigBytes.length);
+        return sigBytes;
+    }
 }

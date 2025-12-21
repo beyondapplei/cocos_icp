@@ -72,8 +72,8 @@ export default class ETHWalletPanel extends UIPanel {
         
         UIManager.ShowTip('Loading ETH Balance='+ ethAddress);
 
-        //bwtest 0xdadB0d80178819F2319190D340ce9A924f783711
-        ETHManager.Instance.GetBalanceETH("0xdadB0d80178819F2319190D340ce9A924f783711").then((balanceText) => {
+        
+        ETHManager.Instance.GetBalanceETH(ethAddress).then((balanceText) => {
                 this.labelbalance.string = balanceText;
             })
             .catch((e) => {
@@ -106,6 +106,13 @@ export default class ETHWalletPanel extends UIPanel {
         cc.log('clickbegin'+nTag);
         //UIManager.Instance.OpenPanel(EUIPanelType.HOME);
 
+        this.sendETH();
+        
+
+    }
+
+    async sendETH(){
+
         //发送eth
 
         let toText = (this.boxtoaddress && this.boxtoaddress.string) ? this.boxtoaddress.string.trim() : '';
@@ -114,26 +121,23 @@ export default class ETHWalletPanel extends UIPanel {
             UIManager.ShowTip('请输入收款地址和金额');
             return;
         }
-
-
-        
-        
         UIManager.ShowTip('Sending ETH...');
-        // ETHManager.Instance.SendETH(toText, amountText, strEthLedgerCanisterId)
-        //     .then((msg) => {
-        //         UIManager.ShowTip(msg);
-        //         // const principalText = LoginManager.Instance.getPrincipalText();
-        //         // return ETHManager.Instance.GetBalance(principalText, strEthLedgerCanisterId);
-        //     })
-        //     .then((balanceText) => {
-        //         //this.labelbalance.string = balanceText;
-        //     })
-        //     .catch((e) => {
-        //         cc.error('ETHWalletPanel: SendETH failed:', e);
-        //         UIManager.ShowTip('发送失败: ' + (e && e.message ? e.message : e));
-        //     });
-
+        let ethAddress = await BackManager.Instance.GetEthAddress();
+        ETHManager.Instance.SendETH(ethAddress,toText, amountText)
+            .then((msg) => {
+                UIManager.ShowTip(msg);
+                // const principalText = LoginManager.Instance.getPrincipalText();
+                // return ETHManager.Instance.GetBalance(principalText, strEthLedgerCanisterId);
+            })
+            .then((balanceText) => {
+                //this.labelbalance.string = balanceText;
+            })
+            .catch((e) => {
+                cc.error('ETHWalletPanel: SendETH failed:', e);
+                UIManager.ShowTip('发送失败: ' + (e && e.message ? e.message : e));
+            });
     }
+    
 
     clickOrder(nTag){
 

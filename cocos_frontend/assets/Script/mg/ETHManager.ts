@@ -3,10 +3,9 @@ import UIManager from "../UIManager";
 import LoginManager from "./LoginManager";
 import { DFX_NETWORK } from "./DefData";
 
-// 导入 ethers.js 相关（需要先安装 ethers.js 库）
-//import { JsonRpcProvider, Transaction, parseEther, keccak256, getBytes, hexlify } from 'ethers';
-
 import { ethers } from 'ethers';
+import BackManager from "./BackManager";
+
 export default class ETHManager {
     public static readonly Instance: ETHManager = new ETHManager();
     private constructor(){}
@@ -15,8 +14,7 @@ export default class ETHManager {
     Init(){
    
     }
-    private backendActor: any = null; // 后端 canister actor 用于签名
-   // private provider: JsonRpcProvider | null = null;
+   
    
     async GetBalanceETH(ethAddress: string): Promise<string> {
         
@@ -24,7 +22,7 @@ export default class ETHManager {
             //https://ethereum-rpc.publicnode.com
             //https://ethereum-sepolia-rpc.publicnode.com
             if (!this.provider) {
-                this.provider = new ethers.providers.JsonRpcProvider('https://ethereum-rpc.publicnode.com');
+                this.provider = new ethers.providers.JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
             }
             const bal = await this.provider.getBalance(ethAddress);
             const balanceInEth = parseFloat(ethers.utils.formatEther(bal)); // 转换为 ETH
@@ -35,61 +33,65 @@ export default class ETHManager {
         }
     }
 
-    // async SendETH(fromAddr: string,toAddr: string, amountStr: string): Promise<string> {
+    async SendETH(fromAddr: string,toAddr: string, amountStr: string): Promise<string> {
        
-    //     // if (!this.backendActor) {
-    //     //     throw new Error('Backend actor not initialized');
-    //     // }
+      
 
-    //     // try {
-    //     //     if (!this.provider) {
-    //     //         this.provider = new JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
-    //     //     }
-    //     //     const chainId = (await this.provider.getNetwork()).chainId;
-    //     //     const nonce = await this.provider.getTransactionCount(fromAddr);
-    //     //     const feeData = await this.provider.getFeeData();
+        try {
+            if (!this.provider) {
+                this.provider = new ethers.providers.JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
+            }
+            const chainId = (await this.provider.getNetwork()).chainId;
+            const nonce = await this.provider.getTransactionCount(fromAddr);
+            const feeData = await this.provider.getFeeData();
 
-    //     //     const tx = new Transaction();
-    //     //     tx.to = toAddr;
-    //     //     tx.value = parseEther(amountStr);
-    //     //     tx.nonce = nonce;
-    //     //     tx.chainId = chainId;
-    //     //     tx.maxFeePerGas = feeData.maxFeePerGas;
-    //     //     tx.maxPriorityFeePerGas = feeData.maxPriorityFeePerGas;
-    //     //     tx.gasLimit = 21000n;
-    //     //     tx.type = 2;
+            const tx: any = {};
+            tx.to = toAddr;
+            tx.value = ethers.utils.parseEther(amountStr);
+            tx.nonce = nonce;
+            tx.chainId = chainId;
+            tx.maxFeePerGas = feeData.maxFeePerGas;
+            tx.maxPriorityFeePerGas = feeData.maxPriorityFeePerGas;
+            tx.gasLimit = 21000;
+            tx.type = 2;
 
-    //     //     this.updateStatus("Signing with Canister...");
             
-    //     //     // 调用后端签名
-    //     //     const unsignedSerialized = tx.unsignedSerialized;
-    //     //     const msgHash = keccak256(unsignedSerialized);
-    //     //     const msgHashBytes = getBytes(msgHash);
+            // 调用后端签名：先序列化 unsigned tx，然后对其 keccak256
+            const unsignedSerialized = ethers.utils.serializeTransaction(tx);
+            const msgHash = ethers.utils.keccak256(unsignedSerialized);
+            const msgHashBytes = ethers.utils.arrayify(msgHash);
 
-    //     //     const signatureBlob = await this.backendActor.sign(Array.from(msgHashBytes));
-    //     //     const signatureBytes = new Uint8Array(signatureBlob);
+            cc.log("ETHManager: requesting signature for msgHash:", msgHash);
+            const signatureBlob = await BackManager.Instance.Sign(Array.from(msgHashBytes));
+            cc.log("ETHManager: received signature blob length:", signatureBlob && signatureBlob.length);
+            const signatureBytes = new Uint8Array(signatureBlob);
 
-    //     //     const r = hexlify(signatureBytes.slice(0, 32));
-    //     //     const s = hexlify(signatureBytes.slice(32, 64));
+            const r = ethers.utils.hexlify(signatureBytes.slice(0, 32));
+            const s = ethers.utils.hexlify(signatureBytes.slice(32, 64));
 
-    //     //     // 尝试恢复签名
-    //     //     const sig0 = { r, s, yParity: 0 };
-    //     //     const sig1 = { r, s, yParity: 1 };
-
-    //     //     let signedTx = tx.clone();
-    //     //     signedTx.signature = sig0;
-
-
-    //     //     const serialized = signedTx.serialized;
-    //     //     const response = await this.provider.broadcastTransaction(serialized);
-            
-            
-    //     //     await response.wait();
-    //     //     return `Transaction confirmed: ${response.hash}`;
-    //     // } catch (e: any) {
-    //     //     console.error(e);
-    //     //     throw e;
-    //     // }
-    // }
+            // 尝试不同的 v 值（0/1/27/28）来拼接签名并发送
+            const tryVs = [0, 1, 27, 28];
+            let lastError: any = null;
+            for (const v of tryVs) {
+                try {
+                    const signature = ethers.utils.joinSignature({ r, s, v });
+                    const signedSerialized = ethers.utils.serializeTransaction(tx, signature);
+                    cc.log("ETHManager: trying send with v=", v, signedSerialized);
+                    const response = await this.provider.sendTransaction(signedSerialized);
+                    await response.wait();
+                    return `Transaction confirmed: ${response.hash}`;
+                } catch (e: any) {
+                    cc.warn("ETHManager: send attempt failed for v=", v, e && e.message ? e.message : e);
+                    lastError = e;
+                    // try next v
+                }
+            }
+            // 如果都失败，抛出最后的错误
+            throw lastError || new Error('ETHManager: failed to send signed transaction');
+        } catch (e: any) {
+            console.error(e);
+            throw e;
+        }
+    }
 
 }
