@@ -77,8 +77,8 @@ export default class WalletPanel extends UIPanel {
         this.nOrderState = 0;
 
         this.nIndexReq = 0
-        // let btnBeginNode = this.node.getChildByName('btnback');
-        // btnBeginNode.on(cc.Node.EventType.TOUCH_END, this.clickBegin.bind(this,109825),this);
+        let btnBeginNode = this.node.getChildByName('btnback');
+        btnBeginNode.on(cc.Node.EventType.TOUCH_END, this.clickBegin.bind(this,109825),this);
     
         // let btnOrder = this.node.getChildByName('btnorder');
         // btnOrder.on(cc.Node.EventType.TOUCH_END, this.clickOrder.bind(this,1025),this);
@@ -194,7 +194,7 @@ export default class WalletPanel extends UIPanel {
   
     clickBegin(nTag){
         cc.log('clickbegin'+nTag);
-        //UIManager.Instance.OpenPanel(EUIPanelType.HOME);
+        UIManager.Instance.OpenPanel(EUIPanelType.HOMELIST);
     }
 
     clickOrder(nTag){

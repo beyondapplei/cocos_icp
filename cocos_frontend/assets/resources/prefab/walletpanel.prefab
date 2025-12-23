@@ -1065,7 +1065,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -517.112,
+        -477.538,
         75.257,
         0,
         0,
@@ -1162,7 +1162,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 111.23,
+      "width": 600,
       "height": 126
     },
     "_anchorPoint": {
@@ -1174,8 +1174,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        178.241,
-        71.928,
+        -88.88,
+        65.332,
         0,
         0,
         0,
@@ -1229,7 +1229,7 @@
     "_N$horizontalAlign": 2,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1260,7 +1260,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "78dc2436-a655-441e-bc98-8c2f64260964"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -1336,19 +1336,19 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "78dc2436-a655-441e-bc98-8c2f64260964"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "_N$pressedSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "pressedSprite": {
-      "__uuid__": "e9ec654c-97a2-4787-9325-e6a10375219a"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "_N$hoverSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "hoverSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "7a4a4cc2-995e-4e6e-bb5d-838890c6537a"
     },
     "_N$disabledSprite": {
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
@@ -2021,7 +2021,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btnbegin",
+    "_name": "btnback",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -2065,8 +2065,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1162.974,
-        1267.888,
+        -337.522,
+        1205.23,
         0,
         0,
         0,
@@ -2118,8 +2118,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 50.4
+      "width": 400,
+      "height": 126
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2166,13 +2166,13 @@
     "_enabled": true,
     "_fontFamily": "Arial",
     "_isSystemFontUsed": true,
-    "_N$string": "login",
+    "_N$string": "back",
     "_N$horizontalAlign": 1,
-    "_N$fontSize": 50,
+    "_N$fontSize": 100,
     "_N$font": null,
     "_N$cacheMode": 0,
-    "_N$maxWidth": 200,
-    "_N$lineHeight": 40,
+    "_N$maxWidth": 400,
+    "_N$lineHeight": 100,
     "_N$imageAtlas": null,
     "_N$handleTouchEvent": true,
     "_id": ""

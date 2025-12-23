@@ -10,3 +10,9 @@ Cocos Creator 2.x 的预览环境（quick-compile）不支持直接加载 ES 模
 解决方案：
 1. 打包依赖： 我已使用 esbuild 将 @dfinity/auth-client 打包成 Cocos Creator 2.x 可识别的 CommonJS 格式文件，存放在 auth-client.js。
 2. 修改引用： 更新了 LoginManager.ts，使用 require("../Lib/auth-client") 替代直接的 import。
+
+
+1 canister 获取ethaddress，from singer 作为池子
+2 user getethaddress from oisy wallet
+3 时间流 dex, time is only in icp
+
